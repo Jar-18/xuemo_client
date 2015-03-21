@@ -1,17 +1,24 @@
 angular.module('starter')
     .config(['$translateProvider', function ($translateProvider) {
-    $translateProvider.translations('en', {
-        'TITLE': 'Hello',
-        'FOO': 'This is a paragraph',
-        NAMESPACE: {
-            PARAGRAPH: 'And it comes with awesome features!'
+    $translateProvider.translations('cn', {
+        widget:{
+            tab:{
+                learn:"我要学",
+                teach:"我要教",
+                find:"发现",
+                news:"消息",
+                account:"我的"
+            },
+            city:{
+
+            }
+        },
+        page:{
+
         }
     });
 
-    $translateProvider.translations('de', {
-        'TITLE': 'Hallo',
-        'FOO': 'Dies ist ein Paragraph'
-    });
+    $translateProvider.preferredLanguage('en',{
 
-    $translateProvider.preferredLanguage('en');
+    });
 }]);

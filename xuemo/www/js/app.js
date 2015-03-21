@@ -1,5 +1,8 @@
 // Ionic Starter App
 
+
+angular.module('starter.controllers', ['widget.ratingStar']);
+
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
@@ -42,8 +45,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
           url: '/learn',
           views: {
               'tab-learn': {
-                  templateUrl: 'templates/tab-dash.html',
-                  controller: 'DashCtrl'
+                  templateUrl: 'module/app/learn/index.html',
+                  controller: 'learnCtrl'
               }
           }
       })
