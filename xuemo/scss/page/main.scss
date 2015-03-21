@@ -1,0 +1,46 @@
+@import "scss/widget/rating_star";
+
+
+
+.course-card{
+  .title{
+    white-space: normal;
+  }
+  p{
+    position: relative;
+    .location{
+      font-size: 13px;
+      display: block;
+      margin-right: 110px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .teacher-section{
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      .name{
+
+      }
+      .other-info{
+        display: inline-block;
+        margin-left: 8px;
+        padding: 0px 7px;
+        border-radius: 3px;
+        box-shadow: 0px 0px 1px 1px #387ef5 inset;
+      }
+    }
+    .price-section{
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      font-size: 13px;
+      .price{
+        font-size: 16px;
+        color: #fd8e51;
+        font-weight: bold;
+      }
+    }
+  }
+}
