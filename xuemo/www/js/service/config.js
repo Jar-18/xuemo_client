@@ -1,0 +1,20 @@
+angular.module("service.config",[])
+    .constant("URL_CONFIG",{
+        status:"online",
+        host:{
+          normalHost:"http://192.168.2.2:3000",
+          imgHost:"http://192.168.2.2:3000"
+        },
+        common:{
+            imgApi:"/images"
+        },
+        app:{
+            learn:{
+                courseList:{
+                    "dev":"./json/learn/course_list.json",
+                    "online":"/courses"
+                }
+            }
+
+        }
+    });

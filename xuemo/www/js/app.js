@@ -1,7 +1,18 @@
 // Ionic Starter App
 
 
-angular.module('starter.controllers', ['widget.ratingStar']);
+angular.module('starter.controllers', ['widget.ratingStar','service.config','service.course'])
+    .filter('transformImgUrl',['URL_CONFIG',function(URL_CONFIG){
+        return function(imgName){
+            if(!imgName){
+                imgName="default.jpg";
+            }
+            var urlStatus=URL_CONFIG.status;
+            var imgHost=URL_CONFIG.host.imgHost;
+            var imgApi=URL_CONFIG.common.imgApi;
+            return imgHost+imgApi+"/"+imgName;
+        }
+    }]);
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
@@ -50,7 +61,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               }
           }
       })
-
+      .state('app.course_detail', {
+          url: '/course_detail/:courseId',
+          views: {
+              'tab-learn': {
+                  templateUrl: 'module/app/course_detail/index.html',
+                  controller: 'courseDetailCtrl'
+              }
+          }
+      })
       .state('app.teach', {
           url: '/teach',
           views: {

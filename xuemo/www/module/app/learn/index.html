@@ -1,21 +1,24 @@
-<ion-view view-title="Dashboard">
+<ion-view view-title="我要学">
+    <ion-nav-bar class="nav-title-slide-ios7 bar-orange">
+        <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> 返回</ion-nav-back-button>
+    </ion-nav-bar>
     <ion-content class="padding">
         <div class="list">
 
-            <a class="item course-card item-thumbnail-left" href="#">
-                <img src="http://ionicframework.com/img/docs/blue-album.jpg">
-                <h3 class="title">专业普拉提教练，提供排练室,（这里需要对字数进行控制）</h3>
+            <a ng-repeat="course in courseList" class="item course-card item-thumbnail-left" ng-href="#app/course_detail/{{course.id}}">
+                <img ng-src="{{course.pics[0].name|transformImgUrl}}">
+                <h3 class="title">{{course.title}}（这里需要对字数进行控制）</h3>
                 <p>
-                    <rating-star mark="4.2"></rating-star>
+                    <rating-star mark="{{course.rating}}"></rating-star>
                     <span class="teacher-section">
-                        <span class="name">王小二</span>
+                        <span class="name" ng-bind="course.teacher.nickname"></span>
                         <span class="other-info">
-                            <span class="ion-female"></span>
-                            <span class="age">25</span>
+                            <span ng-class="{'ion-female':course.teacher.gender==0,'ion-male':course.teacher.gender==1}"></span>
+                            <span class="age" ng-bind="course.teacher.age">25</span>
                         </span>
                     </span>
                 </p>
-                <p><span class="location">陆家嘴正大星美广场</span><span class="price-section"><span class="price">11190元</span>/小时</span></p>
+                <p><span class="location">陆家嘴正大星美广场</span><span class="price-section"><span class="price">{{course.price}}元</span>/小时</span></p>
             </a>
         </div>
 

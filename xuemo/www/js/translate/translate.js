@@ -11,6 +11,10 @@ angular.module('starter')
             },
             city:{
 
+            },
+            gender:{
+                "1":"男",
+                "0":"女"
             }
         },
         page:{
@@ -21,4 +25,6 @@ angular.module('starter')
     $translateProvider.preferredLanguage('en',{
 
     });
-}]);
+        $translateProvider.preferredLanguage('cn');
+
+    }]);
