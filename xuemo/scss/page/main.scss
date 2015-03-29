@@ -1,7 +1,9 @@
 @import "scss/widget/rating_star";
+@import "scss/widget/gender_age";
 
-
-
+.bar-orange,.tabs-orange{
+  background: #f90;
+}
 .course-card{
   .title{
     white-space: normal;
@@ -9,7 +11,8 @@
   p{
     position: relative;
     .location{
-      font-size: 13px;
+      font-size: 12px;
+
       display: block;
       margin-right: 110px;
       text-overflow: ellipsis;
@@ -23,13 +26,6 @@
       .name{
 
       }
-      .other-info{
-        display: inline-block;
-        margin-left: 8px;
-        padding: 0px 7px;
-        border-radius: 3px;
-        box-shadow: 0px 0px 1px 1px #387ef5 inset;
-      }
     }
     .price-section{
       position: absolute;
@@ -42,5 +38,90 @@
         font-weight: bold;
       }
     }
+  }
+}
+.comment-card{
+  padding: 8px 10px;
+  .personal-info{
+    .rating-position-wrapper{
+      display: inline-block;
+      float: right;
+    }
+  }
+}
+
+.appointment-card{
+  padding: 8px 10px;
+  .appoint-desc{
+    margin-left: 20px;
+  }
+}
+.appointment-card,.comment-card{
+  .personal-info{
+    height: 30px;
+    line-height: 30px;
+    margin-top: 3px;
+  }
+  .portrait{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .nickname{
+    margin-left: 40px;
+  }
+  .post-time{
+    font-size: 12px;
+  }
+}
+.course-detail-container{
+  .tabs{
+    height: 40px;
+    margin-bottom: 1px;
+    .tab-item{
+      line-height: 40px;
+      border-right: 1px solid#ddd;
+      &:last-child{
+        border-right: none;
+      }
+    }
+  }
+}
+.teacher-brief-intro{
+  min-height: 70px;
+  padding-left: 76px;
+  img.portrait{
+    border-radius: 50%;
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
+
+.desc-row{
+  font-size: 8px;
+  /*border-bottom: 1px solid #ddd;*/
+  padding: 2px 0px;
+  .row-label{
+    position: absolute;
+    color: #000;
+  }
+  .row-value{
+    white-space: normal;
+    margin-left: 40px;
+    display: inline-block;
+    color: #333;
+  }
+}
+
+.img-slider img{
+  max-height: 180px;
+}
+
+
+.section-title{
+  padding: 10px 16px;
+  h2{
+    font-size: 15px;
   }
 }

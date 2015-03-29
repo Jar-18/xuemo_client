@@ -1,0 +1,13 @@
+<div class="list">
+    <a ng-repeat="appointment in appointmentList" class="item appointment-card">
+        <p class="personal-info">
+            <img class="portrait"  ng-src="{{appointment.applicant.portrait|transformImgUrl}}">
+            <span class="nickname" ng-bind="appointment.applicant.nickname"></span>
+            <gender-age age="{{appointment.applicant.age}}" gender="{{appointment.applicant.gender}}"></gender-age>
+            <span class="appoint-desc">
+                预约了该课程
+            </span>
+        </p>
+        <p class="post-time" ng-bind="appointment.updatedAt"></p>
+    </a>
+</div>

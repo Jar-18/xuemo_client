@@ -1,0 +1,25 @@
+<div class="list">
+    <div class="item">
+        <div class="desc-row">
+            <span class="row-label">科目:</span>
+            <span class="row-value"  ng-bind="course.category.name"></span>
+        </div>
+        <div class="desc-row">
+            <span class="row-label">区域:</span><span class="row-value">
+            <span ng-repeat="district in course.districts">{{district.name+"&nbsp;&nbsp;"}}</span>
+        </span>
+        </div>
+        <div class="desc-row">
+            <span class="row-label">类型:</span>
+            <span class="row-value">{{ 'widget.courseType.'+course.type | translate }}</span>
+        </div>
+        <div class="desc-row">
+            <span class="row-label">地点:</span>
+            <span class="row-value">{{ 'widget.courseSite.'+course.site | translate }}</span>
+        </div>
+        <div class="desc-row">
+            <span class="row-label">描述:</span>
+            <span class="row-value"  ng-bind="course.describe"></span>
+        </div>
+    </div>
+</div>

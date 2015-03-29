@@ -6,15 +6,23 @@ angular.module("service.config",[])
           imgHost:"http://192.168.2.2:3000"
         },
         common:{
-            imgApi:"/images"
+            imgApi:"/images",
+            courseComments:{
+                "online":"/courseRatings"
+            },
+            courseAppointment:{
+                "online":"/appointments"
+            }
         },
         app:{
             learn:{
                 courseList:{
                     "dev":"./json/learn/course_list.json",
                     "online":"/courses"
+                },
+                relatedCourseList:{
+                    "online":"/courses"
                 }
             }
-
         }
     });

@@ -1,0 +1,13 @@
+<div class="list">
+    <a ng-repeat="comment in commentList" class="item comment-card">
+        <p class="personal-info">
+            <img class="portrait"  ng-src="{{comment.commentator.portrait|transformImgUrl}}">
+            <span class="nickname" ng-bind="comment.commentator.nickname"></span>
+            <span class="rating-position-wrapper">
+                <rating-star mark="{{comment.rating}}"></rating-star>
+            </span>
+        </p>
+        <p class="" ng-bind="comment.comment"></p>
+        <p class="post-time" ng-bind="comment.updatedAt"></p>
+    </a>
+</div>

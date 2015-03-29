@@ -17,6 +17,45 @@ angular.module("service.course",['service.config'])
                     params:params
                 });
                 return courseListPromise;
+            },
+
+            getCommentPromise:function(params){
+                if(!params){
+                    params={};
+                }
+                var url=normalHost+URL_CONFIG.common.courseComments[urlStatus];
+                var courseListPromise=$http({
+                    method:'GET',
+                    url:url,
+                    params:params
+                });
+                return courseListPromise;
+            },
+
+            getAppointmentPromise:function(params){
+                if(!params){
+                    params={};
+                }
+                var url=normalHost+URL_CONFIG.common.courseAppointment[urlStatus];
+                var courseListPromise=$http({
+                    method:'GET',
+                    url:url,
+                    params:params
+                });
+                return courseListPromise;
+            },
+            getRelatedCoursePromise:function(params){
+                if(!params){
+                    params={};
+                }
+                var url=normalHost+URL_CONFIG.app.learn.relatedCourseList[urlStatus];
+                var courseListPromise=$http({
+                    method:'GET',
+                    url:url,
+                    params:params
+                });
+                return courseListPromise;
             }
+
         }
     }])

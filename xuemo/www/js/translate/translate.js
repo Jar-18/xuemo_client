@@ -15,10 +15,26 @@ angular.module('starter')
             gender:{
                 "1":"男",
                 "0":"女"
+            },
+            courseType:{
+                "1":"一对一",
+                "2":"小班",
+                "3":"大班"
+            },
+            courseSite:{
+                "1":"老师家",
+                "2":"学生家",
+                "3":"公共场所"
             }
         },
         page:{
-
+            courseDetail:{
+                tab:{
+                    courseIntro:"课程简介",
+                    comment:"评论",
+                    appointmentRecord:"预约纪录"
+                }
+            }
         }
     });
 

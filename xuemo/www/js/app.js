@@ -1,7 +1,7 @@
 // Ionic Starter App
 
 
-angular.module('starter.controllers', ['widget.ratingStar','service.config','service.course'])
+angular.module('starter.controllers', ['widget.ratingStar','widget.genderAge','service.config','service.course'])
     .filter('transformImgUrl',['URL_CONFIG',function(URL_CONFIG){
         return function(imgName){
             if(!imgName){
@@ -67,6 +67,33 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               'tab-learn': {
                   templateUrl: 'module/app/course_detail/index.html',
                   controller: 'courseDetailCtrl'
+              }
+          }
+      })
+      .state('app.course_detail.courseIntro', {
+          url: '/course_intro',
+          views: {
+              'course-detail': {
+                  templateUrl: 'module/app/course_detail/course_intro/index.html',
+                  controller:"courseDetailIntroCtrl"
+              }
+          }
+      })
+      .state('app.course_detail.comment', {
+          url: '/comment',
+          views: {
+              'course-detail': {
+                  templateUrl: 'module/app/course_detail/comment/index.html',
+                  controller:"courseDetailCommentCtrl"
+              }
+          }
+      })
+      .state('app.course_detail.appointmentRecord', {
+          url: '/appointment_record',
+          views: {
+              'course-detail': {
+                  templateUrl: 'module/app/course_detail/appointment_record/index.html',
+                  controller:"courseDetailAppointmentRecordCtrl"
               }
           }
       })
