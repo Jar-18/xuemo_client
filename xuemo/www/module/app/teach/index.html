@@ -1,0 +1,41 @@
+<ion-view view-title="发布课程">
+    <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
+        <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> 返回</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="padding">
+        <div class="form-row">
+            <chain-selector
+                    selector-list="courseCategoriesList"
+                    selected-model="courseForm.dataModel.courseCategories"
+                    custom-options="courseForm.options.courseCategories">
+            </chain-selector>
+        </div>
+        <div class="form-row">
+            <span class="row-label">地点</span>
+            <horizontal-selector
+                    dic-name="{{courseForm.options.courseSite.dicName}}"
+                    selector-list="courseForm.options.courseSite.selectorList"
+                    selected-model="courseForm.dataModel.sites"
+                    >
+            </horizontal-selector>
+        </div>
+        <div class="form-row">
+            <span class="row-label">类型</span>
+            <horizontal-selector
+                    dic-name="{{courseForm.options.courseType.dicName}}"
+                    selector-list="courseForm.options.courseType.selectorList"
+                    selected-model="courseForm.dataModel.types"
+                    >
+            </horizontal-selector>
+        </div>
+        <div class="form-row">
+            <chain-selector
+                    selector-list="districtsList"
+                    selected-model="courseForm.dataModel.districts">
+            </chain-selector>
+        </div>
+        <div class="form-row">
+            <button class="button button-positive button-block">下一步</button>
+        </div>
+    </ion-content>
+</ion-view>

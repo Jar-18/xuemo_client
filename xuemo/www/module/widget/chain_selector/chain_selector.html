@@ -1,0 +1,14 @@
+<div class="chain-selector-wrapper">
+   <div  ng-repeat="level1Item in groupedSelectorData" class="level1-wrapper">
+        <div class="level1-item">
+            {{level1Item.data.name}}
+        </div>
+        <div>
+            <span ng-click="level2Change(level2Item.data,level1Item.children)"
+                  ng-class="{'active':selectedItemObj[level2Item.data.id]}"
+                  class="level2-item selector-item" ng-repeat="level2Item in level1Item.children">
+                {{level2Item.data.name}}
+            </span>
+        </div>
+    </div>
+</div>

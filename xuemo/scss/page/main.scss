@@ -1,9 +1,22 @@
 @import "scss/widget/rating_star";
 @import "scss/widget/gender_age";
-
+@import "scss/widget/horizontal_selector";
+@import "scss/widget/chain_selector";
 .bar-orange,.tabs-orange{
   background: #f90;
 }
+.form-row{
+  padding: 3px 0px;
+  .row-label{
+    display: inline-block;
+    width: 50px;
+    &::after{
+      content: '：';
+    }
+  }
+}
+
+
 .course-card{
   .title{
     white-space: normal;
@@ -99,7 +112,7 @@
 }
 
 .desc-row{
-  font-size: 8px;
+  font-size: 12px;
   /*border-bottom: 1px solid #ddd;*/
   padding: 2px 0px;
   .row-label{

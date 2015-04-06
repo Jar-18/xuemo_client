@@ -1,7 +1,15 @@
 // Ionic Starter App
 
 
-angular.module('starter.controllers', ['widget.ratingStar','widget.genderAge','service.config','service.course'])
+angular.module('starter.controllers', [
+        'widget.ratingStar',
+        'widget.genderAge',
+        'widget.horizontalSelector',
+        'widget.chainSelector',
+
+        'service.config',
+        'service.course'
+    ])
     .filter('transformImgUrl',['URL_CONFIG',function(URL_CONFIG){
         return function(imgName){
             if(!imgName){
@@ -101,8 +109,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
           url: '/teach',
           views: {
               'tab-teach': {
-                  templateUrl: 'templates/tab-chats.html',
-                  controller: 'ChatsCtrl'
+                  templateUrl: 'module/app/teach/index.html',
+                  controller: 'teachCtrl'
               }
           }
       })

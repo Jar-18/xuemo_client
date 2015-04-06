@@ -12,6 +12,12 @@ angular.module("service.config",[])
             },
             courseAppointment:{
                 "online":"/appointments"
+            },
+            districts:{
+                "online":"./json/widget/districts.json"
+            },
+            courseCategories:{
+                "online":"./json/widget/course_categories.json"
             }
         },
         app:{

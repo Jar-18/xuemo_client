@@ -1,0 +1,11 @@
+@import "varible";
+.horizontal-selector-wrapper{
+  display: inline-block;
+  .selector-item{
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid $theme-color;
+    margin-right: 8px;
+    padding: 1px 5px;
+  }
+}
