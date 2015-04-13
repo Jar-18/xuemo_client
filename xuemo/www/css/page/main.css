@@ -33,7 +33,8 @@
   .horizontal-selector-wrapper .selector-item {
     display: inline-block;
     border-radius: 3px;
-    border: 1px solid #3c9fea;
+    border: 1px solid #387ef5;
+    color: #387ef5;
     margin-right: 8px;
     padding: 1px 5px; }
 
@@ -58,7 +59,7 @@
     display: inline-block;
     box-sizing: border-box;
     width: 31%;
-    border: 1px solid #3c9fea;
+    border: 1px solid #387ef5;
     margin-right: 2%;
     margin-top: 8px;
     font-size: 12px;
@@ -67,7 +68,7 @@
     cursor: pointer;
     text-align: center; }
     .chain-selector-wrapper .level1-wrapper .selector-item.active {
-      background: #3c9fea;
+      background: #387ef5;
       color: #fff; }
 
 .bar-orange, .tabs-orange {
@@ -75,6 +76,8 @@
 
 .form-row {
   padding: 3px 0px; }
+  .form-row .row-label + .item-input-wrapper {
+    margin-left: 3px; }
   .form-row .row-label {
     display: inline-block;
     width: 50px; }

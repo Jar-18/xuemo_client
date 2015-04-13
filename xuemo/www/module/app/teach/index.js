@@ -29,6 +29,8 @@ angular.module('starter.controllers')
                 courseCategories:{
                     "multiple":false,
                     "addSelectAllBtn":false
+                },
+                districts:{
                 }
             },
             dataModel:{

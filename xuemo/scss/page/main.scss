@@ -7,6 +7,9 @@
 }
 .form-row{
   padding: 3px 0px;
+  .row-label+.item-input-wrapper{
+    margin-left: 3px;
+  }
   .row-label{
     display: inline-block;
     width: 50px;

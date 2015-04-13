@@ -1,5 +1,5 @@
 angular.module("widget.chainSelector",[])
-    .directive('chainSelector',[function(){
+    .directive('chainSelector',['modalService',function(modalService){
         return{
             restrict: 'E',
             templateUrl: './module/widget/chain_selector/chain_selector.html',
@@ -12,7 +12,8 @@ angular.module("widget.chainSelector",[])
             controller:['$scope',function($scope){
                 $scope.options={
                     "multiple":true,
-                    "addSelectAllBtn":true
+                    "addSelectAllBtn":true,
+                    "btnName":"请选择"
                 };
                 if($scope.customOptions){
                     angular.extend($scope.options,$scope.customOptions);
@@ -108,6 +109,44 @@ angular.module("widget.chainSelector",[])
                     $scope.selectedModel=resultList;
                     console.debug($scope.selectedModel);
                 }
+                $scope.showModal=function(modalName){
+                    modalService.showModal($scope,modalName);
+                };
+                $scope.hideModal=function(modalName){
+                    modalService.hideModal(modalName);
+                }
             }]
+        }
+    }])
+    .factory('modalService',['$ionicModal',function($ionicModal){
+        return{
+            initModal:function(scope,modalName){
+                var me=this;
+                $ionicModal.fromTemplateUrl('./module/widget/chain_selector/chain_selector_modal.html', {
+                    scope: scope,
+                    animation: 'slide-in-up'
+                }).then(function(modal) {
+                    me[modalName] = modal;
+                    me[modalName].show();
+                });
+            },
+            showModal:function($scope,modalName){
+                if(this[modalName]==null){
+                    this.initModal($scope,modalName);
+                }else{
+                    this[modalName].show();
+                }
+            },
+            removeModal:function(modalName){
+                if(this[modalName]){
+                    this[modalName].remove();
+                    this[modalName]=null;
+                }
+            },
+            hideModal:function(modalName){
+                if(this[modalName]){
+                    this[modalName].hide();
+                }
+            }
         }
     }]);

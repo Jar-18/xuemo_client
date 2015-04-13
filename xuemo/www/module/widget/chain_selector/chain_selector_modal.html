@@ -1,0 +1,23 @@
+<ion-modal-view class="sns-view">
+    <div class="bar bar-header bar-positive">
+        <button class="button button-small icon-left ion-chevron-left button-clear"  on-tap="hideModal('selectorModal')"></button>
+        <h1 class="title">bar-positive</h1>
+    </div>
+    <ion-content class="sns-content has-header">
+        <div class="chain-selector-wrapper">
+            <div  ng-repeat="level1Item in groupedSelectorData" class="level1-wrapper">
+                <div class="level1-item">
+                    {{level1Item.data.name}}
+                </div>
+                <div>
+            <span ng-click="level2Change(level2Item.data,level1Item.children)"
+                  ng-class="{'active':selectedItemObj[level2Item.data.id]}"
+                  class="level2-item selector-item" ng-repeat="level2Item in level1Item.children">
+                {{level2Item.data.name}}
+            </span>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-modal-view>
