@@ -109,8 +109,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
           url: '/teach',
           views: {
               'tab-teach': {
-                  templateUrl: 'module/app/teach/index.html',
-                  controller: 'teachCtrl'
+                  templateUrl: 'module/app/teach/post_course_step_2/index.html',
+                  controller: 'postCourseStep2Ctrl'
               }
           }
       })

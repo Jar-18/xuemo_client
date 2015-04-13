@@ -55,6 +55,14 @@ angular.module("service.course",['service.config'])
                     params:params
                 });
                 return courseListPromise;
+            },
+            getCoursePhotosUploadTokenPromise: function(){
+                var url = normalHost + URL_CONFIG.app.teach.uploadCoursePhotoToken[urlStatus];
+                var promise = $http({
+                    method: 'GET',
+                    url: url
+                });
+                return promise;
             }
 
         }

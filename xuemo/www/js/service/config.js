@@ -2,8 +2,8 @@ angular.module("service.config",[])
     .constant("URL_CONFIG",{
         status:"online",
         host:{
-          normalHost:"http://192.168.2.2:3000",
-          imgHost:"http://192.168.2.2:3000"
+          normalHost:"http://192.168.2.5:3000",
+          imgHost:"http://192.168.2.5:3000"
         },
         common:{
             imgApi:"/images",
@@ -28,6 +28,11 @@ angular.module("service.config",[])
                 },
                 relatedCourseList:{
                     "online":"/courses"
+                }
+            },
+            teach: {
+                uploadCoursePhotoToken:{
+                    "online":"/files/uploadToken"
                 }
             }
         }

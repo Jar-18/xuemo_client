@@ -1,0 +1,30 @@
+<ion-view view-title="发布课程">
+    <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
+        <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> 返回</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="padding">
+    	<div class="list">
+   			<label class="item item-input">
+    		<textarea placeholder="课程描述（不多于100字）..." rows="5"></textarea>
+  			</label>
+		</div>
+		<div>
+			<div>
+				<h5>上传图片</h5>
+			</div>
+			<div>
+				<div style="display:inline;" ng-repeat="file in fileList">
+					<img src="{{file.path}}" style="width:85px;height:85px;margin-right:10px;">
+				</div>
+				<div style="display:inline;">
+  					<button ng-click="addPhoto()" class="button" style="text-align:center;width:85px;height:85px;margin-right:10px;color:gray;background-color:white" >
+  						<i class="icon ion-plus"></i>
+  					</button>
+				</div>
+			</div>
+		</div>	
+		<div class="form-row">
+            <button ng-click="uploadFiles()" class="button button-positive button-block">发布</button>
+        </div>	
+    </ion-content>
+</ion-view>
