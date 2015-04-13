@@ -4,20 +4,25 @@
     </ion-nav-bar>
     <ion-content class="padding">
     	<div class="list">
-   			<label class="item item-input">
-    		<textarea placeholder="课程描述（不多于100字）..." rows="5"></textarea>
-  			</label>
+    		<div>
+				<h5>课程描述</h5>
+			</div>
+			<div>
+   				<label class="item item-input">
+    			<textarea placeholder="不多于100字..." rows="5"></textarea>
+  				</label>
+  			</div>
 		</div>
 		<div>
 			<div>
 				<h5>上传图片</h5>
 			</div>
 			<div>
-				<div style="display:inline;" ng-repeat="file in fileList">
-					<img src="{{file.path}}" style="width:85px;height:85px;margin-right:10px;">
+				<div class="upload-photo-card" ng-repeat="file in fileList">
+					<img src="{{file.path}}" class="card-content">
 				</div>
-				<div style="display:inline;">
-  					<button ng-click="addPhoto()" class="button" style="text-align:center;width:85px;height:85px;margin-right:10px;color:gray;background-color:white" >
+				<div class="upload-photo-card">
+  					<button ng-click="addPhoto()" class="button card-content add-card">
   						<i class="icon ion-plus"></i>
   					</button>
 				</div>

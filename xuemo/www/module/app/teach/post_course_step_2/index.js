@@ -12,7 +12,7 @@ angular.module('starter.controllers')
 			}, {
 				text: '从相册选取'
 			}],
-			titleText: '添加图片',
+			// titleText: '添加图片',
 			cancelText: '取消',
 			cancel: function() {
 				// No action
@@ -26,7 +26,7 @@ angular.module('starter.controllers')
 	};
 
 	function takePhoto() {
-		navigator.camera.getPicture(onSuccess, onFail, {
+		navigator.camera.getPicture(onAddPhotoSuccess, onAddPhotoFail, {
 			//options
 			quality: 100,
 			sourceType: navigator.camera.PictureSourceType.CAMERA,
@@ -35,7 +35,7 @@ angular.module('starter.controllers')
 	};
 
 	function choosePhotoFromGallery() {
-		navigator.camera.getPicture(onSuccess, onFail, {
+		navigator.camera.getPicture(onAddPhotoSuccess, onAddPhotoFail, {
 			//options
 			quality: 100,
 			sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY,
@@ -43,7 +43,7 @@ angular.module('starter.controllers')
 		});
 	};
 
-	function onSuccess(imageURI) {
+	function onAddPhotoSuccess(imageURI) {
 		console.log(imageURI);
 		var file = {};
 		file.path = imageURI;
@@ -53,7 +53,7 @@ angular.module('starter.controllers')
 		console.log($scope.fileList[0]);
 	};
 
-	function onFail(message) {
+	function onAddPhotoFail(message) {
 		console.log(message);
 	};
 
@@ -70,18 +70,18 @@ angular.module('starter.controllers')
 				// Whatever you populate options.params with, will be available in req.body at the server-side.
 					"token": response
 				};
-
-				//alert("UP2");
-				console.log('created file');
-				ft.upload($scope.fileList[0].path, "http://upload.qiniu.com", function(data) {
-					// ft.upload($scope.lastPhoto, "http://192.168.2.5:3000/photos", function(data) {
-					//Upload success
-					alert("Upload success:" + data.response);
-				}, function(err) {
-					//Upload fail
-					alert("Upload fails");
-					console.log(err);
-				}, options);
+				$scope.fileList.forEach(function(file) {
+					ft.upload(file.path, "http://upload.qiniu.com", function(data) {
+						// ft.upload($scope.lastPhoto, "http://192.168.2.5:3000/photos", function(data) {
+						//Upload success
+						alert("Upload success:" + data.response);
+					}, function(err) {
+						//Upload fail
+						alert("Upload fails");
+						console.log(err);
+					}, options);
+				});
+				
 			});
 	};
 }])

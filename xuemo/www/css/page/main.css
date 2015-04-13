@@ -171,3 +171,17 @@
   padding: 10px 16px; }
   .section-title h2 {
     font-size: 15px; }
+
+/*temp, by Jar*/
+.upload-photo-card {
+  display: inline;
+  margin-right:10px;
+}
+.upload-photo-card .card-content {
+    width:85px;
+    height:85px;
+}
+.upload-photo-card .add-card {
+      color:gray;
+      background-color:white
+}
