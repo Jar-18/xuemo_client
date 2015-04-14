@@ -141,3 +141,16 @@
     font-size: 15px;
   }
 }
+
+.upload-photo-card {
+  display: inline;
+  margin-right:10px;
+  .card-content {
+    width:85px;
+    height:85px;
+  }
+  .add-card {
+    color:gray;
+    background-color:white
+  }
+}
