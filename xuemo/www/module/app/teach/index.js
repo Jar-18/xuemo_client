@@ -1,6 +1,6 @@
 angular.module('starter.controllers')
 
-    .controller('teachCtrl', ['$scope','URL_CONFIG','$http',function($scope,URL_CONFIG,$http) {
+    .controller('teachCtrl', ['$scope','URL_CONFIG','$http','$timeout',function($scope,URL_CONFIG,$http,$timeout) {
         var urlStatus=URL_CONFIG.status;
         $http({
             method:'GET',
@@ -28,17 +28,23 @@ angular.module('starter.controllers')
                 },
                 courseCategories:{
                     "multiple":false,
-                    "addSelectAllBtn":false
+                    "addSelectAllBtn":false,
+                    "modalTitle":"课程类型"
                 },
                 districts:{
+                    "modalTitle":"区域"
                 }
             },
             dataModel:{
-                sites:"1",
-                types:"1",
                 districts:[{"id":100103},{"id":100104}] ,
                 courseCategories:[{"id":100201}]
-
             }
-        }
+        };
+        $timeout(function(){
+            $scope.courseForm.dataModel.sites=[{"id":1},{"id":2}];
+            $scope.courseForm.dataModel.types={"id":1};
+        },1000);
+        $timeout(function(){
+            console.debug($scope.courseForm.dataModel);
+        },3000);
     }])

@@ -13,7 +13,8 @@ angular.module("widget.chainSelector",[])
                 $scope.options={
                     "multiple":true,
                     "addSelectAllBtn":true,
-                    "btnName":"请选择"
+                    "btnName":"请选择",
+                    "modalTitle":""
                 };
                 if($scope.customOptions){
                     angular.extend($scope.options,$scope.customOptions);

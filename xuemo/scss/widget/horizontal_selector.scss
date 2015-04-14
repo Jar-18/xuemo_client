@@ -8,5 +8,9 @@
     color:$theme-color;
     margin-right: 8px;
     padding: 1px 5px;
+    &.active{
+      background: $theme-color;
+      color:$text-color-light;
+    }
   }
 }

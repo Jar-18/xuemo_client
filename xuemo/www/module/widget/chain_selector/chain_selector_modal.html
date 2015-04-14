@@ -1,7 +1,7 @@
 <ion-modal-view class="sns-view">
     <div class="bar bar-header bar-positive">
-        <button class="button button-small icon-left ion-chevron-left button-clear"  on-tap="hideModal('selectorModal')"></button>
-        <h1 class="title">bar-positive</h1>
+        <h1 class="title" ng-bind="options.modalTitle"></h1>
+        <button class="button button-small icon-left ion-chevron-down button-clear"  on-tap="hideModal('selectorModal')"></button>
     </div>
     <ion-content class="sns-content has-header">
         <div class="chain-selector-wrapper">
