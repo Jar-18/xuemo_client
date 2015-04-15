@@ -7,14 +7,14 @@
             <span class="row-label">类别</span>
             <chain-selector
                     selector-list="courseCategoriesList"
-                    selected-model="courseForm.dataModel.courseCategories"
+                    selected-model="courseForm.dataModel.category"
                     custom-options="courseForm.options.courseCategories">
             </chain-selector>
         </div>
         <div class="form-row item-input-inset">
             <span class="row-label">简介</span>
             <label class="item-input-wrapper">
-                <input type="text" placeholder="不超过20字" />
+                <input type="text" ng-model="courseForm.dataModel.title" placeholder="不超过20字" />
             </label>
         </div>
         <div class="form-row">
@@ -47,12 +47,7 @@
             </horizontal-selector>
         </div>
         <div class="form-row">
-            <label class="item item-input">
-                <textarea placeholder="描述"></textarea>
-            </label>
-        </div>
-        <div class="form-row">
-            <button class="button button-positive button-block">下一步</button>
+            <button type="button" ng-click="postCourseStep1()" class="button button-positive button-block">下一步</button>
         </div>
     </ion-content>
 </ion-view>

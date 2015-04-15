@@ -14,7 +14,8 @@ angular.module("widget.chainSelector",[])
                     "multiple":true,
                     "addSelectAllBtn":true,
                     "btnName":"请选择",
-                    "modalTitle":""
+                    "modalTitle":"",
+                    "modalName":""
                 };
                 if($scope.customOptions){
                     angular.extend($scope.options,$scope.customOptions);
@@ -79,8 +80,14 @@ angular.module("widget.chainSelector",[])
                     }
                 });
                 $scope.selectedItemObj={};
-                for(var index=0;index<$scope.selectedModel.length;index++){
-                    $scope.selectedItemObj[$scope.selectedModel[index].id]=true;
+                if($scope.options.multiple){
+                    for(var index=0;index<$scope.selectedModel.length;index++){
+                        $scope.selectedItemObj[$scope.selectedModel[index].id]=true;
+                    }
+                }else{
+                    if($scope.selectedModel.id){
+                        $scope.selectedItemObj[$scope.selectedModel.id]=true;
+                    }
                 }
                 $scope.level2Change=function(level2ItemData,level2List){
                     if(level2ItemData.mutex){
@@ -103,9 +110,17 @@ angular.module("widget.chainSelector",[])
                         }
                         $scope.selectedItemObj[level2ItemData.id]=true;
                     }
-                    var resultList=[];
-                    for(var key in $scope.selectedItemObj){
-                        resultList.push({id:key});
+                    var resultList;
+                    if($scope.options.multiple){
+                        resultList=[];
+                        for(var key in $scope.selectedItemObj){
+                            resultList.push({id:key});
+                        }
+                    }else{
+                        resultList={};
+                        for(var key in $scope.selectedItemObj){
+                            resultList.id=key;
+                        }
                     }
                     $scope.selectedModel=resultList;
                     console.debug($scope.selectedModel);

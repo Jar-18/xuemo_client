@@ -2,6 +2,7 @@ angular.module('starter.controllers')
 
     .controller('teachCtrl', ['$scope','URL_CONFIG','$http','$timeout',function($scope,URL_CONFIG,$http,$timeout) {
         var urlStatus=URL_CONFIG.status;
+        var normalHost=URL_CONFIG.host.normalHost;
         $http({
             method:'GET',
             url:URL_CONFIG.common.districts[urlStatus],
@@ -29,22 +30,42 @@ angular.module('starter.controllers')
                 courseCategories:{
                     "multiple":false,
                     "addSelectAllBtn":false,
-                    "modalTitle":"课程类型"
+                    "modalTitle":"课程类型",
+                    "modalName":"courseCategories"
                 },
                 districts:{
-                    "modalTitle":"区域"
+                    "modalTitle":"区域",
+                    "modalName":"districts"
                 }
             },
             dataModel:{
-                districts:[{"id":100103},{"id":100104}] ,
-                courseCategories:[{"id":100201}]
+                districts:[] ,
+                category:{},
+                "sites":[
+                    {"id":"1"},
+                    {"id":"2"}
+                ],
+                "types":[
+                    {"id":"1"},
+                    {"id":"2"}
+                ],
+                "title":"TestTitle3",
+                "teacher":{"id":"1"},
+                "price": "100"
             }
         };
-        $timeout(function(){
-            $scope.courseForm.dataModel.sites=[{"id":1},{"id":2}];
-            $scope.courseForm.dataModel.types={"id":1};
-        },1000);
-        $timeout(function(){
+        $scope.postCourseStep1=function(){
+            var url=normalHost+URL_CONFIG.app.teach.postCourseStep1[urlStatus];
             console.debug($scope.courseForm.dataModel);
-        },3000);
+            $http({
+                method:'POST',
+                url:url,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data:$scope.courseForm.dataModel
+            }).success(function(){
+
+            });
+        };
     }])

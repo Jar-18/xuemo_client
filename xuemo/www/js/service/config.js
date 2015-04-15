@@ -33,6 +33,9 @@ angular.module("service.config",[])
             teach: {
                 uploadCoursePhotoToken:{
                     "online":"/files/uploadToken"
+                },
+                postCourseStep1:{
+                    "online":"/courses"
                 }
             }
         }
