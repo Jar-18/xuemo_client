@@ -1,6 +1,6 @@
 angular.module('starter.controllers')
 
-    .controller('teachCtrl', ['$scope','URL_CONFIG','$http','$timeout',function($scope,URL_CONFIG,$http,$timeout) {
+    .controller('teachCtrl', ['$scope','URL_CONFIG','$http','$state',function($scope,URL_CONFIG,$http,$state) {
         var urlStatus=URL_CONFIG.status;
         var normalHost=URL_CONFIG.host.normalHost;
         $http({
@@ -56,8 +56,10 @@ angular.module('starter.controllers')
         };
         $scope.postCourseStep1=function(){
             var url=normalHost+URL_CONFIG.app.teach.postCourseStep1[urlStatus];
-            console.debug($scope.courseForm.dataModel);
-            $http({
+            //console.debug($scope.courseForm.dataModel);
+            $state.go("app.post_course_step_2",{});
+
+            /*$http({
                 method:'POST',
                 url:url,
                 headers: {
@@ -66,6 +68,6 @@ angular.module('starter.controllers')
                 data:$scope.courseForm.dataModel
             }).success(function(){
 
-            });
+            });*/
         };
     }])

@@ -18,5 +18,20 @@
         "parentId":"2",
         "id":"5",
         "name":"英语"
+    },
+    {
+        "parentId":"2",
+        "id":"6",
+        "name":"日语"
+    },
+    {
+        "parentId":"2",
+        "id":"7",
+        "name":"法语"
+    },
+    {
+        "parentId":"3",
+        "id":"8",
+        "name":"羽毛球"
     }
 ]

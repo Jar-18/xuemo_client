@@ -2,21 +2,46 @@
     {
         "parentId":"1",
         "id":"2",
-        "name":"语言"
+        "name":"浦东新区"
     },
     {
         "parentId":"1",
         "id":"3",
-        "name":"运动"
-    },
-    {
-        "parentId":"3",
-        "id":"4",
-        "name":"游泳"
+        "name":"闵行区"
     },
     {
         "parentId":"2",
         "id":"5",
-        "name":"英语"
+        "name":"世纪公园"
+    },
+    {
+        "parentId":"2",
+        "id":"6",
+        "name":"八佰伴"
+    },
+    {
+        "parentId":"2",
+        "id":"7",
+        "name":"川沙"
+    },
+    {
+        "parentId":"2",
+        "id":"8",
+        "name":"康桥"
+    },
+    {
+        "parentId":"3",
+        "id":"9",
+        "name":"七宝"
+    },
+    {
+        "parentId":"3",
+        "id":"10",
+        "name":"莘庄"
+    },
+    {
+        "parentId":"3",
+        "id":"11",
+        "name":"南方商城"
     }
 ]

@@ -114,6 +114,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               }
           }
       })
+      .state('app.post_course_step_2', {
+          url: '/post_course_step_2',
+          views: {
+              'tab-teach': {
+                  templateUrl: 'module/app/teach/post_course_step_2/index.html',
+                  controller: 'postCourseStep2Ctrl'
+              }
+          }
+      })
       .state('app.find', {
           url: '/find',
           views: {

@@ -123,7 +123,7 @@ angular.module("widget.chainSelector",[])
                         }
                     }
                     $scope.selectedModel=resultList;
-                    console.debug($scope.selectedModel);
+                    //console.debug($scope.selectedModel);
                 }
                 $scope.showModal=function(modalName){
                     modalService.showModal($scope,modalName);
