@@ -93,6 +93,8 @@
   border-bottom: 1px solid #ddd;
   box-shadow: none; }
 
+.course-detail-container .img-slider {
+  margin-top: -1px; }
 .course-detail-container .list {
   margin-bottom: 10px; }
 
@@ -191,10 +193,18 @@
     max-height: 50px; }
 
 .course-brief-intro {
-  line-height: 30px; }
+  margin-top: -10px; }
+  .course-brief-intro .price-section {
+    top: 8px;
+    position: relative; }
+    .course-brief-intro .price-section .price {
+      font-size: 25px; }
+      .course-brief-intro .price-section .price::before {
+        font-size: 14px; }
   .course-brief-intro .appointment-btn {
     float: right;
-    padding: 0px 12px; }
+    padding: 5px 35px;
+    font-size: 18px; }
 
 .desc-row {
   font-size: 14px;

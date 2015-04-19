@@ -23,8 +23,13 @@
   border-bottom: 1px solid #ddd;
   box-shadow: none;
 }
-.course-detail-container .list{
-  margin-bottom:10px ;
+.course-detail-container{
+  .img-slider{
+    margin-top: -1px;
+  }
+  .list{
+    margin-bottom:10px ;
+  }
 }
 
 
@@ -160,10 +165,21 @@
   }
 }
 .course-brief-intro{
-  line-height: 30px;
+  margin-top: -10px;
+  .price-section {
+    top: 8px;
+    position: relative;
+    .price{
+      font-size: 25px;
+      &::before{
+        font-size: 14px;
+      }
+    }
+  }
   .appointment-btn{
     float: right;
-    padding: 0px 12px;
+    padding: 5px 35px;
+    font-size: 18px;
   }
 }
 
