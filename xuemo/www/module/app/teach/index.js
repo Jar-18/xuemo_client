@@ -3,6 +3,7 @@ angular.module('starter.controllers')
     .controller('teachCtrl', ['$scope','URL_CONFIG','$http','$state',function($scope,URL_CONFIG,$http,$state) {
         var urlStatus=URL_CONFIG.status;
         var normalHost=URL_CONFIG.host.normalHost;
+
         $http({
             method:'GET',
             url:URL_CONFIG.common.districts[urlStatus],
@@ -57,17 +58,18 @@ angular.module('starter.controllers')
         $scope.postCourseStep1=function(){
             var url=normalHost+URL_CONFIG.app.teach.postCourseStep1[urlStatus];
             //console.debug($scope.courseForm.dataModel);
-            $state.go("app.post_course_step_2",{});
-
-            /*$http({
+            
+            $http({
                 method:'POST',
                 url:url,
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 data:$scope.courseForm.dataModel
-            }).success(function(){
-
-            });*/
+            }).success(function(result){
+                if(result.status != null && result.status == "Success") {
+                    $state.go("app.post_course_step_2", {courseId: result.courseId});
+                }
+            });
         };
     }])
