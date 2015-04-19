@@ -143,6 +143,7 @@
   height: 40px;
   margin-bottom: 1px; }
   .course-detail-container .tabs .tab-item {
+    font-size: 16px;
     line-height: 40px;
     border-right: 1px solid #ddd; }
     .course-detail-container .tabs .tab-item:last-child {
@@ -156,8 +157,14 @@
     max-width: 50px;
     max-height: 50px; }
 
+.course-brief-intro {
+  line-height: 30px; }
+  .course-brief-intro .appointment-btn {
+    float: right;
+    padding: 0px 12px; }
+
 .desc-row {
-  font-size: 12px;
+  font-size: 14px;
   /*border-bottom: 1px solid #ddd;*/
   padding: 2px 0px; }
   .desc-row .row-label {
