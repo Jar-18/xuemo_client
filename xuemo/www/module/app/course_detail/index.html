@@ -2,7 +2,7 @@
     <ion-nav-bar class="bar-positive nav-title-slide-ios7">
         <ion-nav-back-button class="button-clear"><i class="icon ion-ios-arrow-back"></i> 返回</ion-nav-back-button>
     </ion-nav-bar>
-    <ion-content class="padding course-detail-container">
+    <ion-content class="course-detail-container">
         <div class="card">
             <div class="img-slider">
                 <ion-slide-box>
@@ -14,7 +14,13 @@
                 </ion-slide-box>
             </div>
         </div>
-        <a class="item teacher-brief-intro item-thumbnail-left">
+        <span class="course-brief-intro list padding item">
+            <p>
+                价格：<span class="price-section"><span class="price">{{course.price}}</span>/小时</span>
+                <button type="button" class="appointment-btn button button-small button-positive">预约</button>
+            </p>
+        </span>
+        <a class="list padding item teacher-brief-intro item-thumbnail-left">
             <img class="portrait"  ng-src="{{course.teacher.portrait|transformImgUrl}}">
             <p>
                 <span class="name" ng-bind="course.teacher.nickname"></span>
@@ -25,16 +31,15 @@
         <div class="list card">
             <div class="item tabs tabs-secondary tabs-icon-left">
                 <a ng-repeat="tabStatus in tabStatusList" class="tab-item" ng-class="{'tab-item-active positive':tabStatus==currentTabStatus}" ng-click="toggleTab(tabStatus)">
-                    {{ 'page.courseDetail.tab.'+tabStatus | translate }}
+                    <span class="tab-text">{{ 'page.courseDetail.tab.'+tabStatus | translate }}</span>
                 </a>
             </div>
             <ui-view name="course-detail"></ui-view>
         </div>
-
+        <div class="section-title">
+            <h2>TA的其它课程</h2>
+        </div>
         <div class="list">
-            <div class="item section-title">
-                <h2>相关课程</h2>
-            </div>
             <a ng-repeat="course in relatedCourseList" class="item course-card item-thumbnail-left" ng-href="#app/course_detail/{{course.id}}/course_intro">
                 <img ng-src="{{course.pics[0].name|transformImgUrl}}">
                 <h3 class="title">{{course.title}}（这里需要对字数进行控制）</h3>
@@ -45,7 +50,7 @@
                         <gender-age age="{{course.teacher.age}}" gender="{{course.teacher.gender}}"></gender-age>
                     </span>
                 </p>
-                <p><span class="location">陆家嘴正大星美广场</span><span class="price-section"><span class="price">{{course.price}}元</span>/小时</span></p>
+                <p><span class="location">陆家嘴正大星美广场</span><span class="price-section"><span class="price">{{course.price}}</span>/小时</span></p>
             </a>
         </div>
     </ion-content>

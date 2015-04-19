@@ -2,7 +2,7 @@
     <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
         <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> 返回</ion-nav-back-button>
     </ion-nav-bar>
-    <ion-content class="padding">
+    <ion-content class="">
         <div class="list">
 
             <a ng-repeat="course in courseList" class="item course-card item-thumbnail-left" ng-href="#app/course_detail/{{course.id}}/course_intro">
@@ -15,7 +15,7 @@
                         <gender-age age="{{course.teacher.age}}" gender="{{course.teacher.gender}}"></gender-age>
                     </span>
                 </p>
-                <p><span class="location">陆家嘴正大星美广场</span><span class="price-section"><span class="price">{{course.price}}元</span>/小时</span></p>
+                <p><span class="location">陆家嘴正大星美广场</span><span class="price-section"><span class="price">{{course.price}}</span>/小时</span></p>
             </a>
         </div>
 

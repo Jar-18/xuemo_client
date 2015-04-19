@@ -30,9 +30,9 @@ angular.module('starter')
         page:{
             courseDetail:{
                 tab:{
-                    courseIntro:"课程简介",
+                    courseIntro:"简介",
                     comment:"评论",
-                    appointmentRecord:"预约纪录"
+                    appointmentRecord:"预约记录"
                 }
             }
         }

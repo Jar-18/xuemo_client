@@ -1,4 +1,7 @@
-<div class="list">
+<div class="list comment-container">
+    <div ng-if="!loaded" class="loading-hint" ng-bind="loadingHintText">
+
+    </div>
     <a ng-repeat="comment in commentList" class="item comment-card">
         <p class="personal-info">
             <img class="portrait"  ng-src="{{comment.commentator.portrait|transformImgUrl}}">

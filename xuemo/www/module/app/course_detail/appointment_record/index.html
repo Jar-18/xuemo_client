@@ -1,4 +1,6 @@
-<div class="list">
+<div class="list appointment-container">
+    <div ng-if="!loaded" class="loading-hint" ng-bind="loadingHintText">
+    </div>
     <a ng-repeat="appointment in appointmentList" class="item appointment-card">
         <p class="personal-info">
             <img class="portrait"  ng-src="{{appointment.applicant.portrait|transformImgUrl}}">
