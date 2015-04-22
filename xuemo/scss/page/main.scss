@@ -163,6 +163,9 @@
     max-width: 50px;
     max-height: 50px;
   }
+  i {
+    color: gray;
+  }
 }
 .course-brief-intro{
   margin-top: -10px;
@@ -229,4 +232,15 @@
     color:gray;
     background-color:white
   }
+}
+
+.me-item {
+  color:gray !important;
+}
+
+/*Override ionic class
+  Need further disscussion
+*/
+.item-divider {
+  min-height: 20px;
 }
