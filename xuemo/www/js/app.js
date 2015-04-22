@@ -8,7 +8,8 @@ angular.module('starter.controllers', [
         'widget.chainSelector',
 
         'service.config',
-        'service.course'
+        'service.course',
+        'service.tmpStorage'
     ])
     .filter('transformImgUrl',['URL_CONFIG',function(URL_CONFIG){
         return function(imgName){
