@@ -1,0 +1,29 @@
+<ion-view class="personal-homepage" view-title="个人主页">
+    <ion-nav-bar class="nav-title-slide-ios7">
+        <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> 返回</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content>
+        <div class="front-cover">
+            <img class="portrait"  ng-src="{{userObj.portrait|transformImgUrl}}">
+            <span class="name-and-age">
+                <span class="name" ng-bind="userObj.nickname"></span>
+                <gender-age age="{{userObj.age}}" gender="{{userObj.gender}}"></gender-age>
+            </span>
+            <div class="social-info clearfix">
+                <span>关注<span class="person-num" ng-bind="userObj.attentionCount"></span></span>
+                <span>粉丝<span class="person-num" ng-bind="userObj.followerCount"></span></span>
+            </div>
+        </div>
+        <div class="btn-container">
+            <div>
+                <span class="button button-small">私信</span>
+                <span class="button button-small">＋关注</span>
+            </div>
+        </div>
+        <div class="courses-container">
+            <div class="list-wrapper">
+                <course-card course="course" ng-repeat="course in coursesList"></course-card>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

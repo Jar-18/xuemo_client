@@ -18,6 +18,9 @@ angular.module("service.config",[])
             },
             courseCategories:{
                 "online":"./json/widget/course_categories.json"
+            },
+            personalInfo:{
+                "online":"/users"
             }
         },
         app:{

@@ -1,0 +1,71 @@
+$portrait-width:50px;
+.personal-homepage{
+  .front-cover{
+    background:url(../../img/front-cover.jpg) no-repeat center;
+    height: 170px;
+    position: relative;
+    .portrait{
+      width: $portrait-width;
+      height: $portrait-width;
+      border-radius: 50%;
+      left: 50%;
+      position: absolute;
+      margin-left: -$portrait-width/2;
+      top: 50px;
+    }
+    .name-and-age{
+      position: absolute;
+      text-align: center;
+      display: block;
+      width: 100%;
+      top: 110px;
+      .name{
+        font-weight: bold;
+      }
+    }
+    .social-info{
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      &>span{
+        display: inline-block;
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+        &:first-child{
+          text-align: right;
+          padding-right: 10px;
+        }
+        &:last-child{
+          border-left: 1px solid #a2a2a2;
+          padding-left: 10px;
+        }
+      }
+      .person-num{
+        font-size: 14px;
+        font-weight: bold;
+        display: inline-block;
+        margin-left: 5px;
+      }
+    }
+  }
+  .btn-container{
+    margin-top: 15px;
+    text-align: center;
+    &>div{
+      display: inline-block;
+    }
+    .button{
+      width: 65px;
+      &:first-child{
+        margin-right: 15px;
+      }
+    }
+  }
+  .scroll-content{
+    top:0px;
+  }
+  .bar-header{
+    background: rgba(255,255,255,0.4);
+  }
+}

@@ -3,6 +3,7 @@
 @import "scss/widget/gender_age";
 @import "scss/widget/horizontal_selector";
 @import "scss/widget/chain_selector";
+@import "./personal_homepage";
 .appointment-container,.comment-container{
   min-height: 100px;
   .loading-hint{
@@ -144,7 +145,6 @@
         }
       }
       .tab-text{
-        display: inline-block;
         display: inline-block;
         width: 100%;
         height: 16px;

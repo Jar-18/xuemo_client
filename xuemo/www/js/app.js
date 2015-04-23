@@ -6,10 +6,12 @@ angular.module('starter.controllers', [
         'widget.genderAge',
         'widget.horizontalSelector',
         'widget.chainSelector',
+        'widget.courseCard',
 
         'service.config',
         'service.course',
-        'service.tmpStorage'
+        'service.tmpStorage',
+        'service.user'
     ])
     .filter('transformImgUrl',['URL_CONFIG',function(URL_CONFIG){
         return function(imgName){
@@ -128,8 +130,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
           url: '/find',
           views: {
               'tab-find': {
-                  templateUrl: 'templates/chat-detail.html',
-                  controller: 'ChatDetailCtrl'
+                  templateUrl: 'module/app/personal_homepage/index.html',
+                  controller: 'personalHomepageCtrl'
               }
           }
       })
