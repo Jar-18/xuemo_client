@@ -126,15 +126,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               }
           }
       })
-      .state('app.find', {
-          url: '/find',
-          views: {
-              'tab-find': {
-                  templateUrl: 'module/app/personal_homepage/index.html',
-                  controller: 'personalHomepageCtrl'
-              }
-          }
-      })
       .state('app.news', {
           url: '/news',
           views: {
@@ -150,6 +141,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               'tab-me': {
                   templateUrl: 'module/app/me/index.html',
                   controller: 'meCtrl'
+              }
+          }
+      })
+      .state('app.personal_homepage', {
+          url: '/personal_homepage',
+          views: {
+              'tab-me': {
+                  templateUrl: 'module/app/personal_homepage/index.html',
+                  controller: 'personalHomepageCtrl'
               }
           }
       })
