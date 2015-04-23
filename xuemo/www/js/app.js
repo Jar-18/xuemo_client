@@ -127,8 +127,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
           url: '/find',
           views: {
               'tab-find': {
-                  templateUrl: 'templates/chat-detail.html',
-                  controller: 'ChatDetailCtrl'
+                  templateUrl: 'module/app/personal_homepage/index.html',
+                  controller: 'personalHomepageCtrl'
               }
           }
       })

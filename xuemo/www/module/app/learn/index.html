@@ -2,9 +2,13 @@
     <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
         <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> 返回</ion-nav-back-button>
     </ion-nav-bar>
-    <ion-content class="">
-        <div class="list">
 
+    <ion-content scroller class="has-header">
+        <ion-refresher
+                pulling-text="下拉刷新"
+                on-refresh="refreshCourseList()">
+        </ion-refresher>
+        <ion-list>
             <a ng-repeat="course in courseList" class="item course-card item-thumbnail-left" ng-href="#app/course_detail/{{course.id}}/course_intro">
                 <img ng-src="{{course.pics[0].name|transformImgUrl}}">
                 <h3 class="title">{{course.title}}（这里需要对字数进行控制）</h3>
@@ -17,7 +21,11 @@
                 </p>
                 <p><span class="location">陆家嘴正大星美广场</span><span class="price-section"><span class="price">{{course.price}}</span>/小时</span></p>
             </a>
-        </div>
 
+        </ion-list>
+
+        <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="showMoreCourses()" distance="8%">
+        </ion-infinite-scroll>
     </ion-content>
+
 </ion-view>
