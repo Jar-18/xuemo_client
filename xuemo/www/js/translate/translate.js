@@ -7,7 +7,7 @@ angular.module('starter')
                 teach:"我要教",
                 find:"发现",
                 news:"消息",
-                account:"我的"
+                me:"我的"
             },
             city:{
 

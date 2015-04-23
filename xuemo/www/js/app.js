@@ -8,7 +8,8 @@ angular.module('starter.controllers', [
         'widget.chainSelector',
 
         'service.config',
-        'service.course'
+        'service.course',
+        'service.tmpStorage'
     ])
     .filter('transformImgUrl',['URL_CONFIG',function(URL_CONFIG){
         return function(imgName){
@@ -141,12 +142,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               }
           }
       })
-      .state('app.account', {
-          url: '/account',
+      .state('app.me', {
+          url: '/me',
           views: {
-              'tab-account': {
-                  templateUrl: 'templates/tab-account.html',
-                  controller: 'AccountCtrl'
+              'tab-me': {
+                  templateUrl: 'module/app/me/index.html',
+                  controller: 'meCtrl'
               }
           }
   });
