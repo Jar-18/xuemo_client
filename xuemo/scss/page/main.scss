@@ -238,9 +238,21 @@
   color:gray !important;
 }
 
-/*Override ionic class
-  Need further disscussion
-*/
-.item-divider {
-  min-height: 20px;
+.me-container {
+  .item-divider {
+    min-height: 20px;
+  }
+}
+
+.confirm-appointment-container {
+  .desc-row{
+    padding: 6px 0px;
+    font-size: 16px;
+    .row-value{
+      margin-left: 50px;
+    }
+    .course-desc-text{
+      text-indent: 35px;
+    }
+  }
 }

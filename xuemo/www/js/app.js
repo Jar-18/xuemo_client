@@ -152,7 +152,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
                   controller: 'meCtrl'
               }
           }
-  });
+      })
+      .state('app.confirm_appointment', {
+        url: '/confirm_appointment/:courseKey',
+        views: {
+          'tab-learn': {
+            templateUrl: 'module/app/learn/confirm_appointment/index.html',
+            controller: 'confirmAppointmentCtrl'
+          }
+        }
+      });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/learn');

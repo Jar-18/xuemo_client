@@ -1,0 +1,53 @@
+<ion-view view-title="确认预约">
+	<ion-content class="confirm-appointment-container">
+		<div class="list">
+			<div class="item">
+				<div class="desc-row">
+					<span class="row-label">科目</span>
+					<span class="row-value"  ng-bind="course.category.name"></span>
+				</div>
+				<div class="desc-row">
+					<span class="row-label">老师</span>
+					<span class="row-value"  ng-bind="course.teacher.nickname"></span>
+				</div>
+				<div class="desc-row">
+					<span class="row-label">区域</span>
+					<span class="row-value">
+						<span ng-repeat="district in course.districts">
+							{{district.name}}
+							<span ng-if="!$last&&course.districts.length!=1">,</span>
+						</span>
+					</span>
+				</div>
+				<div class="desc-row">
+					<span class="row-label">类型</span>
+					<span class="row-value">
+						<span ng-repeat="courseType in course.types">
+							{{ 'widget.courseType.'+courseType.id | translate }}
+							<span ng-if="!$last&&course.types.length!=1">,</span>
+						</span>
+					</span>
+				</div>
+				<div class="desc-row">
+					<span class="row-label">地点</span>
+					<span class="row-value">
+						<span ng-repeat="courseSite in course.sites">
+							{{ 'widget.courseSite.'+courseSite.id | translate }}
+							<span ng-if="!$last&&course.sites.length!=1">,</span>
+						</span>
+					</span>
+				</div>
+				<div class="desc-row">
+					<span class="row-label">补充</span>
+					<span class="row-value" style="border:gray solid 1px;width:70%;">
+						<textarea rows="5" style="border-size:2px;"></textarea>
+					</span>
+				</div>
+				<div class="form-row">
+					<button ng-click="uploadFiles()" class="button button-positive button-block">现在预约</button>
+				</div>
+
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,7 +1,7 @@
 angular.module('starter.controllers')
 
     .controller('courseDetailCtrl', ['$scope','courseService','$state','$ionicSlideBoxDelegate','tmpStorageService',
-        function($scope,courseService,$state,$ionicSlideBoxDelegate,$tmpStorageService) {
+        function($scope,courseService,$state,$ionicSlideBoxDelegate,tmpStorageService) {
             var courseId=$state.params.courseId;
             $scope.course={};
             courseService.getCoursePromise(courseId).success(function(result){
@@ -35,7 +35,8 @@ angular.module('starter.controllers')
                 passedCourse.types = $scope.course.types;
                 passedCourse.price = $scope.course.price;
                 console.log(passedCourse);
-                $tmpStorageService.storeObject('FromCourseDetailPage', passedCourse);
-                console.log($tmpStorageService.retriveObjectAndDestroy('FromCourseDetailPage'));
+                var courseKey = 'FromCourseDetailPage';
+                tmpStorageService.storeObject(courseKey, passedCourse);
+                $state.go("app.confirm_appointment", {courseKey: courseKey});
             }
         }])
