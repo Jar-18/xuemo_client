@@ -3,14 +3,26 @@ angular.module("service.user",['service.config'])
         var urlStatus=URL_CONFIG.status;
         var normalHost=URL_CONFIG.host.normalHost;
         return{
-            getPersonalInfoPromise:function(courseId,params){
+            getPersonalInfoPromise:function(userId,params){
                 if(!params){
                     params={};
                 }
-                var url=normalHost+URL_CONFIG.app.learn.courseList[urlStatus];
-                if(courseId){
-                    url=url+"/"+courseId;
+                var url=normalHost+URL_CONFIG.common.personalInfo[urlStatus];
+                if(userId){
+                    url=url+"/"+userId;
                 }
+                var personalInfoPromise=$http({
+                    method:'GET',
+                    url:url,
+                    params:params
+                });
+                return personalInfoPromise;
+            },
+            getTeachingCoursesPromise:function(params){
+                if(!params){
+                    params={};
+                }
+                var url=normalHost+URL_CONFIG.app.learn.relatedCourseList[urlStatus];
                 var courseListPromise=$http({
                     method:'GET',
                     url:url,

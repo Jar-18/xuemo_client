@@ -1,0 +1,12 @@
+<a class="item course-card item-thumbnail-left" ng-href="#app/course_detail/{{course.id}}/course_intro">
+    <img ng-src="{{course.pics[0].name|transformImgUrl}}">
+    <h3 class="title">{{course.title}}（这里需要对字数进行控制）</h3>
+    <p>
+        <rating-star mark="{{course.rating}}"></rating-star>
+                    <span class="teacher-section">
+                        <span class="name" ng-bind="course.teacher.nickname"></span>
+                        <gender-age age="{{course.teacher.age}}" gender="{{course.teacher.gender}}"></gender-age>
+                    </span>
+    </p>
+    <p><span class="location">陆家嘴正大星美广场</span><span class="price-section"><span class="price">{{course.price}}</span>/小时</span></p>
+</a>

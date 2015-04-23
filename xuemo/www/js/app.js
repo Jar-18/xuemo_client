@@ -6,10 +6,12 @@ angular.module('starter.controllers', [
         'widget.genderAge',
         'widget.horizontalSelector',
         'widget.chainSelector',
+        'widget.courseCard',
 
         'service.config',
         'service.course',
-        'service.tmpStorage'
+        'service.tmpStorage',
+        'service.user'
     ])
     .filter('transformImgUrl',['URL_CONFIG',function(URL_CONFIG){
         return function(imgName){
