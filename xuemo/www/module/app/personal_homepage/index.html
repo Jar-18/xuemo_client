@@ -20,10 +20,47 @@
                 <span class="button button-small">＋关注</span>
             </div>
         </div>
-        <div class="courses-container">
-            <div class="list-wrapper">
-                <course-card course="course" ng-repeat="course in coursesList"></course-card>
+        <div class="item brief-intro-container">
+            <div class="desc-row">
+                <span class="row-label">地区</span>
+                <span class="row-value"  ng-bind="userObj.district.name"></span>
             </div>
+            <div class="desc-row">
+                <span class="row-label">简介</span><span class="row-value" ng-bind="userObj.motto"></span>
+        </span>
+            </div>
+            <div class="desc-row">
+                <span class="row-label">星座</span>
+            <span class="row-value">
+                <span>{{ 'widget.constellation.'+userObj.constellation | translate }}</span>
+            </span>
+            </div>
+            <div class="desc-row">
+                <span class="row-label">爱好</span>
+            <span class="row-value">
+                <span ng-repeat="interest in userObj.interests">{{ 'widget.interests.'+interest.id | translate }}<span ng-if="!$last&&course.sites.length!=1">, </span></span></span>
+            </div>
+        </div>
+        <div class="section-title">
+            <h2>TA想学的课程</h2>
+        </div>
+        <div class="item desired-courses-container">
+            <ul class="clearfix">
+                <li>钢琴</li>
+                <li>钢琴</li>
+                <li>钢琴</li>
+                <li>钢琴</li>
+                <li>钢琴</li>
+                <li>钢琴</li>
+                <li>钢琴</li>
+                <li>钢琴</li>
+            </ul>
+        </div>
+        <div class="section-title">
+            <h2>TA的其它课程</h2>
+        </div>
+        <div class="courses-card-container">
+            <course-card course="course" ng-repeat="course in coursesList"></course-card>
         </div>
     </ion-content>
 </ion-view>
