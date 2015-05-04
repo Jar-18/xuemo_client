@@ -12,7 +12,7 @@
             <top-filter></top-filter>
         </div>
         <ion-list>
-            <a ng-repeat="course in courseList" class="item course-card item-thumbnail-left" ng-href="#app/course_detail/{{course.id}}/course_intro">
+            <a ng-repeat="course in courseList" class="item course-card item-thumbnail-left" ng-href="#course_detail/{{course.id}}/course_intro">
                 <img ng-src="{{course.pics[0].name|transformImgUrl}}">
                 <h3 class="title">{{course.title}}（这里需要对字数进行控制）</h3>
                 <p>

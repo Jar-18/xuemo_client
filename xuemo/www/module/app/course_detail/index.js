@@ -12,7 +12,7 @@ angular.module('starter.controllers')
             $scope.currentTabStatus="courseIntro";
             $scope.toggleTab=function(status){
                 $scope.currentTabStatus=status;
-                var parentStatus="app.course_detail";
+                var parentStatus="course_detail";
                 $state.go(parentStatus+"."+status,$state.params);
             };
 

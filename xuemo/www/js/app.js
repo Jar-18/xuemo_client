@@ -46,6 +46,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
     }
   });
 })
+
 .config(function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
@@ -57,8 +58,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
   // setup an abstract state for the tabs directive
       .state('app', {
           url: "/app",
-          controller: 'mainTabsCtrl',
-          templateUrl: "module/app/tabs/index.html"
+          views:{
+              'app':{
+                  abstract: true,
+                  templateUrl: 'module/app/tabs/index.html'
+              }
+          }
       })
 
       // Each tab has its own nav history stack:
@@ -66,22 +71,22 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.learn', {
           url: '/learn',
           views: {
-              'tab-main': {
+              'tab-learn': {
                   templateUrl: 'module/app/learn/index.html',
                   controller: 'learnCtrl'
               }
           }
       })
-      .state('app.course_detail', {
+      .state('course_detail', {
           url: '/course_detail/:courseId',
           views: {
-              'tab-main': {
+              'app': {
                   templateUrl: 'module/app/course_detail/index.html',
                   controller: 'courseDetailCtrl'
               }
           }
       })
-      .state('app.course_detail.courseIntro', {
+      .state('course_detail.courseIntro', {
           url: '/course_intro',
           views: {
               'course-detail': {
@@ -90,7 +95,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               }
           }
       })
-      .state('app.course_detail.comment', {
+      .state('course_detail.comment', {
           url: '/comment',
           views: {
               'course-detail': {
@@ -99,7 +104,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               }
           }
       })
-      .state('app.course_detail.appointmentRecord', {
+      .state('course_detail.appointmentRecord', {
           url: '/appointment_record',
           views: {
               'course-detail': {
@@ -111,7 +116,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.teach', {
           url: '/teach',
           views: {
-              'tab-main': {
+              'tab-teach': {
                   templateUrl: 'module/app/teach/index.html',
                   controller: 'teachCtrl'
               }
@@ -120,7 +125,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.post_course_step_2', {
           url: '/post_course_step_2/:courseId',
           views: {
-              'tab-main': {
+              'tab-teach': {
                   templateUrl: 'module/app/teach/post_course_step_2/index.html',
                   controller: 'postCourseStep2Ctrl'
               }
@@ -129,7 +134,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.news', {
           url: '/news',
           views: {
-              'tab-main': {
+              'tab-news': {
                   templateUrl: 'templates/chat-detail.html',
                   controller: 'ChatDetailCtrl'
               }
@@ -138,7 +143,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.me', {
           url: '/me',
           views: {
-              'tab-main': {
+              'tab-me': {
                   templateUrl: 'module/app/me/index.html',
                   controller: 'meCtrl'
               }
@@ -147,7 +152,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.personal_homepage', {
           url: '/personal_homepage',
           views: {
-              'tab-main': {
+              'tab-me': {
                   templateUrl: 'module/app/personal_homepage/index.html',
                   controller: 'personalHomepageCtrl'
               }
@@ -156,7 +161,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.confirm_appointment', {
         url: '/confirm_appointment/:courseKey',
         views: {
-          'tab-main': {
+          'tab-learn': {
             templateUrl: 'module/app/learn/confirm_appointment/index.html',
             controller: 'confirmAppointmentCtrl'
           }
