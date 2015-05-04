@@ -1,0 +1,37 @@
+<nav class="top-filter-wrapper">
+<div class="tab-container">
+    <span ng-repeat="filterItem in transformedFilterData"
+          ng-class="{'active':activeFilterKey==filterItem.key}"
+          ng-click="toggleTab(filterItem.key)">{{getFilterName(filterItem,$index)}}</span>
+</div>
+
+<div ng-repeat="filterItem in transformedFilterData" ng-class="{'show':activeFilterKey==filterItem.key}" class="level-item-container">
+    <div ng-if="filterItem.category=='linkage'">
+        <ul class="level-list level1-list">
+            <li ng-click="level1Clicked($parent.$index,level1Item.data.id,'linkage')"
+                ng-repeat="level1Item in filterItem.data"
+                ng-class="{'active':activeItemList[$parent.$index].level1==level1Item.data.id}">
+                <span class="option-name" ng-bind="level1Item.data.name"></span>
+            </li>
+        </ul>
+
+        <ul class="level-list level2-list">
+            <li ng-click="level2Clicked($parent.$index,level2Item.data.id)"
+                ng-class="{'active':activeItemList[$parent.$index].level2==level2Item.data.id}"
+                ng-repeat="level2Item in currentLevel2List[filterItem.key]">
+                <span class="option-name" ng-bind="level2Item.data.name"></span>
+            </li>
+        </ul>
+    </div>
+    <div ng-if="filterItem.category=='single'">
+        <ul class="level-list single-list">
+            <li ng-click="level1Clicked($parent.$index,level1Item.id,'single')"
+                ng-class="{'active':activeItemList[$parent.$index].level1==level1Item.id}"
+                ng-repeat="level1Item in filterItem.data">
+                <span class="option-name" ng-bind="level1Item.name"></span>
+            </li>
+        </ul>
+    </div>
+
+</div>
+</nav>

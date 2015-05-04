@@ -1,3 +1,4 @@
+/*顶部过滤条的配置*/
 .stars-wrapper {
   position: relative;
   display: inline-block;
@@ -28,6 +29,7 @@
   .gender-age.female {
     background: #fa96c4; }
 
+/*顶部过滤条的配置*/
 .horizontal-selector-wrapper {
   display: inline-block; }
   .horizontal-selector-wrapper .selector-item {
@@ -41,6 +43,7 @@
       background: #387ef5;
       color: #fff; }
 
+/*顶部过滤条的配置*/
 /*.chain-selector-wrapper{
   display: inline-block;
   .selector-item{
@@ -76,9 +79,99 @@
         background: #387ef5;
         color: #fff; }
 
+/*顶部过滤条的配置*/
+.top-filter-wrapper {
+  z-index: 200;
+  position: relative; }
+  .top-filter-wrapper .tab-container {
+    width: 100%;
+    height: 40px;
+    top: 0;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 12; }
+    .top-filter-wrapper .tab-container > span {
+      display: inline-block;
+      float: left;
+      width: 33.33%;
+      box-sizing: border-box;
+      line-height: 40px;
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+      .top-filter-wrapper .tab-container > span:after {
+        content: "";
+        display: inline-block;
+        margin-left: 7px;
+        margin-bottom: 3px;
+        width: 6px;
+        height: 6px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid #666;
+        border-width: 1px 0 0 1px;
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+        transition-duration: 300ms;
+        -webkit-transition-duration: 300ms; }
+      .top-filter-wrapper .tab-container > span.active:after {
+        border-color: #387ef5;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-bottom: 0; }
+  .top-filter-wrapper .level-item-container {
+    position: absolute;
+    z-index: 11;
+    width: 100%;
+    background-color: #f8f8f8;
+    top: 40px;
+    height: 0px;
+    overflow: hidden;
+    transition-duration: 0ms;
+    -webkit-transition-duration: 0ms;
+    transition-property: height; }
+    .top-filter-wrapper .level-item-container.show {
+      transition-duration: 600ms;
+      -webkit-transition-duration: 600ms;
+      height: 320px; }
+    .top-filter-wrapper .level-item-container .level-list {
+      float: left;
+      width: 50%;
+      height: 320px;
+      box-sizing: border-box;
+      overflow: hidden; }
+      .top-filter-wrapper .level-item-container .level-list.single-list {
+        width: 100%; }
+        .top-filter-wrapper .level-item-container .level-list.single-list li {
+          background-color: #f8f8f8; }
+          .top-filter-wrapper .level-item-container .level-list.single-list li.active {
+            color: #387ef5; }
+      .top-filter-wrapper .level-item-container .level-list li {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        box-sizing: border-box;
+        font-size: 14px;
+        color: #111;
+        border-bottom: 1px solid #e2e2e2;
+        background-color: #eee;
+        padding-left: 18px; }
+    .top-filter-wrapper .level-item-container .level1-list li {
+      background-color: #f8f8f8;
+      border-right: 1px solid #e0e0e0; }
+      .top-filter-wrapper .level-item-container .level1-list li.active {
+        background-color: #eee;
+        color: #387ef5; }
+    .top-filter-wrapper .level-item-container .level2-list li.active {
+      color: #387ef5; }
+
+/*顶部过滤条的配置*/
 .personal-homepage .front-cover {
   background: url(../../img/front-cover.jpg) no-repeat center;
-  height: 170px;
+  height: 140px;
   position: relative;
   color: #ffffff; }
   .personal-homepage .front-cover .portrait {
@@ -88,13 +181,13 @@
     left: 50%;
     position: absolute;
     margin-left: -25px;
-    top: 50px; }
+    top: 20px; }
   .personal-homepage .front-cover .name-and-age {
     position: absolute;
     text-align: center;
     display: block;
     width: 100%;
-    top: 110px; }
+    top: 80px; }
     .personal-homepage .front-cover .name-and-age .name {
       font-weight: bold;
       font-size: 15px; }
@@ -120,7 +213,8 @@
       margin-left: 5px; }
 .personal-homepage .btn-container {
   margin-top: 10px;
-  text-align: center; }
+  text-align: center;
+  padding: 10px 0px; }
   .personal-homepage .btn-container > div {
     display: inline-block; }
   .personal-homepage .btn-container .button {
@@ -145,10 +239,6 @@
       float: left; }
 .personal-homepage .brief-intro-container, .personal-homepage .desired-courses-container {
   margin: 10px 0px; }
-.personal-homepage .scroll-content {
-  top: 0px; }
-.personal-homepage .bar-header {
-  background: rgba(255, 255, 255, 0.4); }
 
 .appointment-container, .comment-container {
   min-height: 100px; }
@@ -319,8 +409,13 @@
 .me-item {
   color: gray !important; }
 
-/*Override ionic class
-  Need further disscussion
-*/
-.item-divider {
+.me-container .item-divider {
   min-height: 20px; }
+
+.confirm-appointment-container .desc-row {
+  padding: 6px 0px;
+  font-size: 16px; }
+  .confirm-appointment-container .desc-row .row-value {
+    margin-left: 50px; }
+  .confirm-appointment-container .desc-row .course-desc-text {
+    text-indent: 35px; }

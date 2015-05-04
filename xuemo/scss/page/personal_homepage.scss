@@ -1,8 +1,9 @@
+@import "../widget/varible";
 $portrait-width:50px;
 .personal-homepage{
   .front-cover{
     background:url(../../img/front-cover.jpg) no-repeat center;
-    height: 170px;
+    height: 140px;
     position: relative;
     color: #ffffff;
     .portrait{
@@ -12,14 +13,14 @@ $portrait-width:50px;
       left: 50%;
       position: absolute;
       margin-left: -$portrait-width/2;
-      top: 50px;
+      top: 20px;
     }
     .name-and-age{
       position: absolute;
       text-align: center;
       display: block;
       width: 100%;
-      top: 110px;
+      top: 80px;
       .name{
         font-weight: bold;
         font-size: 15px;
@@ -54,6 +55,7 @@ $portrait-width:50px;
   .btn-container{
     margin-top: 10px;
     text-align: center;
+    padding: 10px 0px;
     &>div{
       display: inline-block;
     }
@@ -88,9 +90,9 @@ $portrait-width:50px;
     margin: 10px 0px;
   }
   .scroll-content{
-    top:0px;
+   // top:0px;
   }
   .bar-header{
-    background: rgba(255,255,255,0.4);
+    //background: rgba(255,255,255,0.4);
   }
 }

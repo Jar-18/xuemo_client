@@ -7,6 +7,7 @@ angular.module('starter.controllers', [
         'widget.horizontalSelector',
         'widget.chainSelector',
         'widget.courseCard',
+        'widget.topFilter',
 
         'service.config',
         'service.course',

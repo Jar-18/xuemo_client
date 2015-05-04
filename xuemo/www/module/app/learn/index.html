@@ -8,6 +8,9 @@
                 pulling-text="下拉刷新"
                 on-refresh="refreshCourseList()">
         </ion-refresher>
+        <div>
+            <top-filter></top-filter>
+        </div>
         <ion-list>
             <a ng-repeat="course in courseList" class="item course-card item-thumbnail-left" ng-href="#app/course_detail/{{course.id}}/course_intro">
                 <img ng-src="{{course.pics[0].name|transformImgUrl}}">
