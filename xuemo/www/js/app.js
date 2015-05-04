@@ -58,8 +58,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
   // setup an abstract state for the tabs directive
       .state('app', {
           url: "/app",
-          abstract: true,
-          templateUrl: "templates/tabs.html"
+          controller: 'mainTabsCtrl',
+          templateUrl: "module/app/tabs/index.html"
       })
 
       // Each tab has its own nav history stack:
@@ -67,7 +67,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.learn', {
           url: '/learn',
           views: {
-              'tab-learn': {
+              'tab-main': {
                   templateUrl: 'module/app/learn/index.html',
                   controller: 'learnCtrl'
               }
@@ -76,7 +76,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.course_detail', {
           url: '/course_detail/:courseId',
           views: {
-              'tab-learn': {
+              'tab-main': {
                   templateUrl: 'module/app/course_detail/index.html',
                   controller: 'courseDetailCtrl'
               }
@@ -112,7 +112,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.teach', {
           url: '/teach',
           views: {
-              'tab-teach': {
+              'tab-main': {
                   templateUrl: 'module/app/teach/index.html',
                   controller: 'teachCtrl'
               }
@@ -121,7 +121,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.post_course_step_2', {
           url: '/post_course_step_2/:courseId',
           views: {
-              'tab-teach': {
+              'tab-main': {
                   templateUrl: 'module/app/teach/post_course_step_2/index.html',
                   controller: 'postCourseStep2Ctrl'
               }
@@ -130,7 +130,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.news', {
           url: '/news',
           views: {
-              'tab-news': {
+              'tab-main': {
                   templateUrl: 'templates/chat-detail.html',
                   controller: 'ChatDetailCtrl'
               }
@@ -139,7 +139,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.me', {
           url: '/me',
           views: {
-              'tab-me': {
+              'tab-main': {
                   templateUrl: 'module/app/me/index.html',
                   controller: 'meCtrl'
               }
@@ -148,7 +148,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.personal_homepage', {
           url: '/personal_homepage',
           views: {
-              'tab-me': {
+              'tab-main': {
                   templateUrl: 'module/app/personal_homepage/index.html',
                   controller: 'personalHomepageCtrl'
               }
@@ -157,7 +157,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.confirm_appointment', {
         url: '/confirm_appointment/:courseKey',
         views: {
-          'tab-learn': {
+          'tab-main': {
             templateUrl: 'module/app/learn/confirm_appointment/index.html',
             controller: 'confirmAppointmentCtrl'
           }

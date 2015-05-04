@@ -52,15 +52,10 @@
     width: 100%;
     background-color: #f8f8f8;
     top: $filter-height;
-    height: 0px;
+    display: none;
     overflow: hidden;
-    transition-duration: 0ms;
-    -webkit-transition-duration: 0ms;
-    transition-property: height;
     &.show{
-      transition-duration: 600ms;
-      -webkit-transition-duration: 600ms;
-      height: $level-container-height;
+      display: inline-block;
     }
     .level-list{
       float: left;
@@ -70,6 +65,7 @@
       overflow: hidden;
       &.single-list{
         width: 100%;
+        height: inherit;
         li{
           background-color: #f8f8f8;
           &.active {

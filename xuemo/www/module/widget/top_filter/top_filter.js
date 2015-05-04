@@ -13,6 +13,8 @@ angular.module("widget.topFilter",[])
                     level2:"6"
                 },{
                     level1:"3"
+                },{
+                    level1:""
                 }];
                 var districts=[
                     {
@@ -98,6 +100,25 @@ angular.module("widget.topFilter",[])
                         "name":"羽毛球"
                     }
                 ];
+                var sortList=[
+                    {
+                        "parentId":"1",
+                        "id":"2",
+                        "name":"最近时间"
+                    },{
+                        "parentId":"1",
+                        "id":"3",
+                        "name":"最新发布"
+                    },{
+                        "parentId":"1",
+                        "id":"4",
+                        "name":"人气最高"
+                    },{
+                        "parentId":"1",
+                        "id":"5",
+                        "name":"离我最近"
+                    }
+                ];
                 $scope.filterData=[{
                     name:"区域",
                     key:"districts",
@@ -108,6 +129,11 @@ angular.module("widget.topFilter",[])
                     key:"categories",
                     category:"single",//一级
                     data:categories
+                },{
+                    name:"排序",
+                    key:"sort",
+                    category:"single",//一级
+                    data:sortList
                 }
                 ];
                 $scope.activeFilterKey="";
