@@ -67,9 +67,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       })
 
       // Each tab has its own nav history stack:
-
       .state('app.learn', {
-          url: '/learn',
+          url: '/learn/:district/:category/:sort',
           views: {
               'tab-learn': {
                   templateUrl: 'module/app/learn/index.html',
@@ -169,6 +168,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/learn');
+  $urlRouterProvider.otherwise('/app/learn/8/2/2');
 
 });

@@ -9,7 +9,7 @@
                 on-refresh="refreshCourseList()">
         </ion-refresher>
         <div>
-            <top-filter></top-filter>
+            <top-filter active-item-list="activeFilterList"></top-filter>
         </div>
         <ion-list>
             <a ng-repeat="course in courseList" class="item course-card item-thumbnail-left" ng-href="#course_detail/{{course.id}}/course_intro">

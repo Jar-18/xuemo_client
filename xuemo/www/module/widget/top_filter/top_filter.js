@@ -5,17 +5,9 @@ angular.module("widget.topFilter",[])
             templateUrl: './module/widget/top_filter/top_filter.html',
             replace:true,
             scope:{
-                mark:'@'
+                activeItemList:'='
             },
             controller:['$scope',function($scope){
-                $scope.activeItemList=[{
-                    level1:"2",
-                    level2:"6"
-                },{
-                    level1:"3"
-                },{
-                    level1:""
-                }];
                 var districts=[
                     {
                         "parentId":"1",
@@ -150,6 +142,9 @@ angular.module("widget.topFilter",[])
                         var currentDataItem=$scope.filterData[filterIndex];
                         $scope.dictionary[currentDataItem.key]={};
                         for(var itemIndex=0;itemIndex<currentDataItem.data.length;itemIndex++){
+                            if($scope.activeItemList[filterIndex].level2!==undefined&&$scope.activeItemList[filterIndex].level2==currentDataItem.data[itemIndex].id){
+                                $scope.activeItemList[filterIndex].level1=currentDataItem.data[itemIndex].parentId;
+                            }
                             $scope.dictionary[currentDataItem.key][currentDataItem.data[itemIndex].id]=currentDataItem.data[itemIndex].name;
                         }
                     }

@@ -1,6 +1,15 @@
 angular.module('starter.controllers')
 
-    .controller('learnCtrl', ['$scope','courseService',function($scope,courseService) {
+    .controller('learnCtrl', ['$scope','courseService','$state',function($scope,courseService,$state) {
+        var routerParams=$state.params;
+        $scope.activeFilterList=[{
+            level1:"",
+            level2:routerParams.district
+        },{
+            level1:routerParams.category
+        },{
+            level1:routerParams.sort
+        }];
         $scope.courseList=[];
         $scope.noMoreItemsAvailable = false;
         $scope.pageNumber=1;
