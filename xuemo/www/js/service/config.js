@@ -2,8 +2,8 @@ angular.module("service.config",[])
     .constant("URL_CONFIG",{
         status:"online",
         host:{
-          normalHost:"http://192.168.1.3:3001",
-          imgHost:"http://192.168.1.3:3001"
+          normalHost:"http://192.168.2.5:3001",
+          imgHost:"http://192.168.2.5:3001"
         },
         common:{
             imgApi:"/images",

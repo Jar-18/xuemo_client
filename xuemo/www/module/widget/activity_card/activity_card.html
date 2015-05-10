@@ -1,12 +1,12 @@
-<a class="item course-card item-thumbnail-left" ng-href="#course_detail/{{course.id}}/course_intro">
+<a class="item activity-card item-thumbnail-left" ng-href="">
     <img ng-src="{{course.pics[0].name|transformImgUrl}}">
-    <h3 class="title">{{course.title}}（这里需要对字数进行控制）</h3>
+    <h2 class="title">这里需要对字数进行控制）</h2>
+    <p><span class="icon ion-ios-location-outline"></span><span class="location">陆家嘴正大1星美广场</span></p>
+    <p><span class="icon ion-ios-calendar-outline"></span><span class="time">2015年5月5日 14:00</span></p>
     <p>
-        <rating-star mark="{{course.rating}}"></rating-star>
-                    <span class="teacher-section">
-                        <span class="name" ng-bind="course.teacher.nickname"></span>
-                        <gender-age age="{{course.teacher.age}}" gender="{{course.teacher.gender}}"></gender-age>
-                    </span>
+        <span class="category">厨艺</span>
+        <span class="icon ion-person"></span><span class="person-num">30人</span>
+        <span class="distance">2.3公里</span>
     </p>
-    <p><span class="location">陆家嘴正大1星美广场</span><span class="price-section"><span class="price">{{course.price}}</span>/小时</span></p>
+    <span class="time-span">今天</span>
 </a>
