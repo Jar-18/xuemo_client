@@ -1,11 +1,11 @@
 <a class="item activity-card item-thumbnail-left" ng-href="">
-    <img ng-src="{{course.pics[0].name|transformImgUrl}}">
-    <h2 class="title">这里需要对字数进行控制）</h2>
-    <p><span class="icon ion-ios-location-outline"></span><span class="location">陆家嘴正大1星美广场</span></p>
-    <p><span class="icon ion-ios-calendar-outline"></span><span class="time">2015年5月5日 14:00</span></p>
+    <img ng-src="{{activity.pics[0].name|transformImgUrl}}">
+    <h2 class="title" ng-bind="activity.title"></h2>
+    <p><span class="icon ion-ios-location-outline"></span><span class="location" ng-bind="activity.location"></span></p>
+    <p><span class="icon ion-ios-calendar-outline"></span><span class="time">{{activity.startTime}}</span></p>
     <p>
-        <span class="category">厨艺</span>
-        <span class="icon ion-person"></span><span class="person-num">30人</span>
+        <span class="category" ng-bind="activity.category.name">厨艺</span>
+        <span class="icon ion-person"></span><span class="person-num">{{activity.attendantCount}}人</span>
         <span class="distance">2.3公里</span>
     </p>
     <span class="time-span">今天</span>

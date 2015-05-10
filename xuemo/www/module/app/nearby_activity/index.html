@@ -6,16 +6,16 @@
     <ion-content scroller class="has-header">
         <ion-refresher
                 pulling-text="下拉刷新"
-                on-refresh="refreshCourseList()">
+                on-refresh="refresh()">
         </ion-refresher>
         <div>
             <top-filter active-item-list="activeFilterList"></top-filter>
         </div>
         <ion-list>
-            <activity-card></activity-card>
+            <activity-card activity="activity" ng-repeat="activity in activityList"></activity-card>
         </ion-list>
 
-        <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="showMoreCourses()" distance="8%">
+        <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="showMore()" distance="8%">
         </ion-infinite-scroll>
     </ion-content>
 

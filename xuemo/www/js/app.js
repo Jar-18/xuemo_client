@@ -12,6 +12,7 @@ angular.module('starter.controllers', [
 
         'service.config',
         'service.course',
+        'service.activity',
         'service.tmpStorage',
         'service.user'
     ])

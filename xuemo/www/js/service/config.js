@@ -40,6 +40,13 @@ angular.module("service.config",[])
                 postCourseStep1:{
                     "online":"/courses"
                 }
+            },
+            find:{
+                nearbyActivity:{
+                    activityList:{
+                        "online":"/activities"
+                    }
+                }
             }
         }
     });
