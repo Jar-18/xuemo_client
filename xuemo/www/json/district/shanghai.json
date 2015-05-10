@@ -24,9 +24,9 @@
 	"name": "瑞金宾馆区",
 	"parentId": 2
 }, {
-	"fullName": "上海,卢湾区,打",
+	"fullName": "上海,卢湾区,打浦桥",
 	"id": 6,
-	"name": "打",
+	"name": "打浦桥",
 	"parentId": 2
 }, {
 	"fullName": "上海,徐汇区",
@@ -79,9 +79,9 @@
 	"name": "上海南站",
 	"parentId": 7
 }, {
-	"fullName": "上海,徐汇区,光",
+	"fullName": "上海,徐汇区,光启城",
 	"id": 17,
-	"name": "光",
+	"name": "光启城",
 	"parentId": 7
 }, {
 	"fullName": "上海,静安区",
@@ -104,9 +104,9 @@
 	"name": "曹家渡",
 	"parentId": 18
 }, {
-	"fullName": "上海,静安区,同",
+	"fullName": "上海,静安区,同乐坊",
 	"id": 22,
-	"name": "同",
+	"name": "同乐坊",
 	"parentId": 18
 }, {
 	"fullName": "上海,长宁区",
@@ -144,9 +144,9 @@
 	"name": "动物园/虹桥机场",
 	"parentId": 23
 }, {
-	"fullName": "上海,长宁区,北",
+	"fullName": "上海,长宁区,北新泾",
 	"id": 30,
-	"name": "北",
+	"name": "北新泾",
 	"parentId": 23
 }, {
 	"fullName": "上海,闵行区",
@@ -244,9 +244,9 @@
 	"name": "金平路步行街",
 	"parentId": 31
 }, {
-	"fullName": "上海,闵行区,仲盛商业",
+	"fullName": "上海,闵行区,仲盛商业中心",
 	"id": 50,
-	"name": "仲盛商业",
+	"name": "仲盛商业中心",
 	"parentId": 31
 }, {
 	"fullName": "上海,浦东新区",
@@ -379,9 +379,9 @@
 	"name": "航头",
 	"parentId": 51
 }, {
-	"fullName": "上海,浦东新区,",
+	"fullName": "上海,浦东新区,高行",
 	"id": 77,
-	"name": "",
+	"name": "高行",
 	"parentId": 51
 }, {
 	"fullName": "上海,黄浦区",
@@ -414,9 +414,9 @@
 	"name": "老西门",
 	"parentId": 78
 }, {
-	"fullName": "上海,黄浦区,董",
+	"fullName": "上海,黄浦区,董家渡",
 	"id": 84,
-	"name": "董",
+	"name": "董家渡",
 	"parentId": 78
 }, {
 	"fullName": "上海,普陀区",
@@ -464,9 +464,9 @@
 	"name": "梅川路",
 	"parentId": 85
 }, {
-	"fullName": "上海,普陀区,中山北路/甘泉",
+	"fullName": "上海,普陀区,中山北路/甘泉地区",
 	"id": 94,
-	"name": "中山北路/甘泉",
+	"name": "中山北路/甘泉地区",
 	"parentId": 85
 }, {
 	"fullName": "上海,闸北区",
@@ -514,9 +514,9 @@
 	"name": "市北工业园/汶水路",
 	"parentId": 95
 }, {
-	"fullName": "上海,闸北区,彭",
+	"fullName": "上海,闸北区,彭浦镇",
 	"id": 104,
-	"name": "彭",
+	"name": "彭浦镇",
 	"parentId": 95
 }, {
 	"fullName": "上海,虹口区",
@@ -559,9 +559,9 @@
 	"name": "凉城/江湾镇",
 	"parentId": 105
 }, {
-	"fullName": "上海,虹口区,赤",
+	"fullName": "上海,虹口区,赤峰路",
 	"id": 113,
-	"name": "赤",
+	"name": "赤峰路",
 	"parentId": 105
 }, {
 	"fullName": "上海,杨浦区",
@@ -594,9 +594,9 @@
 	"name": "平凉路",
 	"parentId": 114
 }, {
-	"fullName": "上海,杨浦区,鞍山",
+	"fullName": "上海,杨浦区,鞍山新村",
 	"id": 120,
-	"name": "鞍山",
+	"name": "鞍山新村",
 	"parentId": 114
 }, {
 	"fullName": "上海,宝山区",
@@ -659,9 +659,9 @@
 	"name": "高境",
 	"parentId": 121
 }, {
-	"fullName": "上海,宝山区,",
+	"fullName": "上海,宝山区,淞南",
 	"id": 133,
-	"name": "",
+	"name": "淞南",
 	"parentId": 121
 }, {
 	"fullName": "上海,松江区",
@@ -749,9 +749,9 @@
 	"name": "鹿都国际商业广场",
 	"parentId": 134
 }, {
-	"fullName": "上海,松江区,松江",
+	"fullName": "上海,松江区,松江万达",
 	"id": 151,
-	"name": "松江",
+	"name": "松江万达",
 	"parentId": 134
 }, {
 	"fullName": "上海,嘉定区",
@@ -814,9 +814,9 @@
 	"name": "黄渡",
 	"parentId": 152
 }, {
-	"fullName": "上海,嘉定区,嘉定",
+	"fullName": "上海,嘉定区,嘉定新城",
 	"id": 164,
-	"name": "嘉定",
+	"name": "嘉定新城",
 	"parentId": 152
 }, {
 	"fullName": "上海,青浦区",
@@ -849,9 +849,9 @@
 	"name": "华新",
 	"parentId": 165
 }, {
-	"fullName": "上海,青浦区,",
+	"fullName": "上海,青浦区,徐泾",
 	"id": 171,
-	"name": "",
+	"name": "徐泾",
 	"parentId": 165
 }, {
 	"fullName": "上海,奉贤区",
@@ -904,9 +904,9 @@
 	"name": "南桥新城区",
 	"parentId": 172
 }, {
-	"fullName": "上海,奉贤区,海湾旅",
+	"fullName": "上海,奉贤区,海湾旅游区",
 	"id": 182,
-	"name": "海湾旅",
+	"name": "海湾旅游区",
 	"parentId": 172
 }, {
 	"fullName": "上海,金山区",
@@ -964,7 +964,7 @@
 	"name": "枫泾",
 	"parentId": 183
 }, {
-	"fullName": "上海,金山区,",
+	"fullName": "上海,金山区,亭林",
 	"id": 194,
 	"name": "亭林",
 	"parentId": 183
