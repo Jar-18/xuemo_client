@@ -37,6 +37,6 @@ angular.module('starter.controllers')
                 console.log(passedCourse);
                 var courseKey = 'FromCourseDetailPage';
                 tmpStorageService.storeObject(courseKey, passedCourse);
-                $state.go("app.confirm_appointment", {courseKey: courseKey});
+                $state.go("confirm_appointment", {courseKey: courseKey});
             }
         }])
