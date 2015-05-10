@@ -7,6 +7,7 @@ angular.module('starter.controllers', [
         'widget.horizontalSelector',
         'widget.chainSelector',
         'widget.courseCard',
+        'widget.activityCard',
         'widget.topFilter',
 
         'service.config',
@@ -82,6 +83,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               'main': {
                   templateUrl: 'module/app/find/index.html',
                   controller: 'findCtrl'
+              }
+          }
+      })
+      .state('nearby_people', {
+          url: '/nearby_people',
+          views: {
+              'app': {
+                  templateUrl: '',
+                  controller: ''
+              }
+          }
+      })
+      .state('nearby_activity', {
+          url: '/nearby_activity',
+          views: {
+              'app': {
+                  templateUrl: 'module/app/nearby_activity/index.html',
+                  controller: 'nearbyActivityCtrl'
               }
           }
       })
