@@ -149,11 +149,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               }
           }
       })
-      .state('app.post_course_step_2', {
+      .state('post_course_step_2', {
           url: '/post_course_step_2/:courseId',
           views: {
-              'main': {
-                  templateUrl: 'module/app/teach/post_course_step_2/index.html',
+              'app': {
+                  templateUrl: 'module/app/post_course_step_2/index.html',
                   controller: 'postCourseStep2Ctrl'
               }
           }
@@ -185,11 +185,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               }
           }
       })
-      .state('app.confirm_appointment', {
+      .state('confirm_appointment', {
         url: '/confirm_appointment/:courseKey',
         views: {
-          'main': {
-            templateUrl: 'module/app/learn/confirm_appointment/index.html',
+          'app': {
+            templateUrl: 'module/app/confirm_appointment/index.html',
             controller: 'confirmAppointmentCtrl'
           }
         }

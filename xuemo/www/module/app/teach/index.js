@@ -68,7 +68,7 @@ angular.module('starter.controllers')
                 data:$scope.courseForm.dataModel
             }).success(function(result){
                 if(result.status != null && result.status == "Success") {
-                    $state.go("app.post_course_step_2", {courseId: result.courseId});
+                    $state.go("post_course_step_2", {courseId: result.courseId});
                 }
             });
         };
