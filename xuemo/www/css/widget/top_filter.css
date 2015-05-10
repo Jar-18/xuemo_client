@@ -56,7 +56,8 @@
       width: 50%;
       height: 320px;
       box-sizing: border-box;
-      overflow: hidden; }
+      overflow: scroll;
+      position: relative; }
       .top-filter-wrapper .level-item-container .level-list.single-list {
         width: 100%;
         height: inherit; }

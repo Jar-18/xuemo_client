@@ -62,7 +62,8 @@
       width: 50%;
       height: $level-container-height;
       box-sizing: border-box;
-      overflow: hidden;
+      overflow: scroll;
+      position: relative;
       &.single-list{
         width: 100%;
         height: inherit;

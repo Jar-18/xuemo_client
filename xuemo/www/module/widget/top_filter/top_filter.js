@@ -5,125 +5,11 @@ angular.module("widget.topFilter",[])
             templateUrl: './module/widget/top_filter/top_filter.html',
             replace:true,
             scope:{
-                activeItemList:'='
+                activeItemList:'=',
+                filterData:'='
             },
             controller:['$scope',function($scope){
-                var districts=[
-                    {
-                        "parentId":"1",
-                        "id":"2",
-                        "name":"浦东新区"
-                    },
-                    {
-                        "parentId":"1",
-                        "id":"3",
-                        "name":"闵行区"
-                    },
-                    {
-                        "parentId":"2",
-                        "id":"5",
-                        "name":"世纪公园"
-                    },
-                    {
-                        "parentId":"2",
-                        "id":"6",
-                        "name":"八佰伴"
-                    },
-                    {
-                        "parentId":"2",
-                        "id":"7",
-                        "name":"川沙"
-                    },
-                    {
-                        "parentId":"2",
-                        "id":"8",
-                        "name":"康桥"
-                    },
-                    {
-                        "parentId":"3",
-                        "id":"9",
-                        "name":"七宝"
-                    },
-                    {
-                        "parentId":"3",
-                        "id":"10",
-                        "name":"莘庄"
-                    },
-                    {
-                        "parentId":"3",
-                        "id":"11",
-                        "name":"南方商城"
-                    }
-                ];
-                var categories=[
-                    {
-                        "parentId":"1",
-                        "id":"2",
-                        "name":"语言"
-                    },
-                    {
-                        "parentId":"1",
-                        "id":"3",
-                        "name":"运动"
-                    },
-                    {
-                        "parentId":"3",
-                        "id":"4",
-                        "name":"游泳"
-                    },
-                    {
-                        "parentId":"2",
-                        "id":"5",
-                        "name":"英语"
-                    },
-                    {
-                        "parentId":"2",
-                        "id":"6",
-                        "name":"日语"
-                    },
-                    {
-                        "parentId":"2",
-                        "id":"7",
-                        "name":"法语"
-                    },
-                    {
-                        "parentId":"3",
-                        "id":"8",
-                        "name":"羽毛球"
-                    }
-                ];
-                var sortList=[
-                    {
-                        "parentId":"1",
-                        "id":"latest",
-                        "name":"最新发布"
-                    },{
-                        "parentId":"1",
-                        "id":"rating",
-                        "name":"评价最高"
-                    },{
-                        "parentId":"1",
-                        "id":"hotest",
-                        "name":"人气最高"
-                    }
-                ];
-                $scope.filterData=[{
-                    name:"区域",
-                    key:"districts",
-                    category:"linkage",//联动
-                    data:districts
-                },{
-                    name:"类别",
-                    key:"categories",
-                    category:"single",//一级
-                    data:categories
-                },{
-                    name:"排序",
-                    key:"sort",
-                    category:"single",//一级
-                    data:sortList
-                }
-                ];
+
                 $scope.activeFilterKey="";
                 $scope.toggleTab=function(key){
                     if($scope.activeFilterKey==key){
@@ -144,9 +30,7 @@ angular.module("widget.topFilter",[])
                             $scope.dictionary[currentDataItem.key][currentDataItem.data[itemIndex].id]=currentDataItem.data[itemIndex].name;
                         }
                     }
-                    console.debug( $scope.dictionary);
                 }
-                formDictionary();
                 $scope.getFilterName=function(filterItem,filterItemIndex){
                     var selectedValue="";
                     if($scope.activeItemList[filterItemIndex].level2!==undefined){
@@ -181,7 +65,6 @@ angular.module("widget.topFilter",[])
                     }
                     $scope.transformedFilterData=result;
                 }
-                transformFilterData();
                 $scope.currentLevel2List={};
                 function updateLevel2List(){
                     for(var index=0;index<$scope.transformedFilterData.length;index++){
@@ -197,7 +80,13 @@ angular.module("widget.topFilter",[])
                     }
                     console.debug($scope.currentLevel2List);
                 };
-                updateLevel2List();
+                $scope.$watchCollection('filterData',function(newVal,oldVal){
+                    if(newVal&&newVal.length){
+                        formDictionary();
+                        transformFilterData();
+                        updateLevel2List();
+                    }
+                },true);
                 $scope.level1Clicked=function(activeItemIndex,id,filterCategory){
                     if($scope.activeItemList[activeItemIndex].level1==id){
                         return;
@@ -268,10 +157,6 @@ angular.module("widget.topFilter",[])
                     }
                     return groupedList;
                 };
-                console.debug(getGroupedData(districts,{
-                    parentId:1,
-                    addSelectAllBtn:true
-                }))
             }]
         }
     }]);
