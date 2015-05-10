@@ -1,25 +1,27 @@
-<!--
-Create tabs with an icon and label, using the tabs-positive style.
-Each tab's child <ion-nav-view> directive will have its own
-navigation history that also transitions its views in and out.
--->
-<ion-tabs class="tabs-icon-top tabs-orange">
-
-    <!-- Dashboard Tab -->
-    <ion-tab title="{{ 'widget.tab.learn' | translate }}" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/app/learn">
-        <ion-nav-view name="tab-learn"></ion-nav-view>
-    </ion-tab>
-    <ion-tab title="{{ 'widget.tab.teach' | translate }}" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/app/teach">
-        <ion-nav-view name="tab-teach"></ion-nav-view>
-    </ion-tab>
-    <ion-tab title="{{ 'widget.tab.find' | translate }}" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/app/find">
-        <ion-nav-view name="tab-find"></ion-nav-view>
-    </ion-tab>
-    <ion-tab title="{{ 'widget.tab.news' | translate }}" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/app/news">
-        <ion-nav-view name="tab-news"></ion-nav-view>
-    </ion-tab>
-    <ion-tab title="{{ 'widget.tab.me' | translate }}" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/app/me">
-        <ion-nav-view name="tab-me"></ion-nav-view>
-    </ion-tab>
-
-</ion-tabs>
+<div>
+    <ion-nav-view name="main"></ion-nav-view>
+    <div class="tabs-striped tabs-background-positive tabs-color-light">
+        <div class="tabs tabs-icon-left">
+            <a class="tab-item" ng-class="{'active':currentStatus=='app.learn'}" ng-click="navTo('app.learn')">
+                <i class="icon ion-home"></i>
+                {{ 'widget.tab.learn' | translate }}
+            </a>
+            <a class="tab-item" ng-class="{'active':currentStatus=='app.teach'}"  ng-click="navTo('app.teach')">
+                <i class="icon ion-star"></i>
+                {{ 'widget.tab.teach' | translate }}
+            </a>
+            <a class="tab-item" ng-class="{'active':currentStatus=='app.find'}" ng-click="navTo('app.find')">
+                <i class="icon ion-star"></i>
+                {{ 'widget.tab.find' | translate }}
+            </a>
+            <a class="tab-item" ng-class="{'active':currentStatus=='app.news'}" ng-click="navTo('app.news')">
+                <i class="icon ion-star"></i>
+                {{ 'widget.tab.news' | translate }}
+            </a>
+            <a class="tab-item" ng-class="{'active':currentStatus=='app.me'}" ng-click="navTo('app.me')">
+                <i class="icon ion-star"></i>
+                {{ 'widget.tab.me' | translate }}
+            </a>
+        </div>
+    </div>
+</div>

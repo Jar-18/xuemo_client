@@ -1,0 +1,13 @@
+/*顶部过滤条的配置*/
+.horizontal-selector-wrapper {
+  display: inline-block; }
+  .horizontal-selector-wrapper .selector-item {
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid #387ef5;
+    color: #387ef5;
+    margin-right: 8px;
+    padding: 1px 5px; }
+    .horizontal-selector-wrapper .selector-item.active {
+      background: #387ef5;
+      color: #fff; }

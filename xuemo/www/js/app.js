@@ -60,7 +60,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
           url: "/app",
           views:{
               'app':{
-                  abstract: true,
+                  controller: 'mainTabsCtrl',
                   templateUrl: 'module/app/tabs/index.html'
               }
           }
@@ -70,9 +70,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.learn', {
           url: '/learn/:district/:category/:sort',
           views: {
-              'tab-learn': {
+              'main': {
                   templateUrl: 'module/app/learn/index.html',
                   controller: 'learnCtrl'
+              }
+          }
+      })
+      .state('app.find', {
+          url: '/find',
+          views: {
+              'main': {
+                  templateUrl: 'module/app/find/index.html',
+                  controller: 'findCtrl'
               }
           }
       })
@@ -115,7 +124,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.teach', {
           url: '/teach',
           views: {
-              'tab-teach': {
+              'main': {
                   templateUrl: 'module/app/teach/index.html',
                   controller: 'teachCtrl'
               }
@@ -124,7 +133,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.post_course_step_2', {
           url: '/post_course_step_2/:courseId',
           views: {
-              'tab-teach': {
+              'main': {
                   templateUrl: 'module/app/teach/post_course_step_2/index.html',
                   controller: 'postCourseStep2Ctrl'
               }
@@ -133,7 +142,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.news', {
           url: '/news',
           views: {
-              'tab-news': {
+              'main': {
                   templateUrl: 'templates/chat-detail.html',
                   controller: 'ChatDetailCtrl'
               }
@@ -142,7 +151,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.me', {
           url: '/me',
           views: {
-              'tab-me': {
+              'main': {
                   templateUrl: 'module/app/me/index.html',
                   controller: 'meCtrl'
               }
@@ -151,7 +160,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.personal_homepage', {
           url: '/personal_homepage',
           views: {
-              'tab-me': {
+              'main': {
                   templateUrl: 'module/app/personal_homepage/index.html',
                   controller: 'personalHomepageCtrl'
               }
@@ -160,7 +169,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       .state('app.confirm_appointment', {
         url: '/confirm_appointment/:courseKey',
         views: {
-          'tab-learn': {
+          'main': {
             templateUrl: 'module/app/learn/confirm_appointment/index.html',
             controller: 'confirmAppointmentCtrl'
           }
@@ -168,6 +177,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/learn/8/2/2');
+  $urlRouterProvider.otherwise('/app/learn/2/2/latest');
 
 });

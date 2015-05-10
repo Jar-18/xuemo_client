@@ -1,0 +1,12 @@
+.gender-age {
+  font-size: 12px;
+  margin-left: 8px;
+  border-radius: 3px;
+  display: inline-block;
+  line-height: 12px;
+  padding: 3px 3px;
+  color: #fff; }
+  .gender-age.male {
+    background: #387ef5; }
+  .gender-age.female {
+    background: #fa96c4; }

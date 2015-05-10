@@ -1,6 +1,6 @@
 angular.module('starter.controllers')
 
-    .controller('learnCtrl', ['$scope','courseService','$state',function($scope,courseService,$state) {
+    .controller('findCtrl', ['$scope','courseService','$state',function($scope,courseService,$state) {
         var routerParams=$state.params;
         $scope.activeFilterList=[{
             level1:"",
@@ -11,9 +11,7 @@ angular.module('starter.controllers')
             level1:routerParams.sort
         }];
         $scope.$watch("activeFilterList",function(newVal,oldVal){
-            console.debug($scope.activeFilterList);
             if(newVal && newVal[0].level1==oldVal[0].level1){
-                console.debug($scope.activeFilterList);
                 $scope.refreshCourseList();
             }
         },true);
@@ -27,8 +25,7 @@ angular.module('starter.controllers')
                 pageNumber:$scope.pageNumber,
                 pageSize:$scope.pageSize,
                 categoryId:$scope.activeFilterList[1].level1,
-                districtId:$scope.activeFilterList[0].level2,
-                orderBy:$scope.activeFilterList[2].level1
+                districtId:$scope.activeFilterList[1].level2
             });
             goodsListPromise.success(function(data,status,headers){
                 var courseList=data;
@@ -44,10 +41,7 @@ angular.module('starter.controllers')
         $scope.showMoreCourses=function(){
             var goodsListPromise=courseService.getCoursePromise(undefined,{
                 pageNumber:$scope.pageNumber,
-                pageSize:$scope.pageSize,
-                categoryId:$scope.activeFilterList[1].level1,
-                districtId:$scope.activeFilterList[0].level2,
-                orderBy:$scope.activeFilterList[2].level1
+                pageSize:$scope.pageSize
             });
             goodsListPromise.success(function(data,status,headers){
                 var courseList=data;

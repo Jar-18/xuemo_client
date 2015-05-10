@@ -95,20 +95,16 @@ angular.module("widget.topFilter",[])
                 var sortList=[
                     {
                         "parentId":"1",
-                        "id":"2",
-                        "name":"最近时间"
-                    },{
-                        "parentId":"1",
-                        "id":"3",
+                        "id":"latest",
                         "name":"最新发布"
                     },{
                         "parentId":"1",
-                        "id":"4",
-                        "name":"人气最高"
+                        "id":"rating",
+                        "name":"评价最高"
                     },{
                         "parentId":"1",
-                        "id":"5",
-                        "name":"离我最近"
+                        "id":"hotest",
+                        "name":"人气最高"
                     }
                 ];
                 $scope.filterData=[{

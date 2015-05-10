@@ -1,0 +1,71 @@
+/*顶部过滤条的配置*/
+.personal-homepage .front-cover {
+  background: url(../../img/front-cover.jpg) no-repeat center;
+  height: 140px;
+  position: relative;
+  color: #ffffff; }
+  .personal-homepage .front-cover .portrait {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: 50%;
+    position: absolute;
+    margin-left: -25px;
+    top: 20px; }
+  .personal-homepage .front-cover .name-and-age {
+    position: absolute;
+    text-align: center;
+    display: block;
+    width: 100%;
+    top: 80px; }
+    .personal-homepage .front-cover .name-and-age .name {
+      font-weight: bold;
+      font-size: 15px; }
+  .personal-homepage .front-cover .social-info {
+    position: absolute;
+    bottom: 10px;
+    width: 100%; }
+    .personal-homepage .front-cover .social-info > span {
+      display: inline-block;
+      float: left;
+      width: 50%;
+      box-sizing: border-box; }
+      .personal-homepage .front-cover .social-info > span:first-child {
+        text-align: right;
+        padding-right: 10px; }
+      .personal-homepage .front-cover .social-info > span:last-child {
+        border-left: 1px solid #ffffff;
+        padding-left: 10px; }
+    .personal-homepage .front-cover .social-info .person-num {
+      font-size: 14px;
+      font-weight: bold;
+      display: inline-block;
+      margin-left: 5px; }
+.personal-homepage .btn-container {
+  margin-top: 10px;
+  text-align: center;
+  padding: 10px 0px; }
+  .personal-homepage .btn-container > div {
+    display: inline-block; }
+  .personal-homepage .btn-container .button {
+    width: 65px; }
+    .personal-homepage .btn-container .button:first-child {
+      margin-right: 15px; }
+.personal-homepage .desired-courses-container {
+  padding: 0px; }
+  .personal-homepage .desired-courses-container > ul {
+    list-style: none; }
+    .personal-homepage .desired-courses-container > ul li {
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      display: inline-block;
+      width: 33.33%;
+      line-height: 48px;
+      border-bottom: 1px solid #ededed;
+      border-right: 1px solid #ededed;
+      text-align: center;
+      color: #323232;
+      font-size: 16px;
+      float: left; }
+.personal-homepage .brief-intro-container, .personal-homepage .desired-courses-container {
+  margin: 10px 0px; }
