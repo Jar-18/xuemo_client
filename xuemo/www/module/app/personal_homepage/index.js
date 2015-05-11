@@ -11,4 +11,8 @@ angular.module('starter.controllers')
         userService.getTeachingCoursesPromise().success(function(data){
             $scope.coursesList=data;
         });
+
+        $scope.toModifyPage = function() {
+            $state.go("modify_personal_info", {});
+        }
     }])

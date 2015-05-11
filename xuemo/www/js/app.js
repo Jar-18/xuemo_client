@@ -177,10 +177,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               }
           }
       })
-      .state('app.personal_homepage', {
+      .state('personal_homepage', {
           url: '/personal_homepage',
           views: {
-              'main': {
+              'app': {
                   templateUrl: 'module/app/personal_homepage/index.html',
                   controller: 'personalHomepageCtrl'
               }
@@ -192,6 +192,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
           'app': {
             templateUrl: 'module/app/confirm_appointment/index.html',
             controller: 'confirmAppointmentCtrl'
+          }
+        }
+      })
+      .state('modify_personal_info', {
+        url: '/modify_personal_info',
+        views: {
+          'app': {
+            templateUrl: 'module/app/modify_personal_info/index.html',
+            controller: 'modifyPersonalInfoCtrl'
           }
         }
       });

@@ -272,3 +272,35 @@
     font-size: 16px;
   }
 }
+
+.modify-info-container {
+  .img-item {
+    height: 92px;
+    line-height: 60px;
+    img {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      right: 51px;
+      border-radius: 50%;
+    }
+    i {
+      color: gray;
+    }
+  }
+  .text-item {
+    height: 52px;
+    line-height: 20px;
+    span {
+      position: absolute;
+      right: 51px;
+      color: gray;
+    }
+    i {
+      color: gray;
+    }
+  }
+  .item-divider {
+    min-height: 20px;
+  }
+}

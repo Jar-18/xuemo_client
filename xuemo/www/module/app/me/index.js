@@ -10,6 +10,6 @@ angular.module('starter.controllers')
 		motto: "无忧无虑的程序猿"
 	};
     $scope.toPersonalHomepage=function(){
-        $state.go("app.personal_homepage", {});
+        $state.go("personal_homepage", {});
     }
 }])
