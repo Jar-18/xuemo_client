@@ -70,6 +70,12 @@ angular.module('starter.controllers')
 	$scope.uploadFiles = function() {
 		courseService.getCoursePhotosUploadTokenPromise()
 			.success(function(response) {
+
+				if(0 == $scope.fileList.length) {
+					$scope.post();
+					return ;
+				}
+
 				console.log('Token from server:' + response);
 				var ft = new FileTransfer();
 				var options = new FileUploadOptions();
@@ -102,17 +108,11 @@ angular.module('starter.controllers')
 						console.log(err);
 					}, options);
 				}
-				// $scope.fileList.forEach(function(file) {
-					
-				// });
 			});
 	};
 
 	$scope.post = function() { 
-		// ("psot2");
 		var url=normalHost+URL_CONFIG.app.teach.postCourseStep1[urlStatus]+"/"+courseId;
-        //console.debug($scope.courseForm.dataModel);
-        // alert(url);
         $http({
             method:'PUT',
             url:url,
