@@ -20,14 +20,7 @@
                 <button ng-click="toAppointment()" type="button" class="appointment-btn button button-small button-positive">预约</button>
             </p>
         </span>
-        <a class="list padding item teacher-brief-intro item-thumbnail-left">
-            <img class="portrait"  ng-src="{{course.teacher.portrait|transformImgUrl}}">
-            <p>
-                <span class="name" ng-bind="course.teacher.nickname"></span>
-                <gender-age age="{{course.teacher.age}}" gender="{{course.teacher.gender}}"></gender-age>
-            </p>
-            <p class="" ng-bind="course.teacher.motto"></p>
-        </a>
+        <user-card user="course.teacher"></user-card>
         <div class="list card">
             <div class="item tabs tabs-secondary tabs-icon-left">
                 <a ng-repeat="tabStatus in tabStatusList" class="tab-item" ng-class="{'tab-item-active positive':tabStatus==currentTabStatus}" ng-click="toggleTab(tabStatus)">

@@ -9,6 +9,7 @@ angular.module('starter.controllers', [
         'widget.courseCard',
         'widget.activityCard',
         'widget.topFilter',
+        'widget.userCard',
 
         'service.config',
         'service.course',

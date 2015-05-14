@@ -1,14 +1,7 @@
 <ion-view view-title="我的">
 	<ion-content class="me-container">
 		<div class="item item-divider"></div>
-		<a ng-click="toPersonalHomepage()" class="list padding item teacher-brief-intro item-thumbnail-left item-icon-right">
-			<img class="portrait"  ng-src="{{teacher.portrait|transformImgUrl}}">
-			<p>
-				<span class="name" ng-bind="teacher.nickname"></span>
-				<gender-age age="{{teacher.age}}" gender="{{teacher.gender}}"></gender-age>
-			</p>
-			<p class="" ng-bind="teacher.motto"></p> <i class="icon ion-ios-arrow-right"></i>
-		</a>
+		<user-card user="user" ng-click="toPersonalHomepage()"></user-card>
 		<a class="item item-icon-left item-icon-right me-item" href="#"> <i class="icon ion-ios-star-outline"></i>
 			我的收藏
 			<i class="icon ion-ios-arrow-right"></i>
