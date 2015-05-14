@@ -31,6 +31,9 @@ angular.module("service.config",[])
                 },
                 relatedCourseList:{
                     "online":"/courses"
+                },
+                createAppointment: {
+                    "online":"/appointments"
                 }
             },
             teach: {

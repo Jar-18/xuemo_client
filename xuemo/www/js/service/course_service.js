@@ -63,7 +63,18 @@ angular.module("service.course",['service.config'])
                     url: url
                 });
                 return promise;
+            },
+            getCreateAppointmentPromise: function(params) {
+                if(!params){
+                    params={};
+                }
+                var url=normalHost+URL_CONFIG.app.learn.createAppointment[urlStatus];
+                var createAppointmentPromise = $http({
+                    method:'POST',
+                    url:url,
+                    params:params
+                });
+                return createAppointmentPromise;
             }
-
         }
     }])
