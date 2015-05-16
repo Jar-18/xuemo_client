@@ -1,0 +1,44 @@
+<ion-modal-view class="login-container">
+  <ion-header-bar class="bar-positive">
+    <div class="button button-icon icon ion-chevron-down" ng-click="closeLoginModal()"></div>
+    <h1 class="title">登录</h1>
+    <a class="button button-icon">注册</a>
+  </ion-header-bar>
+
+  <ion-content ng-controller="LoginCtrl">
+
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" placeholder="用户名" ng-model="username"></label>
+      <label class="item item-input">
+        <input type="password" placeholder="密码" ng-model="password"></label>
+    </div>
+    <div class="list list-inset">
+      <button class="button button-positive button-no-margin" ng-click="login()">登录</button>
+    </div>
+    <div class="list list-inset ionic-scroll forget-pwd-bar">
+      <a class="forget-pwd">忘记密码</a>
+      <a class="login-with-phone">短信密码登录</a>
+      <div class="clearfix"></div>
+    </div>
+  </ion-content>
+  <div class="bar bar-footer ionic-scroll login-bottom">
+    <p>第三方登录</p>
+    <div class="third-party-card-set">
+      <div class="third-party-card">
+        <img src="img/weixin.jpeg"> <i>微信</i>
+      </div>
+      <div class="third-party-card">
+        <img src="img/qq.jpeg"> <i>QQ</i>
+      </div>
+      <div class="third-party-card">
+        <img src="img/weibo.jpeg">
+        <i>微博</i>
+      </div>
+      <div class="third-party-card">
+        <img src="img/renren.jpeg">
+        <i>人人</i>
+      </div>
+    </div>
+  </div>
+</ion-modal-view>

@@ -111,6 +111,32 @@ angular.module('starter.controllers')
 			});
 	};
 
+	$scope.deleteOption = function(filePath) {
+		var hideSheet = $ionicActionSheet.show({
+			buttons: [{
+				text: '删除'
+			}],
+			cancelText: '取消',
+			cancel: function() {
+				// No action
+			},
+			buttonClicked: function(index) {
+				0 == index && deletePic(filePath);
+				return true;
+			}
+		});
+	}
+
+	var deletePic = function(filePath) {
+		var tmpArr = [];
+		for(var i = 0;i < $scope.fileList.length;i++) {
+			if($scope.fileList[i].path != filePath) {
+				tmpArr.push($scope.fileList[i]);
+			}
+		}
+		$scope.fileList = tmpArr;
+	}
+
 	$scope.post = function() { 
 		var url=normalHost+URL_CONFIG.app.teach.postCourseStep1[urlStatus]+"/"+courseId;
         $http({
