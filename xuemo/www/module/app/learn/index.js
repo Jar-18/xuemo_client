@@ -72,7 +72,7 @@ angular.module('starter.controllers')
             },{
                 name:"类别",
                 key:"categories",
-                category:"single",//一级
+                category:"linkage",//一级
                 data:categories
             },{
                 name:"排序",

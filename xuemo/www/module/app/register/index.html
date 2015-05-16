@@ -16,6 +16,9 @@
                 </label>
                 <label class="item verify-code">12341</label>
             </div>
+            <div class="list list-inset">
+                <input type="checkbox" />
+            </div>
             <div class="list list-inset pwd-input-wrapper">
                 <label class="item item-input" ng-class="{'wrong':registerForm.pwd.$error.required||registerForm.pwd.$error.minlength}">
                     <input placeholder="请输入密码" name="pwd" type="{{passwordInputType}}" ng-minlength="6" required="" ng-model="registerData.pwd">

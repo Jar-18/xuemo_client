@@ -116,11 +116,18 @@ angular.module("widget.chainSelector",[])
                         for(var key in $scope.selectedItemObj){
                             resultList.push({id:key});
                         }
+                        if(resultList.length){
+                            $scope.options.btnName="已选择"+resultList.length+"项";
+                        }else{
+                            $scope.options.btnName="请选择";
+                        }
                     }else{
                         resultList={};
                         for(var key in $scope.selectedItemObj){
                             resultList.id=key;
-                        }
+                        };
+                        $scope.options.btnName=level2ItemData.name;
+                        $scope.hideModal($scope.options.modalName);
                     }
                     $scope.selectedModel=resultList;
                     //console.debug($scope.selectedModel);
