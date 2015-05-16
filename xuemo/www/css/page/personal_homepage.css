@@ -51,21 +51,5 @@
     width: 65px; }
     .personal-homepage .btn-container .button:first-child {
       margin-right: 15px; }
-.personal-homepage .desired-courses-container {
-  padding: 0px; }
-  .personal-homepage .desired-courses-container > ul {
-    list-style: none; }
-    .personal-homepage .desired-courses-container > ul li {
-      box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      display: inline-block;
-      width: 33.33%;
-      line-height: 48px;
-      border-bottom: 1px solid #ededed;
-      border-right: 1px solid #ededed;
-      text-align: center;
-      color: #323232;
-      font-size: 16px;
-      float: left; }
 .personal-homepage .brief-intro-container, .personal-homepage .desired-courses-container {
   margin: 10px 0px; }

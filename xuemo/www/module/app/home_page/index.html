@@ -1,0 +1,45 @@
+<ion-view class="homepage-container" view-title="首页">
+    <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
+        <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> 返回</ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content  class="has-header">
+        <div class="card course-categories-container">
+            <ion-slide-box show-pager="true">
+                <ion-slide ng-repeat="groupedCategories in groupedCategoriesList">
+                    <div>
+                        <a ng-click="navToCertainCategory(item)" ng-repeat="item in groupedCategories" class="category-item {{item.key}}">
+                            <div class="icon"></div>
+                            {{item.name}}
+                        </a>
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+        </div>
+        <div class="ad-container clearfix">
+            <div class="ad-item">
+                <a href="http://m.nuomi.com/391/0-0/0-0-0-0-0?key=de47f29c05bb14fd8a8115e3bacbbb5c&amp;cuid=C164C00E586663D9C2E7133051C5FC9E:FG=1">
+                </a>
+            </div>
+            <div class="ad-item">
+                <a href="http://m.nuomi.com/391/0-0/0-0-0-0-0?key=de47f29c05bb14fd8a8115e3bacbbb5c&amp;cuid=C164C00E586663D9C2E7133051C5FC9E:FG=1">
+                </a>
+            </div>
+            <div class="ad-item">
+                <a href="http://m.nuomi.com/391/0-0/0-0-0-0-0?key=de47f29c05bb14fd8a8115e3bacbbb5c&amp;cuid=C164C00E586663D9C2E7133051C5FC9E:FG=1">
+                </a>
+            </div>
+            <div class="ad-item">
+                <a href="http://m.nuomi.com/391/0-0/0-0-0-0-0?key=de47f29c05bb14fd8a8115e3bacbbb5c&amp;cuid=C164C00E586663D9C2E7133051C5FC9E:FG=1">
+                </a>
+            </div>
+        </div>
+        <div class="section-title padding-top">
+            <h2>TA的其它课程</h2>
+        </div>
+        <div class="list">
+            <course-card course="course" ng-repeat="course in courseList"></course-card>
+        </div>
+    </ion-content>
+
+</ion-view>
