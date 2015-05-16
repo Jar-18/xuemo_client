@@ -9,7 +9,7 @@
                 on-refresh="refresh()">
         </ion-refresher>
          <ion-list>
-            <user-card user="user" ng-repeat="user in peopleList"></user-card>
+            <user-card user="user" ng-repeat="user in peopleList" ng-click="toPersonalHomepage(user.id)"></user-card>
         </ion-list>
         <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="showMore()" distance="8%">
         </ion-infinite-scroll>

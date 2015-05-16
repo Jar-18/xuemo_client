@@ -50,9 +50,9 @@ angular.module('starter.controllers')
                     {"id":"1"},
                     {"id":"2"}
                 ],
-                "title":"TestTitle3",
+                "title":"",
                 "teacher":{"id":"1"},
-                "price": "100"
+                "price": ""
             }
         };
         $scope.postCourseStep1=function(){

@@ -80,10 +80,14 @@ angular.module('starter.controllers')
                     $scope.$broadcast('scroll.infiniteScrollComplete');
                 })
             }
-
-
-
         };
+
+        $scope.toPersonalHomepage = function(userId) {
+            $state.go("personal_homepage", {
+                userId: userId,
+                mode: "visit"
+            });
+        }
 
         // var onSuccess = function(position) {
         //     alert('Latitude: ' + position.coords.latitude + '\n' +

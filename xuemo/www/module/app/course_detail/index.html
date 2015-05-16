@@ -1,6 +1,12 @@
 <ion-view view-title="课程详情">
     <ion-nav-bar class="bar-positive nav-title-slide-ios7">
-        <ion-nav-back-button class="button-clear"><i class="icon ion-ios-arrow-back"></i> 返回</ion-nav-back-button>
+        <ion-nav-back-button class="button-clear"> <i class="icon ion-ios-arrow-back"></i>
+            返回
+        </ion-nav-back-button>
+        <ion-nav-buttons side="right">
+            <button class="button button-icon icon ion-ios-upload-outline"></button>
+            <button class="button button-icon icon ion-ios-star-outline"></button>
+        </ion-nav-buttons>
     </ion-nav-bar>
     <ion-content class="course-detail-container">
         <div class="card">
@@ -16,7 +22,10 @@
         </div>
         <span class="course-brief-intro list padding item">
             <p>
-                <span class="price-section"><span class="price">{{course.price}}</span>/小时</span>
+                <span class="price-section">
+                    <span class="price">{{course.price}}</span>
+                    /小时
+                </span>
                 <button ng-click="toAppointment()" type="button" class="appointment-btn button button-small button-positive">预约</button>
             </p>
         </span>

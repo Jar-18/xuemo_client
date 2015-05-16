@@ -14,13 +14,13 @@
                 <span>粉丝<span class="person-num" ng-bind="userObj.followerCount"></span></span>
             </div>
         </div>
-        <div class="btn-container item" ng-show="{{'visit' == mode}}">
+        <div class="btn-container item" ng-if="'visit' == mode">
             <div>
                 <span class="button button-positive button-small">私信</span>
                 <span class="button button-positive button-small">＋关注</span>
             </div>
         </div>
-        <div class="btn-container item" ng-show="{{'modify' == mode}}">
+        <div class="btn-container item" ng-if="'modify' == mode">
             <div>
                 <span class="button button-positive button-small" ng-click="toModifyPage()">编辑</span>
             </div>
