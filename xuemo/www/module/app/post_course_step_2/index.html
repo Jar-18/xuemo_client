@@ -19,7 +19,7 @@
 			</div>
 			<div>
 				<div class="upload-photo-card" ng-repeat="file in fileList">
-					<img src="{{file.path}}" class="card-content">
+					<img src="{{file.path}}" class="card-content" ng-click="deleteOption(file.path)">
 				</div>
 				<div class="upload-photo-card">
   					<button ng-click="addPhoto()" class="button card-content add-card">
