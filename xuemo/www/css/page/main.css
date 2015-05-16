@@ -528,6 +528,15 @@
 .modify-info-container .item-divider {
   min-height: 20px; }
 
+form .pwd-input-wrapper {
+  position: relative; }
+  form .pwd-input-wrapper .toggle-input-type-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0px;
+    top: 12px;
+    z-index: 20; }
 form .input-tip {
   display: block;
   left: 15px;
@@ -535,12 +544,18 @@ form .input-tip {
   font-size: 12px;
   bottom: 5px;
   color: gray; }
-
 form label.show-tip {
   padding-bottom: 20px; }
-
 form .item-input {
   box-shadow: 3px 0px 0px #4a87ee inset; }
-
 form .item-input.wrong {
   box-shadow: 3px 0px 0px #ef4e3a inset; }
+form .verify-code-wrapper {
+  background: transparent; }
+  form .verify-code-wrapper .item {
+    float: left;
+    width: 45%; }
+  form .verify-code-wrapper .verify-code {
+    height: 47px;
+    margin-left: 10%;
+    text-align: center; }

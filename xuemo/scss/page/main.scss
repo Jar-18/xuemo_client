@@ -5,7 +5,9 @@
 @import "scss/widget/chain_selector";
 @import "scss/widget/top_filter";
 @import "scss/widget/activity_card";
+@import "scss/widget/desired_course";
 
+@import "./home_page";
 @import "./personal_homepage";
 .appointment-container,.comment-container{
   min-height: 100px;
@@ -304,3 +306,47 @@
     min-height: 20px;
   }
 }
+
+form{
+  .pwd-input-wrapper{
+    position: relative;
+    .toggle-input-type-btn{
+      display: inline-block;
+      padding: 5px 10px;
+      position: absolute;
+      right: 0px;
+      top: 12px;
+      z-index: 20;
+    }
+  }
+  .input-tip{
+    display: block;
+    left: 15px;
+    position: absolute;
+    font-size: 12px;
+    bottom: 5px;
+    color: gray;
+  }
+  label.show-tip{
+    padding-bottom: 20px;
+  }
+  .item-input{
+    box-shadow: 3px 0px 0px #4a87ee inset;;
+  }
+  .item-input.wrong{
+    box-shadow: 3px 0px 0px #ef4e3a inset;;
+  }
+  .verify-code-wrapper{
+    background: transparent;
+    .item{
+      float: left;
+      width: 45%;
+    }
+    .verify-code{
+      height: 47px;
+      margin-left: 10%;
+      text-align: center;
+    }
+  }
+}
+

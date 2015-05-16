@@ -6,41 +6,28 @@
     <ion-content scroller class="has-header">
         <form name="registerForm" ng-submit="doRegister()">
             <div class="list list-inset">
-                <label class="item item-input" ng-class="{'wrong':registerForm.nickName.$error.required}">
-                    <span class="input-label">用户名</span>
-                    <input type="text" name="nickName" required="" ng-model="registerData.nickName">
-                </label>
-                <label class="item item-input" ng-class="{'wrong':registerForm.pwd.$error.required||registerForm.pwd.$error.minlength}">
-                    <span class="input-label">密码</span>
-                    <input name="pwd" type="password" placeholder="密码长度不得小于6" ng-minlength="6" required="" ng-model="registerData.pwd">
-                </label>
-                <label class="item item-input" ng-class="{'wrong':!registerData.confirmPwd||registerData.confirmPwd!=registerData.pwd}">
-                    <span class="input-label">确认密码</span>
-                    <input name="confirmPwd" required="" type="password" ng-model="registerData.confirmPwd">
-                    <!--<div ng-show="registerData.confirmPwd&&registerData.confirmPwd!=registerData.pwd" class="input-tip">两次密码不一致</div> -->
-                </label>
-                <label class="item item-input">
-                    <span class="input-label">生日</span>
-                    <input type="date" required="" ng-model="registerData.birthday">
-                </label>
-                <label class="item item-input" ng-class="{'wrong':(!registerData.email&&!registerData.phone)||registerForm.email.$error.email}">
-                    <span class="input-label">邮箱</span>
-                    <input name="email" type="email" ng-model="registerData.email">
-                </label>
                 <label class="item item-input" ng-class="{'wrong':(!registerData.email&&!registerData.phone)||registerForm.phone.$error.pattern}">
-                    <span class="input-label">手机号</span>
-                    <input name="phone" ng-pattern="/^\d{11}$/" type="text" ng-model="registerData.phone">
-                </label>
-                <label class="item item-input item-select">
-                    <div class="input-label">
-                        性别
-                    </div>
-                    <select ng-model="registerData.gender" ng-options="gender.id as gender.name for gender in genderList">
-                    </select>
+                    <input placeholder="请输入手机号" name="phone" ng-pattern="/^\d{11}$/" type="text" ng-model="registerData.phone">
                 </label>
             </div>
+            <div class="list list-inset verify-code-wrapper">
+                <label class="item item-input" ng-class="{'wrong':registerForm.verifyCode.$error.required||registerForm.verifyCode.$error.minlength}">
+                    <input placeholder="验证码" name="verifyCode" type="text" ng-minlength="6" required="" ng-model="registerData.verifyCode">
+                </label>
+                <label class="item verify-code">12341</label>
+            </div>
+            <div class="list list-inset pwd-input-wrapper">
+                <label class="item item-input" ng-class="{'wrong':registerForm.pwd.$error.required||registerForm.pwd.$error.minlength}">
+                    <input placeholder="请输入密码" name="pwd" type="{{passwordInputType}}" ng-minlength="6" required="" ng-model="registerData.pwd">
+                </label>
+                    <span ng-click="togglePasswordInputType()" >
+                       <span class="ion toggle-input-type-btn"
+                             ng-class="{'ion-eye':passwordInputType=='password','ion-eye-disabled':passwordInputType=='text'}"></span>
+
+                    </span>
+            </div>
             <div class="padding">
-                <button ng-disabled="!registerForm.$valid||registerData.confirmPwd!=registerData.pwd||(!registerData.email&&!registerData.phone)" class="button button-block button-positive"  type="submit">注册</button>
+                <button class="button button-block button-positive"  type="submit">确定</button>
             </div>
         </form>
 
