@@ -39,4 +39,9 @@ angular.module('starter.controllers')
                 tmpStorageService.storeObject(courseKey, passedCourse);
                 $state.go("confirm_appointment", {courseKey: courseKey});
             }
+
+            $scope.toPersonalHomepage = function() {
+                console.log("ToPersonalHomepage");
+                $state.go("personal_homepage", {userId:$scope.course.teacher.id, mode:"visit"});
+            }
         }])

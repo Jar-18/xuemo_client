@@ -197,7 +197,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
           }
       })
       .state('personal_homepage', {
-          url: '/personal_homepage',
+          url: '/personal_homepage/:userId/:mode',
           views: {
               'app': {
                   templateUrl: 'module/app/personal_homepage/index.html',

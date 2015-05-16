@@ -20,7 +20,7 @@
                 <button ng-click="toAppointment()" type="button" class="appointment-btn button button-small button-positive">预约</button>
             </p>
         </span>
-        <user-card user="course.teacher"></user-card>
+        <user-card user="course.teacher" ng-click="toPersonalHomepage()"></user-card>
         <div class="list card">
             <div class="item tabs tabs-secondary tabs-icon-left">
                 <a ng-repeat="tabStatus in tabStatusList" class="tab-item" ng-class="{'tab-item-active positive':tabStatus==currentTabStatus}" ng-click="toggleTab(tabStatus)">
