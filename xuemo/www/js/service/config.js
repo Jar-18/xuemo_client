@@ -2,8 +2,8 @@ angular.module("service.config",[])
     .constant("URL_CONFIG",{
         status:"online",
         host:{
-          normalHost:"http://192.168.2.5:3001",
-          imgHost:"http://192.168.2.5:3001"
+          normalHost:"http://192.168.2.5:3000",
+          imgHost:"http://192.168.2.5:3000"
         },
         common:{
             imgApi:"/images",
@@ -48,6 +48,11 @@ angular.module("service.config",[])
                 nearbyActivity:{
                     activityList:{
                         "online":"/activities"
+                    }
+                },
+                nearbyPeople: {
+                    peopleList:{
+                        "online":"/users"
                     }
                 }
             }

@@ -1,0 +1,18 @@
+<ion-view view-title="附近的人">
+    <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
+        <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> 返回</ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content scroller class="has-header nearby-people-container">
+        <ion-refresher
+                pulling-text="下拉刷新"
+                on-refresh="refresh()">
+        </ion-refresher>
+         <ion-list>
+            <user-card user="user" ng-repeat="user in peopleList"></user-card>
+        </ion-list>
+        <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="showMore()" distance="8%">
+        </ion-infinite-scroll>
+    </ion-content>
+
+</ion-view>

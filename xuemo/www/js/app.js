@@ -15,7 +15,8 @@ angular.module('starter.controllers', [
         'service.course',
         'service.activity',
         'service.tmpStorage',
-        'service.user'
+        'service.user',
+        'service.location'
     ])
     .filter('transformImgUrl',['URL_CONFIG',function(URL_CONFIG){
         return function(imgName){
@@ -109,8 +110,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
           url: '/nearby_people',
           views: {
               'app': {
-                  templateUrl: '',
-                  controller: ''
+                  templateUrl: 'module/app/nearby_people/index.html',
+                  controller: 'nearbyPeopleCtrl'
               }
           }
       })
