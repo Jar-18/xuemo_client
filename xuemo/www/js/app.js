@@ -68,14 +68,31 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               }
           }
       })
-
-      // Each tab has its own nav history stack:
-      .state('app.learn', {
-          url: '/learn/:district/:category/:sort',
+      .state('app.home_page', {
+          url: '/home_page',
           views: {
               'main': {
+                  templateUrl: 'module/app/home_page/index.html',
+                  controller: 'homePageCtrl'
+              }
+          }
+      })
+      // Each tab has its own nav history stack:
+      .state('learn', {
+          url: '/learn/:district/:category/:sort',
+          views: {
+              'app': {
                   templateUrl: 'module/app/learn/index.html',
                   controller: 'learnCtrl'
+              }
+          }
+      })
+      .state('register', {
+          url: '/register',
+          views: {
+              'app': {
+                  templateUrl: 'module/app/register/index.html',
+                  controller: 'registerCtrl'
               }
           }
       })
@@ -207,6 +224,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/learn/2/2/latest');
+  $urlRouterProvider.otherwise('/app/home_page');
 
 });

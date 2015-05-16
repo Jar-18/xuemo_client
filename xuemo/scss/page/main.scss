@@ -5,7 +5,9 @@
 @import "scss/widget/chain_selector";
 @import "scss/widget/top_filter";
 @import "scss/widget/activity_card";
+@import "scss/widget/desired_course";
 
+@import "./home_page";
 @import "./personal_homepage";
 .appointment-container,.comment-container{
   min-height: 100px;
@@ -303,4 +305,22 @@
   .item-divider {
     min-height: 20px;
   }
+}
+
+form .input-tip{
+  display: block;
+  left: 15px;
+  position: absolute;
+  font-size: 12px;
+  bottom: 5px;
+  color: gray;
+}
+form label.show-tip{
+  padding-bottom: 20px;
+}
+form .item-input{
+  box-shadow: 3px 0px 0px #4a87ee inset;;
+}
+form .item-input.wrong{
+  box-shadow: 3px 0px 0px #ef4e3a inset;;
 }
