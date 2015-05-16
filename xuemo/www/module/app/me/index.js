@@ -11,7 +11,7 @@ angular.module('starter.controllers')
 		navigable: true
 	};
 	$scope.toPersonalHomepage = function() {
-		$state.go("personal_homepage", {});
+		$state.go("personal_homepage", {userId: $scope.user.id, mode: "modify"});
 	}
 
 	$ionicModal.fromTemplateUrl('module/app/login/index.html', {
