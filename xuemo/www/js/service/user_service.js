@@ -29,6 +29,18 @@ angular.module("service.user",['service.config'])
                     params:params
                 });
                 return courseListPromise;
+            },
+            getNearbyPeoplePromise:function(params) {
+                if(!params) {
+                    params = {};
+                }
+                var url = normalHost + URL_CONFIG.app.find.nearbyPeople.peopleList[urlStatus];
+                var nearbyPeoplePromise = $http({
+                    method:'GET',
+                    url:url,
+                    params:params
+                });
+                return nearbyPeoplePromise;
             }
         }
     }])
