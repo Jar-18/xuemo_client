@@ -550,15 +550,6 @@ form .item-input {
   box-shadow: 3px 0px 0px #4a87ee inset; }
 form .item-input.wrong {
   box-shadow: 3px 0px 0px #ef4e3a inset; }
-form .verify-code-wrapper {
-  background: transparent; }
-  form .verify-code-wrapper .item {
-    float: left;
-    width: 45%; }
-  form .verify-code-wrapper .verify-code {
-    height: 47px;
-    margin-left: 10%;
-    text-align: center; }
 
 .login-container .button-no-margin {
   width: 100%;

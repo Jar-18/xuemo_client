@@ -9,25 +9,22 @@
                 <label class="item item-input" ng-class="{'wrong':(!registerData.email&&!registerData.phone)||registerForm.phone.$error.pattern}">
                     <input placeholder="请输入手机号" name="phone" ng-pattern="/^\d{11}$/" type="text" ng-model="registerData.phone">
                 </label>
-            </div>
-            <div class="list list-inset verify-code-wrapper">
                 <label class="item item-input" ng-class="{'wrong':registerForm.verifyCode.$error.required||registerForm.verifyCode.$error.minlength}">
                     <input placeholder="验证码" name="verifyCode" type="text" ng-minlength="6" required="" ng-model="registerData.verifyCode">
                 </label>
-                <label class="item verify-code">12341</label>
-            </div>
-            <div class="list list-inset">
-                <input type="checkbox" />
-            </div>
-            <div class="list list-inset pwd-input-wrapper">
-                <label class="item item-input" ng-class="{'wrong':registerForm.pwd.$error.required||registerForm.pwd.$error.minlength}">
-                    <input placeholder="请输入密码" name="pwd" type="{{passwordInputType}}" ng-minlength="6" required="" ng-model="registerData.pwd">
-                </label>
+                <div class="pwd-input-wrapper">
+                    <label class="item item-input" ng-class="{'wrong':registerForm.pwd.$error.required||registerForm.pwd.$error.minlength}">
+                        <input placeholder="请输入密码" name="pwd" type="{{passwordInputType}}" ng-minlength="6" required="" ng-model="registerData.pwd">
+                    </label>
                     <span ng-click="togglePasswordInputType()" >
                        <span class="ion toggle-input-type-btn"
                              ng-class="{'ion-eye':passwordInputType=='password','ion-eye-disabled':passwordInputType=='text'}"></span>
-
                     </span>
+                </div>
+            </div>
+            <div class="list list-inset">
+                <input  type="checkbox" />
+                我已经阅读并遵守xxx协议
             </div>
             <div class="padding">
                 <button class="button button-block button-positive"  type="submit">确定</button>
