@@ -304,3 +304,38 @@
     min-height: 20px;
   }
 }
+
+.login-container {
+  .button-no-margin {
+    width: 100%;
+    margin: 0px;
+  }
+  .forget-pwd-bar {
+    font-size: 15px;
+    color: $theme-color;
+    .forget-pwd {
+      float: left;
+    }
+    .login-with-phone {
+      float: right;
+    }
+  }
+  .login-bottom {
+    text-align: center;
+    height: 120px;
+    display: block;
+    color: #555;
+    .third-party-card {
+      display: inline-block;
+      padding-left:5px;
+      padding-right: 5px;
+      font-size: 10px;
+      img {
+        width: 40px;
+        height: 40px;
+        display: block;
+      }
+    }
+  }
+}
+
