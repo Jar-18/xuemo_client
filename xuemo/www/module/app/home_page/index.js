@@ -1,7 +1,11 @@
 angular.module('starter.controllers')
 
-.controller('homePageCtrl', ['$scope','courseService','$state','URL_CONFIG','$http',
-    function($scope,courseService,$state,URL_CONFIG,$http) {
+.controller('homePageCtrl', ['$scope','courseService','$state','URL_CONFIG','$http', 'authService',
+    function($scope,courseService,$state,URL_CONFIG,$http,authService) {
+
+        //Update user profile when open app every time
+        authService.updateProfile();
+
         function groupCategoriesList(categoriesList,groupedNum){
             var result=[];
             var loopNum=Math.floor(categoriesList.length/groupedNum);
@@ -89,4 +93,6 @@ angular.module('starter.controllers')
         courseService.getRelatedCoursePromise().success(function(result){
             $scope.courseList=result;
         });
+
+
     }])

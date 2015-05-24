@@ -16,7 +16,8 @@ angular.module('starter.controllers', [
         'service.activity',
         'service.tmpStorage',
         'service.user',
-        'service.location'
+        'service.location',
+        'service.auth'
     ])
     .filter('transformImgUrl',['URL_CONFIG',function(URL_CONFIG){
         return function(imgName){
