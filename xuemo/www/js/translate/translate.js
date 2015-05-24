@@ -42,6 +42,12 @@ angular.module('starter')
                     comment:"评论",
                     appointmentRecord:"预约记录"
                 }
+            },
+            myPost: {
+                tab: {
+                    courseList:"课程",
+                    activityList:"活动"
+                }
             }
         }
     });

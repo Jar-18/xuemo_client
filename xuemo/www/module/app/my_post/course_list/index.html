@@ -1,0 +1,6 @@
+<ion-refresher pulling-text="下拉刷新" on-refresh="refreshCourseList()"></ion-refresher>
+<ion-list>
+    <course-card course="course" ng-repeat="course in courseList"></course-card>
+</ion-list>
+
+<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="showMoreCourses()" distance="8%"></ion-infinite-scroll>

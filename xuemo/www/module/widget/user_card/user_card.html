@@ -5,7 +5,7 @@
 		<gender-age age="{{user.age}}" gender="{{user.gender}}"></gender-age>
 	</p>
 	<p class="" ng-bind="user.motto"></p>
-	<i class="icon ion-ios-arrow-right" ng-show="{{user.navigable}}"></i>
+	<i class="icon ion-ios-arrow-right" ng-show="{{user.account != null}}"></i>
 	<i class="icon" style="font-size:14px" ng-show="{{user.distance}}">{{user.distance}}km</i>
 </a>
 

@@ -27,9 +27,9 @@ angular.module("service.auth", ['service.config'])
                 });
             },
             logout: function() {
-                localStorage.token = null;
-                localStorage.userId = null;
-                localStorage.user = null;
+                delete localStorage.token;
+                delete localStorage.userId;
+                delete localStorage.user;
             },
             isAuthed: function() {
                 return localStorage.token != null;

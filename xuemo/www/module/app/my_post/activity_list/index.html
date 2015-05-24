@@ -1,0 +1,6 @@
+<ion-refresher pulling-text="下拉刷新" on-refresh="refreshActivityList()"></ion-refresher>
+<ion-list>
+    <activity-card activity="activity" ng-repeat="activity in activityList"></activity-card>
+</ion-list>
+
+<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="showMoreActivities()" distance="8%"></ion-infinite-scroll>

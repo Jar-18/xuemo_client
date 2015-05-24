@@ -197,6 +197,37 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               }
           }
       })
+
+      .state('my_post', {
+        url: '/my_post',
+        views: {
+          'app': {
+            templateUrl: 'module/app/my_post/index.html',
+            controller: 'myPostCtrl'
+          }
+        }
+      })
+
+      .state('my_post.courseList', {
+        url: '/courses',
+        views: {
+          'my-post': {
+            templateUrl: 'module/app/my_post/course_list/index.html',
+            controller: 'myPostCoursesCtrl'
+          }
+        }
+      })
+
+      .state('my_post.activityList', {
+        url: '/activities',
+        views: {
+          'my-post': {
+            templateUrl: 'module/app/my_post/activity_list/index.html',
+            controller: 'myPostActivitiesCtrl'
+          }
+        }
+      })
+
       .state('personal_homepage', {
           url: '/personal_homepage/:userId/:mode',
           views: {
