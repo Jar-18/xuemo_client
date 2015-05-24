@@ -247,6 +247,22 @@
   .item-divider {
     min-height: 20px;
   }
+  .list {
+    margin-bottom: 0px;
+  }
+  .my-row {
+    background-color: white;
+    padding: 0px;
+    .my-col {
+      color: gray;
+      text-align:center;
+      padding: 10px;
+
+    }
+    .border-right {
+      border-right: solid 1px gray;
+    }
+  }
 }
 
 .discover-container {

@@ -6,6 +6,7 @@ angular.module('starter.controllers')
 
 		$scope.updateMePageProfile = function() {
 			$scope.user = authService.getProfile();
+			$scope.user.navigable = true
 		}
 		$scope.user = null;
 		$scope.updateMePageProfile();
