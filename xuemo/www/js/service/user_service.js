@@ -41,6 +41,25 @@ angular.module("service.user",['service.config'])
                     params:params
                 });
                 return nearbyPeoplePromise;
+            },
+            getRegisterPromise:function(params) {
+                var url = normalHost + URL_CONFIG.app.user.register[urlStatus];
+                var registerPromise = $http({
+                    method:'POST',
+                    url:url,
+                    data:params,
+                });
+                return registerPromise;
+            },
+            getUpdatePersonalInfoPromise:function(params) {
+                var url = normalHost + URL_CONFIG.app.user.updatePersonalInfo[urlStatus] + '/' + params.userId;
+                var updatePromise = $http({
+                    method:'PUT',
+                    url:url,
+                    data:params,
+                });
+                return updatePromise;
+
             }
         }
     }])

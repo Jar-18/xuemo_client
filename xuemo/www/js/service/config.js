@@ -32,6 +32,14 @@ angular.module("service.config",[])
                     "online":"/users"
                 }
             },
+            user: {
+                register: {
+                    "online":"/users"
+                },
+                updatePersonalInfo: {
+                    "online":"/users"
+                }
+            },
             learn:{
                 courseList:{
                     "dev":"./json/learn/course_list.json",

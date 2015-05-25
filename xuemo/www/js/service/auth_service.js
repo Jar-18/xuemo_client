@@ -47,7 +47,7 @@ angular.module("service.auth", ['service.config'])
                 var userId = localStorage.userId;
                 if (userId != null) {
                     var url = normalHost + URL_CONFIG.app.auth.updateProfile[urlStatus] + '/' + userId;
-                    $http({
+                    return $http({
                         method: 'GET',
                         url: url,
                     }).success(function(result) {

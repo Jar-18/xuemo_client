@@ -17,7 +17,8 @@ angular.module('starter.controllers', [
         'service.tmpStorage',
         'service.user',
         'service.location',
-        'service.mapModal'
+        'service.mapModal',
+        'service.auth'
     ])
     .filter('transformImgUrl',['URL_CONFIG',function(URL_CONFIG){
         return function(imgName){
@@ -140,6 +141,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               'app': {
                   templateUrl: 'module/app/register/index.html',
                   controller: 'registerCtrl'
+              }
+          }
+      })
+      .state('register_step_2', {
+          url: '/register_step_2',
+          views: {
+              'app': {
+                  templateUrl: 'module/app/register_step_2/index.html',
+                  controller: 'registerStep2Ctrl'
               }
           }
       })
@@ -302,6 +312,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
       });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/create_activity');
+  $urlRouterProvider.otherwise('/app/home_page');
 
 });
