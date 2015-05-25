@@ -1,17 +1,26 @@
 angular.module('starter.controllers')
 
-    .controller('createActivityCtrl', ['$scope','courseService','$state','$ionicSlideBoxDelegate','tmpStorageService','mapModalService',
-        function($scope,courseService,$state,$ionicSlideBoxDelegate,tmpStorageService,mapModalService) {
+    .controller('createActivityCtrl', ['$scope','courseService','$state','$ionicSlideBoxDelegate','tmpStorageService','mapModalService','$filter',
+        function($scope,courseService,$state,$ionicSlideBoxDelegate,tmpStorageService,mapModalService,$filter) {
             $scope.showMap=function(){
                 mapModalService.showModal($scope);
             };
+            $scope.location={
+                name:''
+            };
+            $scope.activityForm={
+                startDate:$filter('date')(new Date(),'yyyy-MM-dd'),
+                endDate:$filter('date')(new Date(),'yyyy-MM-dd')
+            };
             $scope.hideMapModal=function(){
-                //mapModalService.hideModal($scope);
-                if($scope.map){
+                mapModalService.hideModal();
+            };
+            $scope.queryMap=function(){
+                if($scope.map&&$scope.location.name){
                     var local = new BMap.LocalSearch($scope.map, {
                         renderOptions:{map: $scope.map}
                     });
-                    local.search("古铜五村");
+                    local.search($scope.location.name);
                 }
             }
             //刷新地图

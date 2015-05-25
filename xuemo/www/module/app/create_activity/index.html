@@ -1,14 +1,29 @@
-<ion-view class="activity-detail-container" view-title="发布活动">
+<ion-view class="create-activity-container" view-title="发布活动">
     <ion-nav-bar class="bar-positive nav-title-slide-ios7">
         <ion-nav-back-button class="button-clear"> <i class="icon ion-ios-arrow-back"></i>
             返回
         </ion-nav-back-button>
     </ion-nav-bar>
     <ion-content>
-        <a class="item item-icon-right me-item" href="#">
-            活动地点
+        <label class="item item-input">
+            <span class="input-label">活动名称</span>
+            <input type="text" required="" ng-model="activityForm.activityName">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">开始时间</span>
+            <input type="date" required="" ng-model="activityForm.startDate">
+            <input type="time" required="" ng-model="activityForm.startTime">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">结束时间</span>
+            <input type="date" required="" ng-model="activityForm.endDate">
+            <input type="time" required="" ng-model="activityForm.endTime">
+        </label>
+        <a class="item item-icon-right item-input" href="#">
+            <span class="input-label">活动地点</span>
             <i ng-click="showMap()" class="icon ion-ios-location-outline"></i>
         </a>
+        <textarea placeholder="活动详细介绍（30-200字）"></textarea>
     </ion-content>
     <button class="bottom-btn button button-block button-positive">
         发布

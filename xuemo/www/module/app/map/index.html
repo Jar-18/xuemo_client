@@ -1,7 +1,15 @@
 <ion-modal-view class="map-modal-container">
     <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+        <ion-nav-title>
+            <div class="bar-search bar bar-header item-input-inset">
+                <label class="item-input-wrapper">
+                    <input ng-model="location.name" placeholder="请输入搜索词" type="text">
+                </label>
+            </div>
+        </ion-nav-title>
         <ion-nav-buttons side="right">
-            <button ng-click="hideMapModal()" class="button button-icon icon ion-ios-star-outline"></button>
+            <button ng-click="queryMap()" class="button button-icon icon ion-ios-search"></button>
+            <button ng-click="hideMapModal()" class="button button-icon icon ion-ios-checkmark-outline"></button>
         </ion-nav-buttons>
     </ion-nav-bar>
     <ion-conctent>

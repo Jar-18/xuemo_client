@@ -643,11 +643,21 @@ form .verify-code-wrapper {
     font-size: 13px;
     color: #808080; }
 
+.map-modal-container .title-center {
+  left: 0px !important;
+  right: 80px !important; }
 .map-modal-container #location-setting-map {
   position: absolute;
   top: 45px;
   width: 100%;
   bottom: 0px; }
+
+.create-activity-container textarea {
+  display: inline-block;
+  width: 100%;
+  height: 150px;
+  padding: 5px 10px;
+  margin-top: 15px; }
 
 .nearby-people-container .list {
   margin-bottom: 0px; }
