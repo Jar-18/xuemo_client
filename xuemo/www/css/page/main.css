@@ -618,7 +618,8 @@ form .verify-code-wrapper {
     color: #ffffff; }
 .activity-detail-container .tabs .tab-item {
   max-width: 250px; }
-.activity-detail-container .participate-btn {
+
+.bottom-btn {
   position: absolute;
   bottom: 0px;
   z-index: 100; }
@@ -641,6 +642,12 @@ form .verify-code-wrapper {
   .location-info-container .marker-desc span:last-child {
     font-size: 13px;
     color: #808080; }
+
+.map-modal-container #location-setting-map {
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  bottom: 0px; }
 
 .nearby-people-container .list {
   margin-bottom: 0px; }

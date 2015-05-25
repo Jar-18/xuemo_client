@@ -16,7 +16,8 @@ angular.module('starter.controllers', [
         'service.activity',
         'service.tmpStorage',
         'service.user',
-        'service.location'
+        'service.location',
+        'service.mapModal'
     ])
     .filter('transformImgUrl',['URL_CONFIG',function(URL_CONFIG){
         return function(imgName){
@@ -85,6 +86,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               'app': {
                   templateUrl: 'module/app/activity_detail/index.html',
                   controller: 'activityDetailCtrl'
+              }
+          }
+      })
+      .state('create_activity', {
+          url: '/create_activity',
+          views: {
+              'app': {
+                  templateUrl: 'module/app/create_activity/index.html',
+                  controller: 'createActivityCtrl'
               }
           }
       })

@@ -430,11 +430,11 @@ form{
       max-width: 250px;
     }
   }
-  .participate-btn{
-    position: absolute;
-    bottom: 0px;
-    z-index: 100;
-  }
+}
+.bottom-btn{
+  position: absolute;
+  bottom: 0px;
+  z-index: 100;
 }
 .location-info-container{
   #location-info-map{
@@ -461,7 +461,14 @@ form{
   }
 }
 
-
+.map-modal-container{
+  #location-setting-map{
+    position: absolute;
+    top:45px;
+    width: 100%;
+    bottom: 0px;
+  }
+}
 
 .nearby-people-container .list{
   margin-bottom: 0px;

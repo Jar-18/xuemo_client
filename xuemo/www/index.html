@@ -14,12 +14,14 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=RRCsVrtvN7kMLGOXP1me4e1G"></script>
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="lib/ionic/js/angular/angular-translate.min.js"></script>
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
+    <script src="js/service/map_modal_service.js"></script>
     <script src="js/app.js"></script>
     <script src="js/service/config.js"></script>
     <script src="js/service/course_service.js"></script>
@@ -64,10 +66,10 @@
     <script src="module/app/my_post/course_list/index.js"></script>
     <script src="module/app/my_post/activity_list/index.js"></script>
     <script src="module/app/activity_detail/index.js"></script>
+    <script src="module/app/create_activity/index.js"></script>
     <script src="module/app/activity_detail/activity_intro/index.js"></script>
     <script src="module/app/activity_detail/participator/index.js"></script>
     <script src="module/app/location_info/index.js"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=RRCsVrtvN7kMLGOXP1me4e1G"></script>
 </head>
 <body ng-app="starter">
 <!--
