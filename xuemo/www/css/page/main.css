@@ -317,13 +317,13 @@
 .personal-homepage .brief-intro-container, .personal-homepage .desired-courses-container {
   margin: 10px 0px; }
 
-.appointment-container, .comment-container {
+.appointment-container, .comment-container, .activity-container, .activity-participator-container {
   min-height: 100px; }
-  .appointment-container .loading-hint, .comment-container .loading-hint {
+  .appointment-container .loading-hint, .comment-container .loading-hint, .activity-container .loading-hint, .activity-participator-container .loading-hint {
     line-height: 100px;
     text-align: center;
     color: #aaa; }
-  .appointment-container .comment-card:last-child, .comment-container .comment-card:last-child {
+  .appointment-container .comment-card:last-child, .comment-container .comment-card:last-child, .activity-container .comment-card:last-child, .activity-participator-container .comment-card:last-child {
     margin-bottom: -10px; }
 
 .ionic-scroll {
@@ -406,17 +406,17 @@
 .appointment-card .post-time, .comment-card .post-time {
   font-size: 12px; }
 
-.course-detail-container .tabs {
+.course-detail-container .tabs, .activity-detail-container .tabs {
   height: 40px;
   margin-bottom: 1px; }
-  .course-detail-container .tabs .tab-item-active {
+  .course-detail-container .tabs .tab-item-active, .activity-detail-container .tabs .tab-item-active {
     border-bottom: 3px solid #387ef5; }
-  .course-detail-container .tabs .tab-item {
+  .course-detail-container .tabs .tab-item, .activity-detail-container .tabs .tab-item {
     font-size: 16px;
     line-height: 40px; }
-    .course-detail-container .tabs .tab-item:last-child .tab-text {
+    .course-detail-container .tabs .tab-item:last-child .tab-text, .activity-detail-container .tabs .tab-item:last-child .tab-text {
       border-right: none; }
-    .course-detail-container .tabs .tab-item .tab-text {
+    .course-detail-container .tabs .tab-item .tab-text, .activity-detail-container .tabs .tab-item .tab-text {
       display: inline-block;
       width: 100%;
       height: 16px;
@@ -488,6 +488,17 @@
 
 .me-container .item-divider {
   min-height: 20px; }
+.me-container .list {
+  margin-bottom: 0px; }
+.me-container .my-row {
+  background-color: white;
+  padding: 0px; }
+  .me-container .my-row .my-col {
+    color: gray;
+    text-align: center;
+    padding: 10px; }
+  .me-container .my-row .border-right {
+    border-right: solid 1px gray; }
 
 .discover-container .item-divider {
   min-height: 20px; }
@@ -550,6 +561,15 @@ form .item-input {
   box-shadow: 3px 0px 0px #4a87ee inset; }
 form .item-input.wrong {
   box-shadow: 3px 0px 0px #ef4e3a inset; }
+form .verify-code-wrapper {
+  background: transparent; }
+  form .verify-code-wrapper .item {
+    float: left;
+    width: 45%; }
+  form .verify-code-wrapper .verify-code {
+    height: 47px;
+    margin-left: 10%;
+    text-align: center; }
 
 .login-container .button-no-margin {
   width: 100%;
@@ -568,10 +588,59 @@ form .item-input.wrong {
   color: #555; }
   .login-container .login-bottom .third-party-card {
     display: inline-block;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 10px; }
     .login-container .login-bottom .third-party-card img {
-      width: 40px;
-      height: 40px;
+      width: 45px;
+      height: 45px;
       display: block; }
+
+/*活动详情*/
+.activity-detail-container .activity-cover {
+  height: 140px;
+  text-align: center;
+  overflow-y: hidden;
+  position: relative; }
+  .activity-detail-container .activity-cover .title {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    display: inline-block;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    padding: 5px 15px;
+    font-size: 15px; }
+  .activity-detail-container .activity-cover img {
+    width: 100%;
+    position: relative;
+    color: #ffffff; }
+.activity-detail-container .tabs .tab-item {
+  max-width: 250px; }
+.activity-detail-container .participate-btn {
+  position: absolute;
+  bottom: 0px;
+  z-index: 100; }
+
+.location-info-container #location-info-map {
+  position: absolute;
+  bottom: 100px;
+  top: 45px;
+  width: 100%; }
+.location-info-container .marker-desc {
+  position: absolute;
+  bottom: 0px;
+  height: 100px;
+  width: 100%;
+  padding-left: 10px; }
+  .location-info-container .marker-desc span:first-child {
+    font-size: 16px;
+    display: block;
+    margin: 10px 0px 5px 0px; }
+  .location-info-container .marker-desc span:last-child {
+    font-size: 13px;
+    color: #808080; }
+
+.nearby-people-container .list {
+  margin-bottom: 0px; }

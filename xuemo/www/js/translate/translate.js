@@ -43,6 +43,12 @@ angular.module('starter')
                     appointmentRecord:"预约记录"
                 }
             },
+            activityDetail:{
+                tab:{
+                    activityIntro:"详情",
+                    participator:"已报名"
+                }
+            },
             myPost: {
                 tab: {
                     courseList:"课程",

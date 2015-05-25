@@ -1,0 +1,35 @@
+<ion-view class="activity-detail-container" view-title="活动详情">
+    <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+        <ion-nav-back-button class="button-clear"> <i class="icon ion-ios-arrow-back"></i>
+            返回
+        </ion-nav-back-button>
+        <ion-nav-buttons side="right">
+            <button class="button button-icon icon ion-ios-upload-outline"></button>
+            <button class="button button-icon icon ion-ios-star-outline"></button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+        <div class="activity-cover">
+            <span class="title">周末滴水湖骑行</span>
+            <img  src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/news/q=100/sign=638215e4cf8065387deaa013a7dca115/2cf5e0fe9925bc31acf191325bdf8db1ca1370e8.jpg">
+        </div>
+        <a class="item  me-item" href="#">
+            2015年6月2日 16:00-19:00
+        </a>
+        <a class="item item-icon-right me-item" href="#">
+            长泰广场 （上海市浦东新区金科路）
+            <i ui-sref="location_info({ lat: 39.921988,lng: 116.417854,locationName:'上海沪北电影院',locationDesc:'上海闸北区洛川东路500号' })" class="icon ion-ios-location-outline"></i>
+        </a>
+        <div class="list card">
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a ng-repeat="tabStatus in tabStatusList" class="tab-item" ng-class="{'tab-item-active positive':tabStatus==currentTabStatus}" ng-click="toggleTab(tabStatus)">
+                    <span class="tab-text">{{ 'page.activityDetail.tab.'+tabStatus | translate }}</span>
+                </a>
+            </div>
+            <ui-view name="activity-detail"></ui-view>
+        </div>
+    </ion-content>
+    <button class="participate-btn button button-block button-positive">
+        我要报名
+    </button>
+</ion-view>

@@ -9,7 +9,7 @@
 
 @import "./home_page";
 @import "./personal_homepage";
-.appointment-container,.comment-container{
+.appointment-container,.comment-container,.activity-container,.activity-participator-container{
   min-height: 100px;
   .loading-hint{
     line-height: 100px;
@@ -134,7 +134,7 @@
     font-size: 12px;
   }
 }
-.course-detail-container{
+.course-detail-container,.activity-detail-container{
   .tabs{
     height: 40px;
     margin-bottom: 1px;
@@ -400,6 +400,68 @@ form{
     }
   }
 }
+
+/*活动详情*/
+.activity-detail-container{
+  .activity-cover{
+    height: 140px;
+    text-align: center;
+    overflow-y:hidden ;
+    position: relative;
+    .title{
+      position: absolute;
+      background: rgba(0, 0, 0, 0.4);
+      color: #ffffff;
+      display: inline-block;
+      left: 0px;
+      top: 0px;
+      z-index: 2;
+      padding: 5px 15px;
+      font-size: 15px;
+    }
+    img{
+      width: 100%;
+      position: relative;
+      color: #ffffff;
+    }
+  }
+  .tabs{
+    .tab-item{
+      max-width: 250px;
+    }
+  }
+  .participate-btn{
+    position: absolute;
+    bottom: 0px;
+    z-index: 100;
+  }
+}
+.location-info-container{
+  #location-info-map{
+    position: absolute;
+    bottom: 100px;
+    top:45px;
+    width: 100%;
+  }
+  .marker-desc{
+    position: absolute;
+    bottom: 0px;
+    height: 100px;
+    width: 100%;
+    padding-left: 10px;
+    span:first-child{
+      font-size: 16px;
+      display: block;
+      margin: 10px 0px 5px 0px;
+    }
+    span:last-child{
+      font-size: 13px;
+      color: #808080;
+    }
+  }
+}
+
+
 
 .nearby-people-container .list{
   margin-bottom: 0px;

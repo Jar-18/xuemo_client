@@ -16,8 +16,7 @@ angular.module('starter.controllers', [
         'service.activity',
         'service.tmpStorage',
         'service.user',
-        'service.location',
-        'service.auth'
+        'service.location'
     ])
     .filter('transformImgUrl',['URL_CONFIG',function(URL_CONFIG){
         return function(imgName){
@@ -80,6 +79,42 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
           }
       })
       // Each tab has its own nav history stack:
+      .state('activity_detail', {
+          url: '/activity_detail/:activityId',
+          views: {
+              'app': {
+                  templateUrl: 'module/app/activity_detail/index.html',
+                  controller: 'activityDetailCtrl'
+              }
+          }
+      })
+      .state('activity_detail.activityIntro', {
+          url: '/activity_intro',
+          views: {
+              'activity-detail': {
+                  templateUrl: 'module/app/activity_detail/activity_intro/index.html',
+                  controller:"activityDetailIntroCtrl"
+              }
+          }
+      })
+      .state('activity_detail.participator', {
+          url: '/participator',
+          views: {
+              'activity-detail': {
+                  templateUrl: 'module/app/activity_detail/participator/index.html',
+                  controller:"activityDetailParticipatorCtrl"
+              }
+          }
+      })
+      .state('location_info', {
+          url: '/location_info?lng&lat&locationName&locationDesc',
+          views: {
+              'app': {
+                  templateUrl: 'module/app/location_info/index.html',
+                  controller: 'locationInfoCtrl'
+              }
+          }
+      })
       .state('learn', {
           url: '/learn/:district/:category/:sort',
           views: {

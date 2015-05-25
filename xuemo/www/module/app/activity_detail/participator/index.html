@@ -1,0 +1,6 @@
+<div class="list activity-participator-container">
+    <div ng-if="!loaded" class="loading-hint" ng-bind="loadingHintText">
+
+    </div>
+    <user-card user="user" ng-repeat="user in peopleList" ng-click="toPersonalHomepage(user.id)"></user-card>
+</div>
