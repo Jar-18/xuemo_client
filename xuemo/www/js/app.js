@@ -216,10 +216,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               }
           }
       })
-      .state('app.teach', {
+      .state('teach', {
           url: '/teach',
           views: {
-              'main': {
+              'app': {
                   templateUrl: 'module/app/teach/index.html',
                   controller: 'teachCtrl'
               }
