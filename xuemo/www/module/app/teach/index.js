@@ -1,6 +1,6 @@
 angular.module('starter.controllers')
 
-    .controller('teachCtrl', ['$scope','URL_CONFIG','$http','$state',function($scope,URL_CONFIG,$http,$state) {
+    .controller('teachCtrl', ['$scope','URL_CONFIG','$http','$state','authService',function($scope,URL_CONFIG,$http,$state, authService) {
         var urlStatus=URL_CONFIG.status;
         var normalHost=URL_CONFIG.host.normalHost;
 
@@ -51,8 +51,8 @@ angular.module('starter.controllers')
                     {"id":"2"}
                 ],
                 "title":"",
-                "teacher":{"id":"1"},
-                "price": ""
+                teacher:{id:authService.getUserId()},
+                "price": "",
             }
         };
         $scope.postCourseStep1=function(){
