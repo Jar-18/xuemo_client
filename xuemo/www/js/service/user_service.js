@@ -60,6 +60,42 @@ angular.module("service.user",['service.config'])
                 });
                 return updatePromise;
 
+            },
+            getRemoveFollowerPromise: function(params) {
+                var url = normalHost + URL_CONFIG.app.user.follower[urlStatus];
+                var remFollowerPromise = $http({
+                    method:'DELETE',
+                    url:url,
+                    params:params,
+                });
+                return remFollowerPromise;
+            },
+            getCreateFollowerPromise: function(data) {
+                var url = normalHost + URL_CONFIG.app.user.follower[urlStatus];
+                var createFollowerPromise = $http({
+                    method:'POST',
+                    url:url,
+                    data:data,
+                });
+                return createFollowerPromise;
+            },
+            getAttentionListPromise: function(params) {
+                var url = normalHost + URL_CONFIG.app.user.follower[urlStatus];
+                var attentionListPromise = $http({
+                    method:'GET',
+                    url:url,
+                    params:params,
+                });
+                return attentionListPromise;
+            },
+            getFollowerListPromise: function(params) {
+                var url = normalHost + URL_CONFIG.app.user.follower[urlStatus];
+                var followerListPromise = $http({
+                    method:'GET',
+                    url:url,
+                    params:params,
+                });
+                return followerListPromise;
             }
         }
     }])
