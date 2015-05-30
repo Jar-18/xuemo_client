@@ -1,19 +1,16 @@
-<ion-view view-title="我要学">
+<ion-view class="course-list-view" view-title="我要学">
     <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
         <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> 返回</ion-nav-back-button>
         <ion-nav-buttons side="right">
             <a href="#/teach" class="button button-icon icon ion-ios-plus-empty"></a>
         </ion-nav-buttons>
     </ion-nav-bar>
-
+    <top-filter filter-data="filterData" active-item-list="activeFilterList"></top-filter>
     <ion-content scroller overflow-scroll="true" class="has-header">
       <ion-refresher
                 pulling-text="下拉刷新"
                 on-refresh="refreshCourseList()">
         </ion-refresher>
-        <div>
-            <top-filter filter-data="filterData" active-item-list="activeFilterList"></top-filter>
-        </div>
         <ion-list>
             <course-card course="course" ng-repeat="course in courseList"></course-card>
         </ion-list>
