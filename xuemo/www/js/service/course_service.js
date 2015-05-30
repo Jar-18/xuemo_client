@@ -75,6 +75,42 @@ angular.module("service.course",['service.config'])
                     params:params
                 });
                 return createAppointmentPromise;
+            },
+            getAddFavouritePromise: function(data) {
+                if(!data) {
+                    data = {};
+                }
+                var url=normalHost+URL_CONFIG.app.learn.courseFavourite[urlStatus];
+                var addFavouritePromise = $http({
+                    method: 'POST',
+                    url: url,
+                    data: data
+                });
+                return addFavouritePromise;
+            },
+            getRemoveFavouritePromise: function(params) {
+                if(!params) {
+                    params = {};
+                }
+                var url=normalHost+URL_CONFIG.app.learn.courseFavourite[urlStatus];
+                var remFavouritePromise = $http({
+                    method: 'DELETE',
+                    url: url,
+                    params: params
+                });
+                return remFavouritePromise;
+            },
+            getFavouriteCourseListPromise: function(params) {
+                if(!params) {
+                    params = {};
+                }
+                var url=normalHost+URL_CONFIG.app.learn.courseFavourite[urlStatus];
+                var favouriteListPromise = $http({
+                    method: 'GET',
+                    url: url,
+                    params: params
+                });
+                return favouriteListPromise;
             }
         }
     }])

@@ -292,6 +292,36 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
         }
       })
 
+      .state('my_favourite', {
+        url: '/my_favourite',
+        views: {
+          'app': {
+            templateUrl: 'module/app/my_favourite/index.html',
+            controller: 'myFavouriteCtrl'
+          }
+        }
+      })
+
+      .state('my_favourite.courseList', {
+        url: '/courses',
+        views: {
+          'my-favourite': {
+            templateUrl: 'module/app/my_favourite/course_list/index.html',
+            controller: 'myFavouriteCoursesCtrl'
+          }
+        }
+      })
+
+      .state('my_favourite.activityList', {
+        url: '/activities',
+        views: {
+          'my-favourite': {
+            templateUrl: 'module/app/my_favourite/activity_list/index.html',
+            controller: 'myFavouriteActivitiesCtrl'
+          }
+        }
+      })
+
       .state('personal_homepage', {
           url: '/personal_homepage/:userId/:mode',
           views: {

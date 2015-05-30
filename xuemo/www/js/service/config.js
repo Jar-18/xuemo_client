@@ -50,6 +50,9 @@ angular.module("service.config",[])
                 },
                 createAppointment: {
                     "online":"/appointments"
+                },
+                courseFavourite: {
+                    "online":"/courseFavourites"
                 }
             },
             teach: {

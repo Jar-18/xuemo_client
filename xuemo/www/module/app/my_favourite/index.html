@@ -1,0 +1,15 @@
+<ion-view view-title="我的收藏">
+    <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+        <ion-nav-back-button class="button-clear"> <i class="icon ion-ios-arrow-back"></i>
+            返回
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="course-detail-container">
+        <div class="item tabs tabs-secondary tabs-icon-left">
+            <a ng-repeat="tabStatus in tabStatusList" class="tab-item" ng-class="{'tab-item-active positive':tabStatus==currentTabStatus}" ng-click="toggleTab(tabStatus)">
+                <span class="tab-text">{{ 'page.myPost.tab.'+tabStatus | translate }}</span>
+            </a>
+        </div>
+        <ui-view name="my-favourite"></ui-view>
+    </ion-content>
+</ion-view>
