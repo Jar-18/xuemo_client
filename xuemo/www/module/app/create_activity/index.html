@@ -7,11 +7,11 @@
     <ion-content>
         <label class="item item-input">
             <span class="input-label">活动名称</span>
-            <input type="text" required="" ng-model="activityForm.activityName">
+            <input type="text" required="" ng-model="formParams.title">
         </label>
         <span class="item item-input">
             <span class="input-label">开始时间</span>
-            <input style="background: red;" type="date" required="" ng-model="activityForm.startDate">
+            <input type="date" required="" ng-model="activityForm.startDate">
             <input type="time" required="" ng-model="activityForm.startTime">
 
         </span>
@@ -24,9 +24,26 @@
             <span class="input-label">活动地点</span>
             <i ng-click="showMap()" class="icon ion-ios-location-outline"></i>
         </a>
-        <textarea placeholder="活动详细介绍（30-200字）"></textarea>
+        <span class="item item-input">
+            <span class="input-label">活动地点</span>
+            <chain-selector
+                    selector-list="districtsList"
+                    selected-model="formParams.district"
+                    custom-options="formOptions.districts">
+                >
+            </chain-selector>
+        </span>
+        <span class="item item-input">
+            <span class="input-label">类别</span>
+            <chain-selector
+                selector-list="courseCategoriesList"
+                selected-model="formParams.category"
+                custom-options="formOptions.courseCategories">
+           </chain-selector>
+        </span>
+        <textarea ng-model="formParams.describe" placeholder="活动详细介绍（30-200字）"></textarea>
     </ion-content>
-    <button class="bottom-btn button button-block button-positive">
+    <button ng-click="createActivity()" class="bottom-btn button button-block button-positive">
         发布
     </button>
 </ion-view>

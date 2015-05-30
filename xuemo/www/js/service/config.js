@@ -21,6 +21,9 @@ angular.module("service.config",[])
             },
             personalInfo:{
                 "online":"/users"
+            },
+            activities:{
+                "online":"/activities"
             }
         },
         app:{
