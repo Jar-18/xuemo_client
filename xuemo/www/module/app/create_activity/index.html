@@ -9,16 +9,17 @@
             <span class="input-label">活动名称</span>
             <input type="text" required="" ng-model="activityForm.activityName">
         </label>
-        <label class="item item-input">
+        <span class="item item-input">
             <span class="input-label">开始时间</span>
-            <input type="date" required="" ng-model="activityForm.startDate">
+            <input style="background: red;" type="date" required="" ng-model="activityForm.startDate">
             <input type="time" required="" ng-model="activityForm.startTime">
-        </label>
-        <label class="item item-input">
+
+        </span>
+        <span class="item item-input">
             <span class="input-label">结束时间</span>
             <input type="date" required="" ng-model="activityForm.endDate">
             <input type="time" required="" ng-model="activityForm.endTime">
-        </label>
+        </span>
         <a class="item item-icon-right item-input" href="#">
             <span class="input-label">活动地点</span>
             <i ng-click="showMap()" class="icon ion-ios-location-outline"></i>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=RRCsVrtvN7kMLGOXP1me4e1G"></script>
+
+</head>
+<body ng-app="starter">
+<div id="location-setting-map" style="width: 500px;height: 500px;"></div>
+
+<script>
+
+    var locationLatLng={
+        lat:39.921988,
+        lng:116.417854
+    };
+    var zoomLevel=17;
+    var map = new BMap.Map("location-setting-map");
+    console.debug(1);
+    map.addEventListener("click", function(e){
+        console.debug(e.point.lng);
+    });
+    var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
+    map.addControl(top_left_navigation);
+    map.centerAndZoom( new BMap.Point(locationLatLng.lng,locationLatLng.lat), zoomLevel);
+    map.enableScrollWheelZoom(true);
+    map.enableDragging();
+    var currentLocPoint=new BMap.Point(locationLatLng.lng,locationLatLng.lat);
+
+</script>
+</body>
+</html>
