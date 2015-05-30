@@ -31,6 +31,7 @@ angular.module('starter.controllers')
                     }).success(function(result) {
                         console.log('Add attention success');
                         $scope.userObj.isFollowed = true;
+                        $scope.userObj.followerCount++;
                     });
                 } else {
                     userService.getRemoveFollowerPromise({
@@ -39,6 +40,7 @@ angular.module('starter.controllers')
                     }).success(function(result) {
                         console.log('Remove attention success');
                         $scope.userObj.isFollowed = false;
+                        $scope.userObj.followerCount--;
                     });
                 }
             }
