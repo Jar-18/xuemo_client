@@ -52,7 +52,7 @@ angular.module('starter.controllers')
                 ],
                 "title":"",
                 teacher:{id:authService.getUserId()},
-                "price": "",
+                "price": ""
             }
         };
         $scope.postCourseStep1=function(){

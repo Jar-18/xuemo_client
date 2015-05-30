@@ -126,6 +126,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               }
           }
       })
+      .state('location_setting', {
+          url: '/location_setting?lng&lat',
+          views: {
+              'app': {
+                  templateUrl: 'module/app/location_setting/index.html',
+                  controller: 'locationSettingCtrl'
+              }
+          }
+      })
       .state('learn', {
           url: '/learn/:district/:category/:sort',
           views: {

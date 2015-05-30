@@ -643,10 +643,10 @@ form .verify-code-wrapper {
     font-size: 13px;
     color: #808080; }
 
-.map-modal-container .title-center {
+.location-setting-container .title-center {
   left: 0px !important;
   right: 80px !important; }
-.map-modal-container #location-setting-map {
+.location-setting-container #location-setting-map {
   position: absolute;
   top: 45px;
   width: 100%;
