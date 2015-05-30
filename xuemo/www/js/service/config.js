@@ -41,6 +41,9 @@ angular.module("service.config",[])
                 },
                 updatePersonalInfo: {
                     "online":"/users"
+                },
+                follower: {
+                    "online":"/followers"
                 }
             },
             learn:{

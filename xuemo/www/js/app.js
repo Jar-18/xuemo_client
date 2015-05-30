@@ -322,6 +322,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
         }
       })
 
+      .state('my_attention', {
+        url: '/my_attentions',
+        views: {
+          'app': {
+            templateUrl: 'module/app/my_attention/index.html',
+            controller: 'myAttentionListCtrl'
+          }
+        }
+      })
+
+      .state('my_follower', {
+        url: '/my_followers',
+        views: {
+          'app': {
+            templateUrl: 'module/app/my_follower/index.html',
+            controller: 'myFollowerListCtrl'
+          }
+        }
+      })
+
       .state('personal_homepage', {
           url: '/personal_homepage/:userId/:mode',
           views: {
