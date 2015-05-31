@@ -1,7 +1,7 @@
 angular.module('starter.controllers')
 
-.controller('meCtrl', ['$scope', '$state', '$ionicModal', 'authService',
-	function($scope, $state, $ionicModal, authService) {
+.controller('meCtrl', ['$scope', '$state', '$ionicModal', 'authService','$ionicHistory',
+	function($scope, $state, $ionicModal, authService, $ionicHistory) {
 
 
 		$scope.updateMePageProfile = function() {
@@ -11,6 +11,7 @@ angular.module('starter.controllers')
 		$scope.updateMePageProfile();
 
 		$scope.toPersonalHomepage = function() {
+			$ionicHistory.clearCache();
 			$state.go("personal_homepage", {
 				userId: $scope.user.id,
 				mode: "modify"

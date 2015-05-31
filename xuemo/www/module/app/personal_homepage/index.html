@@ -40,11 +40,6 @@
                 <span ng-bind="'widget.constellation.'+userObj.constellation | translate "></span>
             </span>
             </div>
-            <div class="desc-row">
-                <span class="row-label">爱好</span>
-            <span class="row-value">
-                <span ng-repeat="interest in userObj.interests">{{ 'widget.interests.'+interest.id | translate }}<span ng-if="!$last&&course.sites.length!=1">, </span></span></span>
-            </div>
         </div>
         <div class="section-title">
             <h2>TA想学的课程</h2>
