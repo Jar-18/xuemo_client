@@ -18,3 +18,7 @@
     margin-bottom: 10px; }
   .activity-card .icon {
     margin-right: 5px; }
+  .activity-card .ion-person {
+    margin-left: 10px; }
+  .activity-card .distance {
+    float: right; }
