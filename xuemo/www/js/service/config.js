@@ -3,10 +3,10 @@ angular.module("service.config",[])
         status:"online",
         host:{
           normalHost:"http://192.168.2.3:3000",
-          imgHost:"http://192.168.2.3:3000"
+          imgHost:"http://7xigx5.com1.z0.glb.clouddn.com"
         },
         common:{
-            imgApi:"/images",
+            imgApi:"",
             courseComments:{
                 "online":"/courseRatings"
             },
