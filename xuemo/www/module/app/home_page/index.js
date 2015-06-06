@@ -23,7 +23,7 @@ angular.module('starter.controllers')
         }
         $scope.categoriesList=[    {
             "parentId":"1",
-            "id":"3",
+            "id":"1",
             "name":"运动",
             "key":"cake"
         },{
