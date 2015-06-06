@@ -18,6 +18,7 @@ angular.module('starter.controllers', [
         'service.user',
         'service.location',
         'service.mapModal',
+        'service.pager',
         'service.auth'
     ])
     .filter('transformImgUrl',['URL_CONFIG',function(URL_CONFIG){

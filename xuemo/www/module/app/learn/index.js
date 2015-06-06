@@ -1,7 +1,7 @@
 angular.module('starter.controllers')
 
-.controller('learnCtrl', ['$scope','courseService','$state','URL_CONFIG','$http',
-    function($scope,courseService,$state,URL_CONFIG,$http) {
+.controller('learnCtrl', ['$scope','courseService','$state','URL_CONFIG','$http','pagerService',
+    function($scope,courseService,$state,URL_CONFIG,$http,pagerService) {
         var routerParams=$state.params;
         var urlStatus=URL_CONFIG.status;
         var normalHost=URL_CONFIG.host.normalHost;
@@ -92,53 +92,31 @@ angular.module('starter.controllers')
         }];
         $scope.$watch("activeFilterList",function(newVal,oldVal){
             if(newVal && newVal[0].level1==oldVal[0].level1){
-                console.debug($scope.activeFilterList);
                 $scope.refreshCourseList();
             }
         },true);
         $scope.courseList=[];
-        $scope.noMoreItemsAvailable = false;
-        $scope.pageNumber=1;
-        $scope.pageSize=10;
+        $scope.whetherLoadMore = false;
+
+        var listUrl=normalHost+URL_CONFIG.app.learn.courseList[urlStatus];
+        var listParams={
+            categoryId:$scope.activeFilterList[1].level1,
+            districtId:$scope.activeFilterList[0].level2,
+            orderBy:$scope.activeFilterList[2].level1
+        };
+        pagerService.init(listUrl,listParams);
         $scope.refreshCourseList=function(){
-            $scope.pageNumber=1;
-            var goodsListPromise=courseService.getCoursePromise(undefined,{
-                pageNumber:$scope.pageNumber,
-                pageSize:$scope.pageSize,
-                categoryId:$scope.activeFilterList[1].level1,
-                districtId:$scope.activeFilterList[0].level2,
-                orderBy:$scope.activeFilterList[2].level1
-            });
-            goodsListPromise.success(function(data,status,headers){
-                var courseList=data;
-                if(courseList.length==0){
-                    $scope.noMoreItemsAvailable = true;
-                }
-                $scope.courseList=courseList;
-                $scope.pageNumber++;
-            }).finally(function(){
-                $scope.$broadcast('scroll.infiniteScrollComplete');
+            pagerService.refresh($scope.courseList,function(whetherLoadMore){
+                $scope.$broadcast('scroll.refreshComplete');
+                console.debug(whetherLoadMore);
+                $scope.whetherLoadMore = whetherLoadMore;
             })
         };
         $scope.showMoreCourses=function(){
-            var goodsListPromise=courseService.getCoursePromise(undefined,{
-                pageNumber:$scope.pageNumber,
-                pageSize:$scope.pageSize,
-                categoryId:$scope.activeFilterList[1].level1,
-                districtId:$scope.activeFilterList[0].level2,
-                orderBy:$scope.activeFilterList[2].level1
-            });
-            goodsListPromise.success(function(data,status,headers){
-                var courseList=data;
-                if(courseList.length==0){
-                    $scope.noMoreItemsAvailable = true;
-                }
-                for(var goodsIndex= 0;goodsIndex<courseList.length;goodsIndex++){
-                    $scope.courseList.push(courseList[goodsIndex]);
-                };
-                $scope.pageNumber++;
-            }).finally(function(){
+            pagerService.nextPage($scope.courseList,function(whetherLoadMore){
                 $scope.$broadcast('scroll.infiniteScrollComplete');
+                console.debug(whetherLoadMore);
+                $scope.whetherLoadMore = whetherLoadMore;
             })
         };
     }])
