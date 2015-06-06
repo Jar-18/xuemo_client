@@ -1,4 +1,4 @@
-<ion-view class="course-list-view" view-title="我要学">
+<ion-view class="list-view" view-title="我要学">
     <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
         <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> 返回</ion-nav-back-button>
         <ion-nav-buttons side="right">
@@ -9,13 +9,13 @@
     <ion-content scroller overflow-scroll="true" class="has-header">
       <ion-refresher
                 pulling-text="下拉刷新"
-                on-refresh="refreshCourseList()">
+                on-refresh="refresh()">
         </ion-refresher>
         <ion-list>
             <course-card course="course" ng-repeat="course in courseList"></course-card>
         </ion-list>
 
-        <ion-infinite-scroll ng-if="whetherLoadMore" on-infinite="showMoreCourses()" distance="8%">
+        <ion-infinite-scroll ng-if="whetherLoadMore" on-infinite="showMore()" distance="8%">
         </ion-infinite-scroll>
     </ion-content>
 

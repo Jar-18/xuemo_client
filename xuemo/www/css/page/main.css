@@ -321,10 +321,10 @@
 .personal-homepage .brief-intro-container, .personal-homepage .desired-courses-container {
   margin: 10px 0px; }
 
-.course-list-view .top-filter-wrapper {
-  margin-top: 60px; }
-.course-list-view .has-header {
-  top: 100px; }
+.list-view .top-filter-wrapper {
+  margin-top: 45px; }
+.list-view .has-header {
+  top: 83px; }
 
 .appointment-container, .comment-container, .activity-container, .activity-participator-container {
   min-height: 100px; }

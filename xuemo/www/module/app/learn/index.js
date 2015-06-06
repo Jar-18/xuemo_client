@@ -86,13 +86,20 @@ angular.module('starter.controllers')
             level1:"",
             level2:routerParams.district
         },{
-            level1:routerParams.category
+            level1:"",
+            level2:routerParams.category
         },{
             level1:routerParams.sort
         }];
         $scope.$watch("activeFilterList",function(newVal,oldVal){
             if(newVal && newVal[0].level1==oldVal[0].level1){
-                $scope.refreshCourseList();
+                var listParams={
+                    categoryId:$scope.activeFilterList[1].level2,
+                    districtId:$scope.activeFilterList[0].level2,
+                    orderBy:$scope.activeFilterList[2].level1
+                };
+                pagerService.init(listUrl,listParams);
+                $scope.refresh();
             }
         },true);
         $scope.courseList=[];
@@ -105,14 +112,14 @@ angular.module('starter.controllers')
             orderBy:$scope.activeFilterList[2].level1
         };
         pagerService.init(listUrl,listParams);
-        $scope.refreshCourseList=function(){
+        $scope.refresh=function(){
             pagerService.refresh($scope.courseList,function(whetherLoadMore){
                 $scope.$broadcast('scroll.refreshComplete');
                 console.debug(whetherLoadMore);
                 $scope.whetherLoadMore = whetherLoadMore;
             })
         };
-        $scope.showMoreCourses=function(){
+        $scope.showMore=function(){
             pagerService.nextPage($scope.courseList,function(whetherLoadMore){
                 $scope.$broadcast('scroll.infiniteScrollComplete');
                 console.debug(whetherLoadMore);
