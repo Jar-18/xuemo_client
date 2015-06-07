@@ -9,6 +9,10 @@
             <span class="input-label">活动名称</span>
             <input type="text" required="" ng-model="formParams.title">
         </label>
+        <a class="item item-icon-right item-input" href="#">
+            <span class="input-label">活动区域</span>
+            <i ng-click="showMap()" class="icon ion-ios-location-outline"></i>
+        </a>
         <span class="item item-input">
             <span class="input-label">开始时间</span>
             <input type="date" required="" ng-model="activityForm.startDate">
@@ -20,10 +24,6 @@
             <input type="date" required="" ng-model="activityForm.endDate">
             <input type="time" required="" ng-model="activityForm.endTime">
         </span>
-        <a class="item item-icon-right item-input" href="#">
-            <span class="input-label">活动地点</span>
-            <i ng-click="showMap()" class="icon ion-ios-location-outline"></i>
-        </a>
         <span class="item item-input">
             <span class="input-label">活动地点</span>
             <chain-selector
