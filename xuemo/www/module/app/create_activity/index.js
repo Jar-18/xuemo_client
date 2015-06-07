@@ -75,7 +75,8 @@ angular.module('starter.controllers')
                     data:$scope.formParams
                 }).success(function(result){
                     if(result.status != null && result.status == "Success") {
-                        $state.go('nearby_activity');
+                        alert('发布成功');
+                        $state.go('my_post.courseList');
                     }
                 });
 
