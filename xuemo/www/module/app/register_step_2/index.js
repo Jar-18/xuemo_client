@@ -1,10 +1,7 @@
 angular.module('starter.controllers')
 
-.controller('registerStep2Ctrl', ['$scope', 'courseService', '$state', 'URL_CONFIG', '$http', 'userService', 'authService','$ionicHistory',
-	function($scope, courseService, $state, URL_CONFIG, $http, userService, authService,$ionicHistory) {
-		$scope.skipUpdatePersonalInfo = function() {
-			$state.go('app.me');
-		}
+.controller('registerStep2Ctrl', ['$scope', 'courseService', '$state', 'URL_CONFIG', '$http', 'userService', 'authService', '$ionicHistory',
+	function($scope, courseService, $state, URL_CONFIG, $http, userService, authService, $ionicHistory) {
 		$scope.userInfo = {
 			nickname: '',
 			gender: '1',
@@ -23,7 +20,7 @@ angular.module('starter.controllers')
 								disableBack: true,
 								historyRoot: true,
 							});
-							$state.go("app.me");
+							$state.go("register_step_3");
 						});
 				})
 				.error(function(err) {

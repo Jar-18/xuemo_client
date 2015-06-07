@@ -163,6 +163,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               }
           }
       })
+      .state('register_step_3', {
+          url: '/register_step_3',
+          views: {
+              'app': {
+                  templateUrl: 'module/app/register_step_3/index.html',
+                  controller: 'registerStep3Ctrl'
+              }
+          }
+      })
       .state('app.find', {
           url: '/find',
           views: {
