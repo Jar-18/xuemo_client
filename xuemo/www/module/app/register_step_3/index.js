@@ -24,16 +24,11 @@ angular.module('starter.controllers')
 			}
 		};
 		$scope.updatePersonalInfo = function() {
-
 			userService.getUserPhotosUploadTokenPromise()
 				.then(function(token) {
-					console.log('111');
-					console.log(token);
 					return uploadService.uploadImg(token, $scope.userInfo.portrait, {});
 				})
 				.then(function(key) {
-					console.log('222');
-					console.log(key);
 					var params = {
 						userId: authService.getUserId(),
 						portrait: key,
@@ -42,12 +37,9 @@ angular.module('starter.controllers')
 					return userService.getUpdatePersonalInfoPromise(params);
 				})
 				.then(function(result) {
-					console.log('333');
-					console.log(result);
 					return authService.updateProfile();
 				})
 				.then(function() {
-					console.log('444');
 					$ionicHistory.clearCache();
 					$ionicHistory.nextViewOptions({
 						disableBack: true,
@@ -58,25 +50,6 @@ angular.module('starter.controllers')
 				.catch(function(err) {
 					alert(err);
 				});
-
-			// var params = $scope.userInfo;
-			// params.userId = authService.getUserId();
-			// console.log(params);
-			// userService.getUpdatePersonalInfoPromise(params)
-			// 	.success(function(result) {
-			// 		authService.updateProfile()
-			// 			.then(function() {
-			// 				$ionicHistory.clearCache();
-			// 				$ionicHistory.nextViewOptions({
-			// 					disableBack: true,
-			// 					historyRoot: true,
-			// 				});
-			// 				$state.go("app.me");
-			// 			});
-			// 	})
-			// 	.error(function(err) {
-			// 		alert(err);
-			// 	});
 		}
 		$scope.updatePortrait = function() {
 			// Show the action sheet

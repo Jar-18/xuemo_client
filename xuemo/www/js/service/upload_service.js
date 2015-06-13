@@ -3,7 +3,6 @@ angular.module("service.upload", [])
         var fileServer = "http://upload.qiniu.com";
         return {
             uploadImg: function(token, imgURI, option) {
-                console.log('get token');
                 console.log('token str:' + token.data);
                 var q = $q.defer();
                 var ft = new FileTransfer();

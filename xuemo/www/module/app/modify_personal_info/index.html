@@ -1,33 +1,33 @@
 <ion-view title="个人信息">
 	<ion-content class="modify-info-container">
 		<div class="item item-divider"></div>
-		<a class="item item-icon-right img-item" href="#">
+		<a class="item item-icon-right img-item" href="#" ng-click="choosePortrait()">
 			头像
-			<img class="portrait"  ng-src="{{user.portrait|transformImgUrl}}"> <i class="icon ion-ios-arrow-right"></i>
+			<img class="portrait"  ng-src="{{userInfo.portrait|transformImgUrl}}"> <i class="icon ion-ios-arrow-right"></i>
 		</a>
 		<a class="item item-icon-right text-item" href="#">
 			昵称
-			<span>{{user.nickname}}</span> <i class="icon ion-ios-arrow-right"></i>
+			<span>{{userInfo.nickname}}</span> <i class="icon ion-ios-arrow-right"></i>
 		</a>
 		<a class="item item-icon-right text-item" href="#">
 			性别
-			<span>{{user.gender == 0 ? '女' : '男'}}</span>
+			<span>{{userInfo.gender == 0 ? '女' : '男'}}</span>
 			<i class="icon ion-ios-arrow-right"></i>
 		</a>
 		<div class="item item-divider"></div>
 		<a class="item item-icon-right text-item" href="#">
 			生日
-			<span>{{user.birthday}}</span>
+			<span>{{userInfo.birthday}}</span>
 			<i class="icon ion-ios-arrow-right"></i>
 		</a>
 		<a class="item item-icon-right text-item" href="#">
 			地区
-			<span>{{user.district.name}}</span>
+			<span>{{userInfo.district.name}}</span>
 			<i class="icon ion-ios-arrow-right"></i>
 		</a>
 		<a class="item item-icon-right text-item" href="#">
 			个性签名
-			<span>{{user.motto}}</span>
+			<span>{{userInfo.motto}}</span>
 			<i class="icon ion-ios-arrow-right"></i>
 		</a>
 	</ion-content>
