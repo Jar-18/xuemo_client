@@ -19,12 +19,14 @@ angular.module('starter.controllers', [
         'service.location',
         'service.mapModal',
         'service.pager',
-        'service.auth'
+        'service.auth',
+        'service.photo',
+        'service.upload'
     ])
     .filter('transformImgUrl',['URL_CONFIG',function(URL_CONFIG){
         return function(imgName){
             if(!imgName){
-                imgName="default.jpg";
+                return "img/default.jpg";
             }
             var urlStatus=URL_CONFIG.status;
             var imgHost=URL_CONFIG.host.imgHost;
@@ -169,6 +171,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               'app': {
                   templateUrl: 'module/app/register_step_2/index.html',
                   controller: 'registerStep2Ctrl'
+              }
+          }
+      })
+      .state('register_step_3', {
+          url: '/register_step_3',
+          views: {
+              'app': {
+                  templateUrl: 'module/app/register_step_3/index.html',
+                  controller: 'registerStep3Ctrl'
               }
           }
       })

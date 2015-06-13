@@ -3,6 +3,14 @@ angular.module("service.user",['service.config'])
         var urlStatus=URL_CONFIG.status;
         var normalHost=URL_CONFIG.host.normalHost;
         return{
+            getUserPhotosUploadTokenPromise: function(){
+                var url = normalHost + URL_CONFIG.app.user.uploadUserPhotoToken[urlStatus];
+                var promise = $http({
+                    method: 'GET',
+                    url: url
+                });
+                return promise;
+            },
             getPersonalInfoPromise:function(userId,params){
                 if(!params){
                     params={};

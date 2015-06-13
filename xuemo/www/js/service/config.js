@@ -44,7 +44,10 @@ angular.module("service.config",[])
                 },
                 follower: {
                     "online":"/followers"
-                }
+                },
+                uploadUserPhotoToken:{
+                    "online":"/files/uploadToken"
+                },
             },
             learn:{
                 courseList:{

@@ -515,3 +515,16 @@ form{
 .nearby-people-container .list{
   margin-bottom: 0px;
 }
+
+.reg-step3-container {
+  .portrait-item {
+    text-align: center;
+  }
+  .item {
+    .portrait {
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+    }
+  }
+}
