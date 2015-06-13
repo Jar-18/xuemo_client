@@ -321,6 +321,21 @@
 .personal-homepage .brief-intro-container, .personal-homepage .desired-courses-container {
   margin: 10px 0px; }
 
+.my-appointment .appointment-info {
+  border: none;
+  padding: 0px 10px 5px 10px;
+  position: relative; }
+  .my-appointment .appointment-info .desc-row {
+    margin-right: 70px; }
+  .my-appointment .appointment-info .status {
+    position: absolute;
+    right: 13px;
+    top: 0px;
+    bottom: 0px;
+    text-align: center;
+    line-height: 77px;
+    color: #387ef5; }
+
 .list-view .top-filter-wrapper {
   margin-top: 45px; }
 .list-view .has-header {

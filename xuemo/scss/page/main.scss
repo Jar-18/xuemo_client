@@ -10,6 +10,26 @@
 @import "./home_page";
 @import "./personal_homepage";
 
+.my-appointment{
+  .appointment-info{
+    border: none;
+    padding: 0px 10px 5px 10px;
+    position: relative;
+    .desc-row{
+      margin-right: 70px;
+    }
+    .status{
+      position: absolute;
+      right: 13px;
+      top: 0px;
+      bottom: 0px;
+      text-align: center;
+      line-height: 77px;
+      color: $theme-color;
+    }
+  }
+}
+
 .list-view{
   .top-filter-wrapper{
     margin-top:45px;

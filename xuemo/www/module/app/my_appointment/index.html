@@ -1,0 +1,46 @@
+<ion-view class="my-appointment" view-title="我的预约">
+    <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
+        <ion-nav-back-button class="button-clear"><i class="icon ion-ios-arrow-left"></i> 返回</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content scroller class="has-header">
+        <ion-list>
+            <div ng-repeat="appointment in myAppointmentList">
+                <course-card course="appointment.appliedCourse"></course-card>
+                <div class="item appointment-info">
+                    <div class="desc-row">
+                        <span class="row-label">区域</span>
+					<span class="row-value">
+						<span ng-repeat="district in appointment.appliedCourse.districts">
+							{{district.name}}
+							<span ng-if="!$last&&appointment.appliedCourse.districts.length!=1">,</span>
+						</span>
+					</span>
+                    </div>
+                    <div class="desc-row">
+                        <span class="row-label">类型</span>
+					<span class="row-value">
+						<span ng-repeat="courseType in appointment.appliedCourse.types">
+							{{ 'widget.courseType.'+courseType.id | translate }}
+							<span ng-if="!$last&&course.types.length!=1">,</span>
+						</span>
+					</span>
+                    </div>
+                    <div class="desc-row">
+                        <span class="row-label">地点</span>
+					<span class="row-value">
+						<span ng-repeat="courseSite in appointment.appliedCourse.sites">
+							{{ 'widget.courseSite.'+courseSite.id | translate }}
+							<span ng-if="!$last&&appointment.appliedCourse.sites.length!=1">,</span>
+						</span>
+					</span>
+                    </div>
+                    <div class="status">
+                        已确认
+                    </div>
+                </div>
+
+            </div>
+        </ion-list>
+    </ion-content>
+
+</ion-view>
