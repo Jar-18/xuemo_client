@@ -497,12 +497,14 @@ form{
 }
 
 .reg-step3-container {
-  .item-divider {
+  .portrait-item {
     text-align: center;
   }
   .item {
     .portrait {
       border-radius: 50%;
+      width: 90px;
+      height: 90px;
     }
   }
 }

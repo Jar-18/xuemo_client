@@ -19,12 +19,14 @@ angular.module('starter.controllers', [
         'service.location',
         'service.mapModal',
         'service.pager',
-        'service.auth'
+        'service.auth',
+        'service.photo',
+        'service.upload'
     ])
     .filter('transformImgUrl',['URL_CONFIG',function(URL_CONFIG){
         return function(imgName){
             if(!imgName){
-                imgName="default.jpg";
+                return "img/default.jpg";
             }
             var urlStatus=URL_CONFIG.status;
             var imgHost=URL_CONFIG.host.imgHost;

@@ -1,5 +1,5 @@
 angular.module("service.location", [])
-    .factory('locationService', function($http, URL_CONFIG, $q) {
+    .factory('locationService', function($q) {
         var data = {};
 
         var a = 6378245.0;
