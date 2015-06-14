@@ -102,6 +102,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','p
               }
           }
       })
+      .state('my_appointment.courseList', {
+          url: '/courses',
+          views: {
+              'my-appointment': {
+                  templateUrl: 'module/app/my_appointment/course_list/index.html',
+                  controller: 'myCourseAppointmentCtrl'
+              }
+          }
+      })
       .state('create_activity', {
           url: '/create_activity',
           views: {

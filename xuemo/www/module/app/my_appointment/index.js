@@ -1,16 +1,16 @@
 angular.module('starter.controllers')
 
-.controller('myAppointmentCtrl', ['$scope','courseService','$state','URL_CONFIG','$http','pagerService',
-    function($scope,courseService,$state,URL_CONFIG,$http,pagerService) {
-        var routerParams=$state.params;
-        var urlStatus=URL_CONFIG.status;
-        var normalHost=URL_CONFIG.host.normalHost;
+    .controller('myAppointmentCtrl', ['$scope','courseService','$state','$ionicSlideBoxDelegate','tmpStorageService',
+        function($scope,courseService,$state,$ionicSlideBoxDelegate,tmpStorageService) {
+            $scope.tabStatusList=["courseList","activityList"];
+            $scope.currentTabStatus="courseList";
 
-        $http({
-            method:'GET',
-            url:"http://120.26.47.14:3000/appointments?userId=2",
-            params:{}
-        }).success(function(data){
-            $scope.myAppointmentList=data;
-        });
-    }])
+            //TODO tab status has not been set to initial value
+            console.log($scope.currentTabStatus);
+
+            $scope.toggleTab=function(status){
+                $scope.currentTabStatus=status;
+                var parentStatus="my_appointment";
+                $state.go(parentStatus+"."+status);
+            };
+        }])

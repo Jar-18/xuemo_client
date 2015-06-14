@@ -5,50 +5,12 @@ angular.module('starter.controllers')
         var routerParams=$state.params;
         var urlStatus=URL_CONFIG.status;
         var normalHost=URL_CONFIG.host.normalHost;
-
         $http({
             method:'GET',
             url:URL_CONFIG.common.districts[urlStatus],
             params:{}
         }).success(function(data){
             $scope.districts=data;
-            var categories=[
-                {
-                    "parentId":"1",
-                    "id":"2",
-                    "name":"语言"
-                },
-                {
-                    "parentId":"1",
-                    "id":"3",
-                    "name":"运动"
-                },
-                {
-                    "parentId":"3",
-                    "id":"4",
-                    "name":"游泳"
-                },
-                {
-                    "parentId":"2",
-                    "id":"5",
-                    "name":"英语"
-                },
-                {
-                    "parentId":"2",
-                    "id":"6",
-                    "name":"日语"
-                },
-                {
-                    "parentId":"2",
-                    "id":"7",
-                    "name":"法语"
-                },
-                {
-                    "parentId":"3",
-                    "id":"8",
-                    "name":"羽毛球"
-                }
-            ];
             var sortList=[
                 {
                     "parentId":"1",
@@ -64,23 +26,30 @@ angular.module('starter.controllers')
                     "name":"人气最高"
                 }
             ];
-            $scope.filterData=[{
-                name:"区域",
-                key:"districts",
-                category:"linkage",//联动
-                data:$scope.districts
-            },{
-                name:"类别",
-                key:"categories",
-                category:"linkage",//一级
-                data:categories
-            },{
-                name:"排序",
-                key:"sort",
-                category:"single",//一级
-                data:sortList
-            }
-            ];
+            $http({
+                method:'GET',
+                url:URL_CONFIG.common.courseCategories[urlStatus],
+                params:{}
+            }).success(function(data){
+                var categories=data;
+                $scope.filterData=[{
+                    name:"区域",
+                    key:"districts",
+                    category:"linkage",//联动
+                    data:$scope.districts
+                },{
+                    name:"类别",
+                    key:"categories",
+                    category:"linkage",//一级
+                    data:categories
+                },{
+                    name:"排序",
+                    key:"sort",
+                    category:"single",//一级
+                    data:sortList
+                }
+                ];
+            });
         });
         $scope.activeFilterList=[{
             level1:"",
