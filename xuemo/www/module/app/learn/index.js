@@ -24,6 +24,10 @@ angular.module('starter.controllers')
                     "parentId":"1",
                     "id":"hotest",
                     "name":"人气最高"
+                },{
+                    "parentId":"1",
+                    "id":"price",
+                    "name":"价格"
                 }
             ];
             $http({

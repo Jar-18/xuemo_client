@@ -21,66 +21,70 @@ angular.module('starter.controllers')
             }
             return result;
         }
-        $scope.categoriesList=[    {
-            "parentId":"1",
-            "id":"1",
-            "name":"运动",
+        $scope.categoriesList=[   {
+            "id": 2,
+            "name": "语言",
+            "parentId": 1,
             "key":"cake"
         },{
-            "parentId":"1",
-            "id":"2",
-            "name":"语言",
-            "key":"food"
-        },{
-            "parentId":"1",
-            "id":"3",
-            "name":"厨艺",
-            "key":"ktv"
-        },{
-            "parentId":"1",
-            "id":"3",
-            "name":"运动",
+            "id": 13,
+            "name": "体育",
+            "parentId": 1,
+            "key":"cake"
+        }, {
+            "id": 24,
+            "name": "小学辅导",
+            "parentId": 1,
+            "key":"cake"
+        }, {
+            "id": 29,
+            "name": "初中辅导",
+            "parentId": 1,
             "key":"cake"
         },{
-            "parentId":"1",
-            "id":"3",
-            "name":"运动",
+            "id": 38,
+            "name": "高中辅导",
+            "parentId": 1,
+            "key":"cake"
+        }, {
+            "id": 51,
+            "name": "资格认证",
+            "parentId": 1,
+            "key":"cake"
+        }, {
+            "id": 46,
+            "name": "考研辅导",
+            "parentId": 1,
             "key":"cake"
         },{
-            "parentId":"1",
-            "id":"3",
-            "name":"运动",
+            "id": 56,
+            "name": "IT技能",
+            "parentId": 1,
             "key":"cake"
+
         },{
-            "parentId":"1",
-            "id":"3",
-            "name":"运动",
+            "id": 66,
+            "name": "艺术",
+            "parentId": 1,
             "key":"cake"
+
         },{
-            "parentId":"1",
-            "id":"3",
-            "name":"运动",
+            "id": 77,
+            "name": "休闲娱乐",
+            "parentId": 1,
             "key":"cake"
+
         },{
-            "parentId":"1",
-            "id":"3",
-            "name":"运动",
+            "id": 83,
+            "name": "兴趣技能",
+            "parentId": 1,
             "key":"cake"
-        },{
-            "parentId":"1",
-            "id":"3",
-            "name":"运动",
+        }, {
+            "id": 92,
+            "name": "其他",
+            "parentId": 1,
             "key":"cake"
-        },{
-            "parentId":"1",
-            "id":"3",
-            "name":"运动",
-            "key":"cake"
-        },{
-            "parentId":"1",
-            "id":"3",
-            "name":"运动",
-            "key":"cake"
+
         }];
         $scope.groupedCategoriesList=groupCategoriesList($scope.categoriesList,8);
         $scope.navToCertainCategory=function(item){
